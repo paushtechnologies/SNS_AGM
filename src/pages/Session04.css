@@ -1,23 +1,23 @@
 /* Session04.css - Premium Slide Styles */
 
 .session04-container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 20px;
   font-family: 'DM Sans', sans-serif;
 }
 
 .slide-section {
-  min-height: 80vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 40px;
-  margin-bottom: 100px;
+  padding: 20px;
+  margin-bottom: 20px;
   background: #ffffff;
   border-radius: 40px;
   box-shadow: 0 20px 50px rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.1);
   position: relative;
   overflow: hidden;
 }
@@ -43,7 +43,7 @@
   background: rgba(212, 175, 55, 0.1);
   color: #B8860B;
   border-radius: 100px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -52,15 +52,16 @@
 
 .slide-title {
   font-family: 'Playfair Display', serif;
-  font-size: 54px;
+  font-size: 42px;
   font-weight: 900;
   color: #1E293B;
   line-height: 1.1;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
 }
 
 .slide-subtitle {
-  font-size: 20px;
+  font-size: 24px;
   color: #64748B;
   max-width: 800px;
   margin: 0 auto;
@@ -80,7 +81,7 @@
   background: #F8FAFC;
   padding: 40px;
   border-radius: 32px;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #CBD5E1;
   transition: all 0.3s ease;
 }
 
@@ -103,9 +104,9 @@
 
 .comparison-card li {
   padding: 12px 0;
-  border-bottom: 1px solid #E2E8F0;
+  border-bottom: 1px solid #CBD5E1;
   color: #475569;
-  font-size: 18px;
+  font-size: 22px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -182,7 +183,7 @@
   font-weight: 700;
   min-width: 120px;
   text-align: center;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #CBD5E1;
 }
 
 /* Formula Section */
@@ -199,13 +200,13 @@
   background: white;
   padding: 30px 20px;
   border-radius: 24px;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #CBD5E1;
   text-align: center;
   box-shadow: 0 10px 25px rgba(0,0,0,0.03);
 }
 
 .formula-box h3 { font-size: 22px; margin-bottom: 12px; color: #1E293B; }
-.formula-box p { font-size: 14px; color: #64748B; margin: 0; }
+.formula-box p { font-size: 18px; color: #64748B; margin: 0; }
 
 .trust-result {
   background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
@@ -254,7 +255,7 @@
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.06);
   text-align: center;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #CBD5E1;
   transition: all 0.3s ease;
 }
 
@@ -316,7 +317,7 @@
   padding: 30px;
   border-radius: 24px;
   gap: 30px;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #CBD5E1;
 }
 
 .mindset-number {
@@ -350,7 +351,7 @@
   grid-template-columns: 300px 1fr;
   align-items: center;
   background: white;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #CBD5E1;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.02);
@@ -359,10 +360,10 @@
 .conversation-left {
   background: #F8FAFC;
   padding: 30px;
-  border-right: 1px solid #E2E8F0;
+  border-right: 1px solid #CBD5E1;
 }
 
-.conversation-left span { font-size: 12px; font-weight: 800; color: #D4AF37; }
+.conversation-left span { font-size: 16px; font-weight: 800; color: #D4AF37; }
 .conversation-left h3 { font-size: 20px; margin-top: 8px; color: #1E293B; }
 
 .conversation-right {
@@ -388,7 +389,7 @@
   background: #F8FAFC;
   padding: 30px;
   border-radius: 24px;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #CBD5E1;
 }
 
 .behaviour-number {
@@ -422,7 +423,7 @@
   background: white;
   padding: 30px 20px;
   border-radius: 24px;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #CBD5E1;
   text-align: center;
 }
 
@@ -457,7 +458,7 @@
   left: 60px;
   right: 60px;
   height: 2px;
-  background: #E2E8F0;
+  background: #CBD5E1;
   z-index: 1;
 }
 
@@ -485,12 +486,12 @@
   background: #F8FAFC;
   padding: 30px 20px;
   border-radius: 24px;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #CBD5E1;
   text-align: center;
 }
 
 .stage-label {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 800;
   background: #D4AF37;
   color: white;
@@ -507,7 +508,7 @@
   padding: 60px 40px;
   background: #F8FAFC;
   border-radius: 40px;
-  border: 4px double #E2E8F0;
+  border: 4px double #CBD5E1;
 }
 
 .main-quote {
@@ -542,7 +543,7 @@
   background: white;
   padding: 16px 32px;
   border-radius: 100px;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #CBD5E1;
   font-weight: 700;
   color: #1E293B;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -634,7 +635,7 @@
 .cover-divider {
   width: 2px;
   height: 300px;
-  background: #E2E8F0;
+  background: #CBD5E1;
 }
 
 .cover-right {

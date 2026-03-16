@@ -1,0 +1,170 @@
+/* Session02.css - Premium Slide Styles for Awake & Ignite */
+
+.session02-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.slide-section {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-section.dark {
+  background: #1A3C40;
+  color: #fff;
+  border-color: rgba(255,255,255,0.08);
+}
+
+.slide-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #2C8FA5, #226D7D);
+}
+
+.slide-header {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.slide-label {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(44, 143, 165, 0.1);
+  color: #2C8FA5;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.dark .slide-label {
+  background: rgba(44, 143, 165, 0.2);
+  color: #89D9E0;
+}
+
+.slide-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 900;
+  color: #1E293B;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.dark .slide-title {
+  color: #fff;
+}
+
+.slide-subtitle {
+  font-size: 20px;
+  color: #64748B;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.icmm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.icmm-card {
+  padding: 32px 24px;
+  background: white;
+  border-radius: 24px;
+  text-align: center;
+  border: 1px solid #CBD5E1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.icmm-card:hover {
+  transform: translateY(-8px);
+  border-color: #2C8FA5;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.icmm-card.active {
+  background: #2C8FA5;
+  color: white;
+  border-color: #2C8FA5;
+}
+
+.icmm-icon {
+  width: 60px;
+  height: 60px;
+  background: #F1F5F9;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: #2C8FA5;
+}
+
+.icmm-card.active .icmm-icon {
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+.mantra-box {
+  background: #1E293B;
+  padding: 60px;
+  border-radius: 40px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.mantra-word {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 10px 0;
+}
+
+.benefit-pill {
+  padding: 20px 32px;
+  background: #F8FAFC;
+  border-radius: 100px;
+  border: 1px solid #CBD5E1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 700;
+  color: #1E293B;
+  transition: all 0.3s ease;
+}
+
+.benefit-pill:hover {
+  background: white;
+  border-color: #2C8FA5;
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .icmm-grid { grid-template-columns: 1fr 1fr; }
+  .slide-title { font-size: 38px; }
+}

@@ -9,9 +9,11 @@ const Nav: React.FC<NavProps> = ({ activePage, onNavigate }) => {
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 's1', label: '01 Momentum Builder' },
-    { id: 's2', label: '02 Awake & Ignite' },
-    { id: 's3', label: '03 Align & Accelerate' },
-    { id: 's4', label: '04 Elevate, Multiply & Scale' },
+    { id: 's2', label: '02 Frontline Connect' },
+    { id: 's3', label: '03 Awake & Ignite' },
+    { id: 's4', label: '04 Align & Accelerate' },
+    { id: 's5', label: '05 Elevate, Multiply & Scale' },
+    { id: 's6', label: '06 Convergence' },
   ];
 
   return (

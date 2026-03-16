@@ -13,259 +13,251 @@ import {
   BarChart3,
   PieChart
 } from 'lucide-react';
+import './Session03.css';
 
 const Session03: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const fadeIn = {
-    initial: { opacity: 0, y: 30 },
+  const slideIn = {
+    initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.6 }
+    transition: { duration: 0.8, ease: "easeOut" as any }
   };
 
 
+
   return (
-    <div id="page-s3" className="page active" style={{ background: 'var(--cream)', color: 'var(--navy)' }}>
+    <div id="page-s3" className="page active session03-container">
       {/* SECTION 1: HERO & CORE PURPOSE */}
       <motion.div
+        className="slide-section dark"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         style={{
-          background: '#141E33',
-          padding: '60px 80px',
-          borderRadius: '40px',
-          marginBottom: '60px',
-          color: '#fff',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          gap: '40px',
-          border: '1.5px solid rgba(255,255,255,0.08)',
-          boxShadow: '0 40px 100px rgba(0,0,0,0.25)',
-          position: 'relative',
-          overflow: 'hidden'
+          background: 'linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%)',
+          borderTop: 'none'
         }}
       >
         {/* Layered Decorative Elements */}
-        <div style={{ position: 'absolute', top: '-20%', right: '-10%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(74,127,212,0.15) 0%, transparent 70%)', filter: 'blur(60px)', pointerEvents: 'none' }}></div>
-        <div style={{ position: 'absolute', bottom: '-20%', left: '-10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none' }}></div>
-        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'url("data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 86c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm66-3c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM37 7c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm61 73c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM82 6c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM91 42c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM42 39c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM67 13c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm-6 33c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM25 26c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm-7 50c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm27 8c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm45-45c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm-24 50c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm57-85c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM9 54c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm28 20c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm56-46c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM61 82c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm21-8c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm-34 11c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm16-41c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM21 37c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm55 0c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM9 15c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm32 2c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm49 17c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM39 63c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm27-6c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm34 54c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm-24-7c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM9 10c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm5 81c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm58-5c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm36-6c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM10 1c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm3 37c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm54 48c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm32-71c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM58 51c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM33 18c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm65 15c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM30 61c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm23 7c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm-13 18c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm43-43c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm5 45c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM45 42c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm22-30c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm10 67c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm-6-52c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm-11 44c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm-3-13c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM26 13c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm39 88c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm-26 0c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM9 22c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm11 72c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm66 0c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zM9 56c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm0-32c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm0 28c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm0-20c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1zm0 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z\' fill=\'rgba(255,255,255,0.03)\' fill-rule=\'evenodd\' /%3E%3C/svg%3E")', opacity: 0.5, pointerEvents: 'none' }}></div>
+        <div style={{ position: 'absolute', top: '-20%', right: '-10%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(74,127,212,0.15) 0%, transparent 70%)', filter: 'blur(60px)', pointerEvents: 'none', zIndex: 0 }}></div>
+        <div style={{ position: 'absolute', bottom: '-20%', left: '-10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', zIndex: 0 }}></div>
 
-        <div style={{ flex: '1', zIndex: 1, minWidth: '550px', textAlign: 'left' }}>
-          <div className="label" style={{ color: 'var(--gold-light)', marginBottom: '20px', letterSpacing: '6px', fontSize: '11px', fontWeight: 900, textTransform: 'uppercase', opacity: 0.8 }}>SESSION 03 • THE TRANSFORMATION</div>
-          <h1 style={{
-            color: '#fff',
-            fontSize: '64px',
-            fontFamily: "'Playfair Display', serif",
-            marginBottom: '20px',
-            fontWeight: 900,
-            letterSpacing: '-2px',
-            lineHeight: '1',
-            textShadow: '0 10px 30px rgba(0,0,0,0.3)'
-          }}>
-            Align & <span style={{ color: 'var(--gold)', position: 'relative' }}>
-              Accelerate.
-              <div style={{ position: 'absolute', bottom: '5px', left: 0, width: '100%', height: '4px', background: 'var(--gold)', borderRadius: '2px', opacity: 0.5 }}></div>
-            </span>
-          </h1>
-          <p style={{
-            fontSize: '22px',
-            maxWidth: '650px',
-            marginBottom: '40px',
-            color: 'rgba(255,255,255,0.9)',
-            lineHeight: '1.4',
-            fontWeight: 600,
-            letterSpacing: '-0.5px'
-          }}>
-            One Team, One Standard, One Model & One Delivery.
-            <div style={{ marginTop: '12px', fontSize: '16px', fontWeight: 400, color: 'rgba(255,255,255,0.6)', fontStyle: 'italic' }}>
-              Ideal Client Management Model (ICMM): Our standardized framework for delivering consistent value.
+        <div style={{ position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px' }}>
+          <div style={{ flex: '1', minWidth: '550px' }}>
+            <div className="slide-label" style={{ background: 'rgba(52, 211, 153, 0.15)', color: '#34D399' }}>SESSION 04 • THE TRANSFORMATION</div>
+            <h1 className="slide-title">
+              Align & <span style={{ color: 'var(--gold)', position: 'relative' }}>
+                Accelerate.
+                <div style={{ position: 'absolute', bottom: '5px', left: 0, width: '100%', height: '4px', background: 'var(--gold)', borderRadius: '2px', opacity: 0.5 }}></div>
+              </span>
+            </h1>
+            <p className="slide-subtitle" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '24px' }}>
+              One Team, One Standard, One Model & One Delivery.
+            </p>
+
+            <h2 style={{ fontSize: '28px', color: '#fff', marginBottom: '24px', fontWeight: 800 }}>What are we trying to achieve?</h2>
+
+            <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+              {['Inspire', 'Improve', 'Impact'].map(item => (
+                <div key={item} style={{
+                  background: 'rgba(255,255,255,0.08)',
+                  backdropFilter: 'blur(20px)',
+                  border: '1.5px solid rgba(255,255,255,0.12)',
+                  padding: '10px 24px',
+                  borderRadius: '16px',
+                  fontSize: '14px',
+                  color: 'var(--gold-light)',
+                  fontWeight: 900,
+                  letterSpacing: '1px',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 10px 20px rgba(0,0,0,0.1)'
+                }}>
+                  {item}
+                </div>
+              ))}
             </div>
-          </p>
-          <h1>What are we trying to achieve? </h1>
-          <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
-            {['Inspire', 'Improve', 'Impact'].map(item => (
-              <div key={item} style={{
-                background: 'rgba(255,255,255,0.08)',
-                backdropFilter: 'blur(20px)',
-                border: '1.5px solid rgba(255,255,255,0.12)',
-                padding: '10px 24px',
-                borderRadius: '16px',
-                fontSize: '14px',
-                color: 'var(--gold-light)',
-                fontWeight: 900,
-                letterSpacing: '1px',
-                textTransform: 'uppercase',
-                boxShadow: '0 10px 20px rgba(0,0,0,0.1)'
-              }}>
-                {item}
-              </div>
-            ))}
           </div>
-        </div>
 
-        <div style={{ flex: '0 0 auto', zIndex: 1, position: 'relative' }}>
-          <motion.div
-            animate={{
-              scale: [1, 1.05, 1],
-              opacity: [0.8, 1, 0.8]
-            }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              padding: '50px',
-              background: 'rgba(255,255,255,0.05)',
-              borderRadius: '50%',
-              backdropFilter: 'blur(30px)',
-              border: '2px solid rgba(212,175,55,0.2)',
-              width: '280px',
-              height: '280px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '120px',
-              boxShadow: '0 30px 60px rgba(0,0,0,0.4)',
-              position: 'relative'
-            }}
-          >
-            <div style={{ position: 'absolute', width: '110%', height: '110%', border: '1px dashed rgba(212,175,55,0.3)', borderRadius: '50%', animation: 'spin 20s linear infinite' }}></div>
-            ⚡
-          </motion.div>
+          <div style={{ flex: '0 0 auto', position: 'relative' }}>
+            <motion.div
+              animate={{
+                scale: [1, 1.05, 1],
+                rotate: [0, 5, -5, 0]
+              }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              style={{
+                padding: '50px',
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%)',
+                borderRadius: '50%',
+                backdropFilter: 'blur(30px)',
+                border: '2px solid rgba(212,175,55,0.3)',
+                width: '320px',
+                height: '320px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '120px',
+                boxShadow: '0 0 40px rgba(212,175,55,0.15), inset 0 0 20px rgba(255,255,255,0.05)'
+              }}
+            >
+              <div style={{ position: 'absolute', width: '110%', height: '110%', border: '1px dashed rgba(212,175,55,0.3)', borderRadius: '50%', animation: 'spin 20s linear infinite' }}></div>
+              ⚡
+            </motion.div>
+          </div>
         </div>
       </motion.div>
 
       {/* SECTION 2: STRATEGIC COMMITMENT & VISION */}
       <motion.div
-        className="card mb"
-        {...fadeIn}
-        style={{
-          background: 'var(--navy)',
-          color: '#fff',
-          padding: '60px 50px',
-          borderRadius: '32px',
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          gap: '60px',
-          boxShadow: '0 30px 60px rgba(0,0,0,0.15)',
-          border: '1px solid rgba(255,255,255,0.1)'
-        }}
+        className="slide-section"
+        {...slideIn}
       >
-        <div style={{ flex: '1' }}>
-          <div className="label" style={{ color: 'var(--gold-light)' }}>Our Strategic Commitment</div>
-          <h3 style={{ color: '#fff', fontSize: '52px', marginBottom: '20px', fontFamily: "'Playfair Display', serif" }}>Tech. Data. Team.</h3>
-          <div style={{
-            padding: '30px',
-            background: 'rgba(255,255,255,0.06)',
-            borderRadius: '20px',
-            border: '1px solid rgba(255,255,255,0.1)'
-          }}>
-            <p style={{ fontSize: '20px', color: '#fff', fontWeight: 700, margin: 0, lineHeight: '1.5' }}>
-              <span style={{ color: 'var(--gold-light)', fontWeight: 900 }}>Vision:</span> Become one of the most "intelligent & consistent" MF distributor.
-            </p>
-          </div>
+        <div className="slide-header">
+          <div className="slide-label">Our Strategic Commitment</div>
+          <h1 className="slide-title">Tech. Data. Team.</h1>
         </div>
 
-        <div style={{ flex: '1', display: 'grid', gridTemplateColumns: '1fr', gap: '16px' }}>
-          <div className="label" style={{ color: 'var(--gold-light)', marginBottom: '8px' }}>FY FOCUS AREAS</div>
-          {[
-            'Embed AI into daily workflow process',
-            'Deploy AI-driven client intelligence',
-            'Train team – Personal & Professional development (data & process fluency)',
-            'Build structured data architecture'
-          ].map(area => (
-            <div key={area} style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '16px',
-              fontSize: '17px',
+        <div style={{ display: 'flex', gap: '60px', alignItems: 'center' }}>
+          <div style={{ flex: '1' }}>
+            <div style={{
+              padding: '24px 30px',
+              background: 'var(--navy)',
+              borderRadius: '24px',
               color: '#fff',
-              fontWeight: 600,
-              padding: '16px 20px',
-              background: 'rgba(255,255,255,0.04)',
-              borderRadius: '16px',
-              border: '1px solid rgba(255,255,255,0.05)'
+              boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
             }}>
-              <div style={{ color: 'var(--gold-light)' }}><CheckCircle2 size={22} /></div>
-              {area}
+              <p style={{ fontSize: '32px', lineHeight: '1.5', margin: 0 }}>
+                <span style={{ color: 'var(--gold-light)', fontWeight: 900 }}>Vision:</span> Become one of the most "intelligent & consistent" MF distributor.
+              </p>
             </div>
-          ))}
+          </div>
+
+          <div style={{ flex: '1' }}>
+            <div className="label" style={{ color: 'var(--gold)', marginBottom: '16px', fontSize: '12px' }}>FY FOCUS AREAS</div>
+            <motion.div
+              style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '8px' }}
+              variants={{
+                visible: { transition: { staggerChildren: 0.1 } }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {[
+                'Embed AI into daily workflow process',
+                'Deploy AI-driven client intelligence',
+                'Train team – Personal & Professional development (data & process fluency)',
+                'Build structured data architecture'
+              ].map(area => (
+                <motion.div
+                  key={area}
+                  variants={{
+                    hidden: { opacity: 0, x: 20 },
+                    visible: { opacity: 1, x: 0 }
+                  }}
+                  whileHover={{ x: 10, background: '#fff' }}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '12px',
+                    fontSize: '20px',
+                    color: 'var(--navy)',
+                    fontWeight: 700,
+                    padding: '12px 20px',
+                    background: '#F8FAFC',
+                    borderRadius: '12px',
+                    border: '1px solid #E2E8F0',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  <div style={{ color: 'var(--gold)' }}><CheckCircle2 size={18} /></div>
+                  {area}
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <div className="tech-slide">
-
-            <div className="tech-header">
-
-              <div className="decorative-blocks">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <h1>How to use Tech, Data & our Team to:</h1>
-
-              <div className="logo">
-                <img src="logo.png" alt="Shah & Shah" />
-              </div>
-
+      <motion.div className="slide-section dark" {...slideIn} style={{ padding: '30px' }}>
+        <div className="tech-slide" style={{ padding: '30px', borderRadius: '24px' }}>
+          <div className="tech-header">
+            <div className="decorative-blocks">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-
-            <ul className="tech-points">
-              <li>Enhance investors’ experience</li>
-              <li>Improve Growth and efficiency</li>
-              <li>Scale up & personalize clients engagements</li>
-              <li>Create a One team, One standard, One model, One delivery</li>
-            </ul>
-
-            <div className="tech-footer">
-
-              <p className="footer-text">
-                Our vision : To provide peace of mind by bringing significance in our Customer Service.
-              </p>
-
-              <div className="footer-bottom">
-                <span>www.snsgroup.in</span>
-                <span>“AMFI-registered Mutual Fund Distributor”</span>
-              </div>
-
-            </div>
-
+            <motion.h1 style={{ fontSize: '32px' }}>How to use Tech, Data & our Team to:</motion.h1>
           </div>
-        </>
+
+          <motion.ul
+            className="tech-points"
+            variants={{
+              visible: { transition: { staggerChildren: 0.1 } }
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {[
+              'Enhance investors’ experience',
+              'Improve Growth and efficiency',
+              'Scale up & personalize clients engagements',
+              'Create a One team, One standard, One model, One delivery'
+            ].map(point => (
+              <motion.li
+                key={point}
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+                whileHover={{ x: 10, color: 'var(--gold)' }}
+                style={{ fontSize: '24px', padding: '12px 0' }}
+              >
+                {point}
+              </motion.li>
+            ))}
+          </motion.ul>
+
+          <div className="tech-footer">
+            <p className="footer-text">
+              Our vision : To provide peace of mind by bringing significance in our Customer Service.
+            </p>
+            <div className="footer-bottom">
+              <span>www.snsgroup.in</span>
+              <span>“AMFI-registered Mutual Fund Distributor”</span>
+            </div>
+          </div>
+        </div>
       </motion.div>
 
       {/* SECTION 3: CRM OPTIMIZATION OVERHAUL */}
       <motion.div
-        className="card mb"
-        {...fadeIn}
-        style={{
-          padding: '60px',
-          background: '#ffffff',
-          borderRadius: '40px',
-          boxShadow: '0 30px 80px rgba(0,0,0,0.06)',
-          border: '1.5px solid rgba(0,0,0,0.05)',
-          overflow: 'hidden',
-          position: 'relative'
-        }}
+        className="slide-section"
+        {...slideIn}
       >
-        <div style={{ position: 'absolute', top: 0, right: 0, width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(212,175,55,0.05) 0%, transparent 70%)', zIndex: 0 }}></div>
+        <div className="slide-header">
+          <div className="slide-label">FOUNDATION ENGINE</div>
+          <h1 className="slide-title">CRM Optimization</h1>
+          <p className="slide-subtitle">
+            Activating the engine of growth through 100% CRM focus and data-driven discipline.
+          </p>
+        </div>
 
         <div style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ textAlign: 'center', marginBottom: '35px' }}>
-            <div className="label" style={{ color: 'var(--gold)', letterSpacing: '6px' }}>FOUNDATION ENGINE</div>
-            <h2 style={{ fontSize: '48px', color: 'var(--navy)', fontWeight: 950, marginBottom: '16px', fontFamily: "'Playfair Display', serif" }}>CRM Optimization</h2>
-            <p style={{ fontSize: '20px', color: 'var(--text3)', fontWeight: 500, maxWidth: '700px', margin: '0 auto' }}>
-              Activating the engine of growth through 100% CRM focus and data-driven discipline.
-            </p>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
+          <motion.div
+            style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px' }}
+            variants={{
+              visible: { transition: { staggerChildren: 0.1 } }
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {[
               {
                 title: 'System Hardening',
@@ -294,38 +286,41 @@ const Session03: React.FC = () => {
             ].map((cat, idx) => (
               <motion.div
                 key={idx}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 }
+                }}
                 whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(0,0,0,0.15)' }}
                 style={{
-                  background: `${cat.color}35`,
-                  borderRadius: '28px',
-                  padding: '35px 28px',
-                  border: `2px solid ${cat.color}50`,
+                  background: `${cat.color}15`,
+                  borderRadius: '24px',
+                  padding: '24px 20px',
+                  border: `2px solid ${cat.color}30`,
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '24px',
-                  boxShadow: '0 8px 30px rgba(0,0,0,0.06)',
+                  gap: '16px',
                   transition: 'all 0.3s ease'
                 }}
               >
                 <div style={{
-                  width: '60px',
-                  height: '60px',
+                  width: '48px',
+                  height: '48px',
                   background: 'white',
-                  borderRadius: '18px',
+                  borderRadius: '14px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: cat.color,
                   boxShadow: '0 10px 25px rgba(0,0,0,0.08)'
                 }}>
-                  {cat.icon}
+                  {React.cloneElement(cat.icon as React.ReactElement<any>, { size: 24 })}
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '20px', fontWeight: 900, color: 'var(--navy)', marginBottom: '18px', letterSpacing: '-0.5px' }}>{cat.title}</h4>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                  <h4 style={{ fontSize: '16px', fontWeight: 900, color: 'var(--navy)', marginBottom: '12px', letterSpacing: '-0.5px' }}>{cat.title}</h4>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                     {cat.items.map(item => (
-                      <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '15.5px', color: 'var(--navy)', fontWeight: 600, lineHeight: '1.4', opacity: 0.9 }}>
-                        <div style={{ color: cat.color, marginTop: '3px' }}><CheckCircle2 size={16} strokeWidth={3} /></div>
+                      <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', fontSize: '18px', color: 'var(--navy)', fontWeight: 600, lineHeight: '1.4', opacity: 0.9 }}>
+                        <div style={{ color: cat.color, marginTop: '2px' }}><CheckCircle2 size={16} strokeWidth={3} /></div>
                         {item}
                       </div>
                     ))}
@@ -333,337 +328,544 @@ const Session03: React.FC = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </motion.div>
 
       {/* SECTION 4: THE AI NECESSITY */}
-      <div className="grid2 mb">
-        <motion.div className="card" style={{ background: 'linear-gradient(135deg, #1A2744 0%, #2C4A8A 100%)', color: '#fff' }} {...fadeIn}>
-          <div className="label" style={{ color: 'var(--gold-light)' }}>Why AI Matters Now</div>
-          <h2 style={{ fontSize: '42px', color: '#fff', marginBottom: '20px' }}>It's No Longer Optional.</h2>
-          <p style={{
-            fontSize: '18px',
-            lineHeight: '1.6',
-            color: 'rgba(255,255,255,0.9)',
-            marginBottom: '24px',
-            fontStyle: 'italic',
-            borderLeft: '3px solid var(--gold)',
-            paddingLeft: '20px'
-          }}>
-            "Business across industries are investing heavily in AI to & therefore a necessity for survival."
-          </p>
-          <div className="check-list" style={{ color: '#fff' }}>
-            <li style={{ borderBottomColor: 'rgba(255,255,255,0.1)' }}><span style={{ color: 'var(--gold-light)' }}>→</span>Rising Investor Expectations</li>
-            <li style={{ borderBottomColor: 'rgba(255,255,255,0.1)' }}><span style={{ color: 'var(--gold-light)' }}>→</span>Need for personalization at scale</li>
-            <li style={{ borderBottomColor: 'rgba(255,255,255,0.1)' }}><span style={{ color: 'var(--gold-light)' }}>→</span>Cost & efficiency pressure</li>
-            <li style={{ borderBottomColor: 'rgba(255,255,255,0.1)' }}><span style={{ color: 'var(--gold-light)' }}>→</span>Data-rich but Insight-poor reality</li>
-            <li style={{ borderBottomColor: 'rgba(255,255,255,0.1)' }}><span style={{ color: 'var(--gold-light)' }}>→</span>Business across industries are investing heavily in AI to & therefore a necessity for survival. </li>
-            <>
-              <ul className="industry-shift-list">
-                <li>
-                  The Industry Has Shifted
-                  <ul>
-                    <li>Investors expect digital-first, personalized experience</li>
-                    <li>
-                      Fintech platforms have reset service benchmarks
-                      (not withstanding beneficial or not to investors)
-                    </li>
-                    <li>Margins are tightening</li>
-                    <li>Compliance expectations are rising</li>
-                    <li>KYC process getting strengthened &amp; integrated</li>
-                  </ul>
-                </li>
+      <motion.div
+        className="slide-section"
+        {...slideIn}
+      >
+        <div className="slide-header">
+          <div className="slide-label">Why AI Matters Now</div>
+          <h1 className="slide-title">It's No Longer Optional.</h1>
+        </div>
 
-                <li className="ai-necessity">
-                  AI is no longer optional. It is a competitive necessity.
-                </li>
-              </ul>
-            </>
-          </div>
-          <div style={{ marginTop: '30px', padding: '24px', background: 'var(--gold)', borderRadius: '16px', color: 'var(--navy)', fontWeight: 800, textAlign: 'center', fontSize: '20px' }}>
-            AI is a Competitive Necessity.
-          </div>
-        </motion.div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+          <motion.div
+            style={{
+              background: 'linear-gradient(135deg, #1A2744 0%, #2C4A8A 100%)',
+              color: '#fff',
+              padding: '30px',
+              borderRadius: '24px'
+            }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
 
-        <motion.div className="card" {...fadeIn}>
-          <div className="label">What AI will change</div>
-          <h2>AI= Decision Intelligence at Scale</h2>
-          <p style={{ fontSize: '18px', marginBottom: '32px' }}>Empowering the same team to achieve 3X Productivity.</p>
-          <div className="grid2">
-            {[
-              { icon: <TrendingUp />, t: 'Predict Churn', d: 'Before Redemption' },
-              { icon: <Zap />, t: 'Identify SIPs', d: 'Top-up Opportunities' },
-              { icon: <Database />, t: 'Auto-generate', d: 'Portfolio Insights' },
-              { icon: <Users />, t: 'RM meeting', d: 'intelligence briefs' },
-              { icon: <Users />, t: 'Personalized communication ', d: 'at scale' },
-            ].map(item => (
-              <div key={item.t} style={{ padding: '20px', border: '1px solid var(--border)', borderRadius: '16px' }}>
-                <div style={{ color: 'var(--gold)', marginBottom: '10px' }}>{item.icon}</div>
-                <div style={{ fontWeight: 800, fontSize: '16px' }}>{item.t}</div>
-                <div style={{ fontSize: '14px', color: 'var(--text2)' }}>{item.d}</div>
-              </div>
-            ))}
-          </div>
-          <p style={{ fontSize: '18px', marginBottom: '32px' }}>Same team. 3X productivity. Higher retention.</p>
-        </motion.div>
-      </div>
+            <p style={{
+              fontSize: '22px',
+              lineHeight: '1.6',
+              color: 'rgba(255,255,255,0.9)',
+              marginBottom: '24px',
+              fontStyle: 'italic',
+              borderLeft: '4px solid var(--gold)',
+              paddingLeft: '20px'
+            }}>
+              "Rising investor expectations"
+            </p>
+            <p style={{
+              fontSize: '22px',
+              lineHeight: '1.6',
+              color: 'rgba(255,255,255,0.9)',
+              marginBottom: '24px',
+              fontStyle: 'italic',
+              borderLeft: '4px solid var(--gold)',
+              paddingLeft: '20px'
+            }}>
+              "Need for personalization at scale."
+            </p>
+            <p style={{
+              fontSize: '22px',
+              lineHeight: '1.6',
+              color: 'rgba(255,255,255,0.9)',
+              marginBottom: '24px',
+              fontStyle: 'italic',
+              borderLeft: '4px solid var(--gold)',
+              paddingLeft: '20px'
+            }}>
+              "Cost & efficiency pressure."
+            </p>
+            <p style={{
+              fontSize: '22px',
+              lineHeight: '1.6',
+              color: 'rgba(255,255,255,0.9)',
+              marginBottom: '24px',
+              fontStyle: 'italic',
+              borderLeft: '4px solid var(--gold)',
+              paddingLeft: '20px'
+            }}>
+              "Business across industries are investing heavily in AI and therefore it's a necessity for survival."
+            </p>
+
+            <ul className="industry-shift-list" style={{ listStyle: 'none', padding: 0 }}>
+              <li style={{ marginBottom: '20px' }}>
+                <span style={{ color: 'var(--gold-light)', fontSize: '18px', fontWeight: 800 }}>The Industry Has Shifted:</span>
+                <ul style={{ paddingLeft: '15px', marginTop: '10px', opacity: 0.9, fontSize: '18px' }}>
+                  <li>Investors expect digital-first, personalized experience</li>
+                  <li>Fintech platforms have reset service benchmarks</li>
+                  <li>Margins are tightening & Compliance expectations are rising</li>
+                  <li>KYC process getting strengthened & integrated</li>
+                </ul>
+              </li>
+              <li className="ai-necessity" style={{ fontSize: '22px', fontWeight: 900, color: 'var(--gold)' }}>
+                AI is a competitive necessity.
+              </li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            style={{
+              background: '#F8FAFC',
+              padding: '30px',
+              border: '1px solid #E2E8F0',
+              borderRadius: '24px'
+            }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <h3 style={{ fontSize: '24px', color: 'var(--navy)', marginBottom: '8px' }}>Decision Intelligence at Scale</h3>
+            <p style={{ fontSize: '18px', color: '#64748B', marginBottom: '24px' }}>Empowering the same team to achieve 3X Productivity.</p>
+
+            <motion.div
+              style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}
+              variants={{
+                visible: { transition: { staggerChildren: 0.05 } }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {[
+                { icon: <TrendingUp size={18} />, t: 'Predict Churn', d: 'Before Redemption' },
+                { icon: <Zap size={18} />, t: 'Identify SIPs', d: 'Top-up Opportunities' },
+                { icon: <Database size={18} />, t: 'Auto-generate', d: 'Portfolio Insights' },
+                { icon: <Users size={18} />, t: 'RM meeting', d: 'Intelligence Briefs' },
+                { icon: <Users size={18} />, t: 'Personalized communication ', d: 'at scale' },
+              ].map(item => (
+                <motion.div
+                  key={item.t}
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.9 },
+                    visible: { opacity: 1, scale: 1 }
+                  }}
+                  whileHover={{ y: -4, background: '#fff' }}
+                  style={{ padding: '16px', background: 'white', border: '1px solid #E2E8F0', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}
+                >
+                  <div style={{ color: 'var(--gold)', marginBottom: '8px' }}>{item.icon}</div>
+                  <div style={{ fontWeight: 800, fontSize: '17px', color: 'var(--navy)' }}>{item.t}</div>
+                  <div style={{ fontSize: '14px', color: '#64748B' }}>{item.d}</div>
+                </motion.div>
+              ))}
+            </motion.div>
+            <p style={{ fontSize: '16px', marginTop: '24px', fontStyle: 'italic', color: 'var(--navy)', fontWeight: 700 }}>
+              Same team. 3X productivity. Higher retention.
+            </p>
+          </motion.div>
+        </div>
+      </motion.div>
 
       {/* SECTION 5: CURRENT REALITY */}
-      <motion.div className="card mb" style={{ padding: '60px 40px', textAlign: 'center' }} {...fadeIn}>
-        <div className="label">Our Current Reality</div>
-        <h2 style={{ fontSize: '48px', marginBottom: '40px', fontFamily: "'Playfair Display', serif" }}>We Are Sitting on Powerful Data</h2>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
-          gap: '20px',
-          marginBottom: '40px'
-        }}>
+      <motion.div
+        className="slide-section"
+        {...slideIn}
+      >
+        <div className="slide-header">
+          <div className="slide-label">Our Current Reality</div>
+          <h1 className="slide-title">We Are Sitting on Powerful Data</h1>
+          <p className="slide-subtitle">Today we report data. Tomorrow we must activate intelligence.</p>
+        </div>
+
+        <motion.div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(5, 1fr)',
+            gap: '12px',
+            marginBottom: '40px'
+          }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.1 } }
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {[
-            { n: '₹1,900+', l: 'Cr Total AUM', s: '42px' },
-            { n: '10+', l: 'Years Transaction History', s: '42px' },
-            { n: 'Redemption', l: 'Cycle Intelligence', s: '32px' },
-            { n: 'SIP', l: 'Behavior Trends', s: '42px' },
-            { n: 'Client', l: 'Segmentation Patterns', s: '42px' },
+            { n: '₹1,900+', l: 'Cr Total AUM', s: '32px' },
+            { n: '10+', l: 'Years Transaction History', s: '32px' },
+            { n: 'Redemption', l: 'Cycle Intelligence', s: '24px' },
+            { n: 'SIP', l: 'Behavior Trends', s: '32px' },
+            { n: 'Client', l: 'Segmentation Patterns', s: '32px' },
           ].map((item, i) => (
-            <div key={i} style={{
-              background: '#fff',
-              padding: '40px 20px',
-              borderRadius: '20px',
-              boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
-              borderBottom: '4px solid var(--gold)',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              minHeight: '200px'
-            }}>
+            <motion.div
+              key={i}
+              variants={{
+                hidden: { opacity: 0, scale: 0.8 },
+                visible: { opacity: 1, scale: 1 }
+              }}
+              whileHover={{ y: -10, rotate: i % 2 === 0 ? 2 : -2 }}
+              style={{
+                background: '#F8FAFC',
+                padding: '30px 15px',
+                borderRadius: '20px',
+                borderBottom: '6px solid var(--gold)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                minHeight: '180px',
+                textAlign: 'center',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.03)',
+                transition: 'transform 0.3s ease'
+              }}
+            >
               <div style={{
                 fontSize: item.s,
                 fontFamily: "'Playfair Display', serif",
-                fontWeight: 800,
+                fontWeight: 900,
                 color: 'var(--navy)',
                 lineHeight: 1.1,
-                marginBottom: '10px',
-                wordBreak: 'break-word'
+                marginBottom: '12px'
               }}>
                 {item.n}
               </div>
               <div style={{
-                fontSize: '16px',
+                fontSize: '19px',
                 fontWeight: 700,
-                color: 'var(--text2)',
-                lineHeight: 1.3,
-                opacity: 0.8
+                color: '#64748B',
+                lineHeight: 1.3
               }}>
                 {item.l}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-        <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '28px', color: 'var(--gold)', fontWeight: 700 }}>
-          "Today we report data. Tomorrow we must activate intelligence."
-        </div>
+        </motion.div>
       </motion.div>
 
       {/* SECTION 6: HUMAN + AI */}
-      <div className="grid2 mb">
-        <motion.div className="card" {...fadeIn}>
-          <div className="label">Relationship 2.0</div>
-          <h2>Human + AI</h2>
-          <p style={{ fontWeight: 700, fontStyle: 'italic', color: 'var(--gold)', margin: '12px 0 24px' }}>AI Will Upgrade — Not Replace — Our Team</p>
-          <ul className="check-list">
-            <li><span className="li-dot">◉</span>Data-backed client conversations</li>
-            <li><span className="li-dot">◉</span>Proactive risk alerts (Alpha/Churn)</li>
-            <li><span className="li-dot">◉</span>Instant goal simulations for confidence</li>
-            <li><span className="li-dot">◉</span>Higher confidence, stronger advice</li>
-            <li><span className="li-dot">◉</span>Trust Deepens. Relationships Scale.</li>
-          </ul>
-        </motion.div>
+      <motion.div
+        className="slide-section"
+        {...slideIn}
+      >
+        <div className="slide-header">
+          <div className="slide-label">Relationship 2.0</div>
+          <h1 className="slide-title">Human + AI</h1>
+          <p className="slide-subtitle" style={{ color: 'var(--gold)', fontWeight: 800 }}>
+            AI Will Upgrade — Not Replace — Our Team
+          </p>
+        </div>
 
-        <motion.div className="card" style={{ background: 'var(--navy)', color: '#fff' }} {...fadeIn}>
-          <div className="label" style={{ color: 'var(--gold-light)' }}>What AI in CX Means for MF Distributors</div>
-          <div className="grid2" style={{ gap: '15px', marginTop: '20px' }}>
-            {[
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+          <motion.div
+            className="standard-card"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            style={{ padding: '20px' }}
+          >
+            <motion.ul
+              style={{ listStyle: 'none', padding: 0 }}
+              variants={{
+                visible: { transition: { staggerChildren: 0.1 } }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {[
+                'Data-backed client conversations',
+                'Proactive risk alerts (Alpha/Churn)',
+                'Instant goal simulations for confidence',
+                'Higher confidence, stronger advice',
+                'Trust Deepens. Relationships Scale.'
+              ].map(item => (
+                <motion.li
+                  key={item}
+                  variants={{
+                    hidden: { opacity: 0, x: -20 },
+                    visible: { opacity: 1, x: 0 }
+                  }}
+                  whileHover={{ x: 10, color: 'var(--gold)' }}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '12px',
+                    fontSize: '19px',
+                    fontWeight: 700,
+                    color: 'var(--navy)',
+                    padding: '12px 0',
+                    borderBottom: '1px solid #E2E8F0',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  <CheckCircle2 color="var(--gold)" size={18} />
+                  {item}
+                </motion.li>
+              ))}
+            </motion.ul>
+          </motion.div>
 
-              "How we apply AI to improve our client engagement activities.",
-              "Identify key client engagement where use AI to scale up client touch points without diluting personal touch.",
-              "Identify backend work to be automated",
-              "Faster investor support",
-              "Personalized advice nudges",
-              "Consistent omni-channel experience",
-              "Proactive engagement, not reactive service"
+          <motion.div
+            className="standard-card dark"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            style={{ padding: '20px' }}
+          >
+            <div className="label" style={{ color: 'var(--gold-light)', marginBottom: '16px', fontSize: '11px' }}>What AI in CX Means for MF Distributors</div>
+            <motion.div
+              style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '8px' }}
+              variants={{
+                visible: { transition: { staggerChildren: 0.05 } }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {[
+                "How we apply AI to improve our client engagement activities.",
+                "Identify key client engagement where use AI to scale up client touch points without diluting personal touch.",
+                "Identify backend work to be automated",
+                "Faster investor support",
+                "Personalized advice nudges",
+                "Consistent omni-channel experience",
+                "Proactive engagement, not reactive service"
+              ].map(c => (
+                <motion.div
+                  key={c}
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.95 },
+                    visible: { opacity: 1, scale: 1 }
+                  }}
+                  whileHover={{ background: 'rgba(255,255,255,0.12)', x: 5 }}
+                  style={{ background: 'rgba(255,255,255,0.08)', padding: '12px', borderRadius: '12px', fontSize: '18px', fontWeight: 600, border: '1px solid rgba(255,255,255,0.1)', transition: 'all 0.2s ease' }}
+                >
+                  {c}
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </motion.div>
 
-            ].map(c => (
-              <div key={c} style={{ background: 'rgba(255,255,255,0.08)', padding: '15px', borderRadius: '12px', fontSize: '14px', fontWeight: 600 }}>
-                {c}
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-
-      <motion.div>
-        <>
-          <div className="investor-benefits-slide">
-
-            <div className="slide-header">
-
-              <div className="decorative-blocks">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <h1>Key Benefits for Investors</h1>
-
+      <motion.div className="slide-section" {...slideIn} style={{ padding: '30px' }}>
+        <div className="investor-benefits-slide" style={{ padding: '30px', borderRadius: '24px' }}>
+          <div className="slide-header">
+            <div className="decorative-blocks">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-
-            <div className="benefits-content">
-              <ul>
-                <li>Faster query resolution</li>
-                <li>24x7 assistance</li>
-                <li>Relevant fund &amp; goal-based insights</li>
-                <li>Reduced friction across journeys</li>
-              </ul>
-            </div>
-
+            <h1 style={{ fontSize: '32px' }}>Key Benefits for Investors</h1>
           </div>
-        </>
+
+          <div className="benefits-content">
+            <motion.ul
+              variants={{
+                visible: { transition: { staggerChildren: 0.1 } }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {[
+                'Faster query resolution',
+                '24x7 assistance',
+                'Relevant fund & goal-based insights',
+                'Reduced friction across journeys'
+              ].map(benefit => (
+                <motion.li
+                  key={benefit}
+                  variants={{
+                    hidden: { opacity: 0, x: -20 },
+                    visible: { opacity: 1, x: 0 }
+                  }}
+                  whileHover={{ x: 10, color: 'var(--gold)' }}
+                  style={{ fontSize: '20px', padding: '8px 0' }}
+                >
+                  {benefit}
+                </motion.li>
+              ))}
+            </motion.ul>
+          </div>
+        </div>
       </motion.div>
 
       {/* SECTION 7: DETAILED AREAS & ROI */}
-      <div className="grid3 mb">
-        <motion.div className="card" {...fadeIn}>
-          <div style={{ color: 'var(--gold)', marginBottom: '15px' }}><Cpu size={32} /></div>
-          <>
+      <motion.div
+        className="slide-section"
+        {...slideIn}
+      >
+        <div className="slide-header">
+          <div className="slide-label">AI Landscape</div>
+          <h1 className="slide-title">Detailed Areas & ROI</h1>
+        </div>
+
+        <motion.div
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.1 } }
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.div
+            className="standard-card"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
+            style={{ padding: '20px' }}
+          >
+            <div style={{ color: 'var(--gold)', marginBottom: '16px' }}><Cpu size={24} /></div>
             <div className="ai-areas-slide">
-
-              <h1>Areas we can use AI</h1>
-
+              <h1 style={{ fontSize: '22px', marginBottom: '12px' }}>Areas we can use AI</h1>
               <div className="ai-areas-content">
-                <ul>
-                  <li>AI chatbots for FAQs &amp; onboarding</li>
-                  <li>Predictive analytics for churn &amp; SIP stoppage</li>
-                  <li>Sentiment analysis on calls &amp; messages</li>
+                <ul style={{ fontSize: '18px' }}>
+                  <li>AI chatbots for FAQs & onboarding</li>
+                  <li>Predictive analytics for churn & SIP stoppage</li>
+                  <li>Sentiment analysis on calls & messages</li>
                   <li>Quality assurance CS survey</li>
                   <li>CRM Optimization</li>
-
-                  <li>
-                    Automate routine tasks.
-                    <ul>
-                      <li>Portfolio review</li>
-                      <li>AUM Journey</li>
-                      <li>Capital gain statement</li>
-                      <li>Whatsapp connect</li>
-                      <li>Customer Profiling</li>
-                      <li>Communication with clients</li>
-                    </ul>
-                  </li>
+                  <li style={{ marginTop: '12px', color: 'var(--gold)', fontWeight: 800 }}>Automate routine tasks:</li>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4px', marginLeft: '12px' }}>
+                    {['Portfolio review', 'AUM Journey', 'Capital gain statement', 'Whatsapp connect', 'Customer Profiling', 'Communication with clients'].map(task => (
+                      <div key={task} style={{ fontSize: '14px', color: '#64748B', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold)' }}></div>
+                        {task}
+                      </div>
+                    ))}
+                  </div>
                 </ul>
               </div>
-
             </div>
-          </>
-        </motion.div>
-        <motion.div className="card" {...fadeIn}>
-          <div style={{ color: 'var(--gold)', marginBottom: '15px' }}><MessageSquare size={32} /></div>
-          <h3>GenAI Opportunities</h3>
-          <>
+          </motion.div>
+
+          <motion.div
+            className="standard-card"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
+            style={{ padding: '20px' }}
+          >
+            <div style={{ color: 'var(--gold)', marginBottom: '16px' }}><MessageSquare size={24} /></div>
             <div className="genai-opportunities-slide">
-
-              <div className="slide-header">
-
-                <div className="decorative-blocks">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-
-                <h1>Generative AI Opportunities</h1>
-
-              </div>
-
+              <h1 style={{ fontSize: '22px', marginBottom: '12px' }}>Generative AI Opportunities</h1>
               <div className="genai-content">
-                <ul>
+                <ul style={{ fontSize: '16px' }}>
                   <li>Investor communication drafts</li>
                   <li>RM/CS call summaries</li>
                   <li>Knowledge base creation</li>
-                  <li>Training &amp; onboarding content</li>
+                  <li>Training & onboarding content</li>
                 </ul>
               </div>
-
             </div>
-          </>
-        </motion.div>
-        <motion.div className="card" {...fadeIn}>
-          <>
+          </motion.div>
+
+          <motion.div
+            className="standard-card"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
+            style={{ padding: '20px' }}
+          >
+            <div style={{ color: 'var(--gold)', marginBottom: '16px' }}><TrendingUp size={24} /></div>
             <div className="kpi-slide">
-
-              <div className="slide-header">
-
-                <div className="decorative-blocks">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-
-                <h1>KPIs to Track ROI</h1>
-
-              </div>
-
+              <h1 style={{ fontSize: '22px', marginBottom: '12px' }}>KPIs to Track ROI</h1>
               <div className="kpi-content">
-                <ul>
+                <ul style={{ fontSize: '16px' }}>
                   <li>Customer Satisfaction</li>
                   <li>First Contact Resolution</li>
                   <li>Self-service adoption</li>
-                  <li>Churn rate &amp; SIP persistence</li>
+                  <li>Churn rate & SIP persistence</li>
                   <li>Revenue per advisor</li>
                 </ul>
               </div>
-
             </div>
-          </>
+          </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
 
-
-      <motion.div>
-        <>
-          <div className="risks-guardrails-slide">
-
-            <div className="slide-header">
-
-              <div className="decorative-blocks">
-                <span></span>
-                <span></span>
-              </div>
-
-              <h1>Risks &amp; Guardrails</h1>
-
+      <motion.div className="slide-section" {...slideIn} style={{ padding: '30px' }}>
+        <div className="risks-guardrails-slide" style={{ padding: '30px', borderRadius: '24px' }}>
+          <div className="slide-header">
+            <div className="decorative-blocks">
+              <span></span>
+              <span></span>
             </div>
-
-            <div className="risks-content">
-              <ul>
-                <li>Maintain human touch for advice</li>
-                <li>Data privacy &amp; SEBI compliance</li>
-                <li>Strong change management</li>
-              </ul>
-            </div>
-
+            <h1 style={{ fontSize: '32px' }}>Risks & Guardrails</h1>
           </div>
-        </>
+
+          <div className="risks-content" style={{ display: 'flex', justifyContent: 'center' }}>
+            <motion.ul
+              style={{ listStyle: 'none', padding: 0, display: 'flex', gap: '16px' }}
+              variants={{
+                visible: { transition: { staggerChildren: 0.1 } }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {[
+                { t: 'Human Touch', d: 'Maintain for advice' },
+                { t: 'Compliance', d: 'Data privacy & SEBI' },
+                { t: 'Change Management', d: 'Strong implementation' }
+              ].map(risk => (
+                <motion.li
+                  key={risk.t}
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.9 },
+                    visible: { opacity: 1, scale: 1 }
+                  }}
+                  whileHover={{ y: -5, background: '#fff' }}
+                  style={{
+                    padding: '20px',
+                    background: '#F8FAFC',
+                    borderRadius: '20px',
+                    border: '1px solid #E2E8F0',
+                    textAlign: 'center',
+                    minWidth: '200px',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  <div style={{ color: 'var(--gold)', fontWeight: 900, fontSize: '11px', marginBottom: '6px', textTransform: 'uppercase' }}>{risk.t}</div>
+                  <div style={{ fontSize: '16px', fontWeight: 700, color: 'var(--navy)' }}>{risk.d}</div>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </div>
+        </div>
       </motion.div>
 
       {/* SECTION 8: ROADMAP & STRATEGY */}
-      <motion.div className="card mb" {...fadeIn}>
-        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-          <div className="label">The Implementation</div>
-          <h2 className="section-title">Recommended Roadmap</h2>
+      <motion.div
+        className="slide-section"
+        {...slideIn}
+      >
+        <div className="slide-header">
+          <div className="slide-label">The Implementation</div>
+          <h1 className="slide-title">Recommended Roadmap</h1>
         </div>
-        <div className="roadmap-row">
+
+        <motion.div
+          className="roadmap-row"
+          variants={{
+            visible: { transition: { staggerChildren: 0.2 } }
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          style={{ gap: '10px' }}
+        >
           {[
             { p: '1', t: 'Map', d: 'Investor Journey Mapping', c: '#4A7FD4' },
             { p: '2', t: 'Integrate', d: 'Full CRM Integration', c: '#6B4FA0' },
@@ -671,229 +873,328 @@ const Session03: React.FC = () => {
             { p: '4', t: 'Scale', d: 'Measure, Refine & Impact', c: '#2E7D5B' }
           ].map((item, idx) => (
             <React.Fragment key={item.p}>
-              <div className="rr-phase" style={{ background: item.c, flex: '1' }}>
-                <div className="rr-ph">Phase {item.p}</div>
-                <div className="rr-t">{item.t}</div>
-                <div className="rr-d">{item.d}</div>
-              </div>
-              {idx < 3 && <div className="rr-arr" style={{ background: 'transparent' }}><ArrowRight color="var(--navy)" /></div>}
+              <motion.div
+                className="rr-phase"
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+                whileHover={{ scale: 1.05, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}
+                style={{ background: item.c, flex: '1', padding: '15px', borderRadius: '16px' }}
+              >
+                <div className="rr-ph" style={{ fontSize: '10px' }}>Phase {item.p}</div>
+                <div className="rr-t" style={{ fontSize: '18px' }}>{item.t}</div>
+                <div className="rr-d" style={{ fontSize: '12px' }}>{item.d}</div>
+              </motion.div>
+              {idx < 3 && <div className="rr-arr" style={{ background: 'transparent', display: 'flex', alignItems: 'center' }}><ArrowRight color="var(--navy)" size={16} /></div>}
             </React.Fragment>
           ))}
-        </div>
-        <div className="quote-block" style={{ marginTop: '40px', background: 'var(--navy)' }}>
+        </motion.div>
+
+        <div className="quote-block" style={{ marginTop: '60px', background: 'var(--navy)' }}>
           <div className="q-text">"AI is not replacing staff. AI is amplifying trust, scale, and consistency."</div>
         </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <div className="why-10000-slide">
-
-            <div className="slide-header">
-
-              <div className="decorative-blocks">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <h1>Why ₹10,000 Crores Matters</h1>
-
+      {/* SECTION 10,000 CR MATTERS */}
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="why-10000-slide" style={{ padding: '30px', borderRadius: '24px' }}>
+          <div className="slide-header">
+            <div className="decorative-blocks">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-
-            <div className="why-content">
-              <ul>
-                <li>
-                  Market positioning &amp; credibility lift
-                  <ul>
-                    <li>Stronger AMC negotiation power</li>
-                    <li>Operating leverage expansion</li>
-                    <li>Enterprise valuation multiple re-rating</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-
+            <h1 className="slide-title" style={{ fontSize: '32px' }}>Why ₹10,000 Crores Matters</h1>
           </div>
-        </>
+
+          <div className="why-content">
+            <motion.div
+              style={{ listStyle: 'none', padding: 0 }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { transition: { staggerChildren: 0.1 } }
+              }}
+            >
+              <div style={{ fontSize: '24px', fontWeight: 800, color: 'var(--navy)', marginBottom: '16px' }}>Market positioning & credibility lift</div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
+                {[
+                  'Stronger AMC negotiation power',
+                  'Operating leverage expansion',
+                  'Enterprise valuation multiple re-rating'
+                ].map(point => (
+                  <motion.div
+                    key={point}
+                    variants={{
+                      hidden: { opacity: 0, y: 10 },
+                      visible: { opacity: 1, y: 0 }
+                    }}
+                    whileHover={{ scale: 1.05, background: '#fff' }}
+                    style={{ padding: '16px', background: '#F8FAFC', borderRadius: '16px', border: '1px solid #E2E8F0', fontWeight: 700, color: '#475569', textAlign: 'center', fontSize: '14px', transition: 'all 0.2s ease' }}
+                  >
+                    {point}
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <div className="sns-commitment-slide">
-
-            <div className="slide-header">
-
-              <div className="decorative-blocks">
-                <span></span>
-              </div>
-
-              <h1>SNS Commitment</h1>
-
-            </div>
-
-            <div className="commitment-content">
-              <ul>
-                <li>
-                  ₹10,000 Crores is not an aspiration.
-                  <ul>
-                    <li>Build for ₹10,000</li>
-                    <li>It is a structured outcome of disciplined execution.</li>
-                    <li>Scale with performance.</li>
-                    <li>Scale is not a number it is a “Standard of thinking”</li>
-                    <li>Lead with transformation.</li>
-                    <li>2<sup>nd</sup> line leadership creation</li>
-                    <li>Zero single point dependency in client management &amp; servicing</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-
+      <motion.div className="slide-section dark" {...slideIn}>
+        <div className="sns-commitment-slide" style={{ padding: '30px', borderRadius: '24px' }}>
+          <div className="slide-header">
+            <div className="slide-label">The Vision</div>
+            <h1 className="slide-title">SNS Commitment</h1>
           </div>
-        </>
-      </motion.div>
-      <motion.div>
-        <>
-          <div className="execution-strategy-slide">
 
-            <div className="slide-header">
+          <div className="commitment-content">
+            <motion.div
+              style={{ background: 'rgba(212, 175, 55, 0.1)', padding: '30px', borderRadius: '24px', border: '1px solid rgba(212,175,55,0.2)' }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+            >
+              <h2 style={{ fontSize: '28px', color: 'var(--gold)', marginBottom: '24px', textAlign: 'center' }}>₹10,000 Crores is not an aspiration.</h2>
 
-              <div className="decorative-blocks">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <h1>Execution Strategy</h1>
-
-            </div>
-
-            <div className="execution-content">
-              <ul>
-                <li>Data Preparation &amp; Depth Review</li>
-                <li>Standardized Portfolio Formats</li>
-                <li>100% CRM Adoption &amp; More</li>
-                <li>AI Tool Integration Across Org</li>
-                <li>100% ICMM Mapping</li>
-              </ul>
-            </div>
-
+              <motion.div
+                style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}
+                variants={{
+                  visible: { transition: { staggerChildren: 0.05 } }
+                }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                {[
+                  'Build for ₹10,000',
+                  'It is a structured outcome of disciplined execution.',
+                  'Scale with performance.',
+                  'Scale is not a number it is a “Standard of thinking”',
+                  'Lead with transformation.',
+                  '2nd line leadership creation',
+                  'Zero single point dependency in client management & servicing'
+                ].map(point => (
+                  <motion.div
+                    key={point}
+                    variants={{
+                      hidden: { opacity: 0, x: -10 },
+                      visible: { opacity: 1, x: 0 }
+                    }}
+                    whileHover={{ x: 5, color: 'var(--gold)' }}
+                    style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '15px', fontWeight: 600, color: '#fff', transition: 'all 0.2s ease' }}
+                  >
+                    <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold)' }}></div>
+                    {point}
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
           </div>
-        </>
+        </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <div className="execution-excellence-slide">
-
-            <div className="slide-header">
-
-              <div className="decorative-blocks">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <h1>Execution to Excellence</h1>
-
-            </div>
-
-            <div className="execution-content">
-              <ul>
-                <li>Data preparation</li>
-                <li>90% Client review in depth</li>
-                <li>Standardized portfolio review format across team.</li>
-                <li>100% CRM adoption and MORE</li>
-                <li>AI Tool integration in all process across the organization.</li>
-                <li>Market conviction</li>
-                <li>Performance is about standards nor an activity</li>
-                <li>100% clients mapped to Ideal Client Management Model</li>
-              </ul>
-            </div>
-
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="execution-strategy-slide" style={{ padding: '30px', borderRadius: '24px' }}>
+          <div className="slide-header">
+            <div className="slide-label">Path to Excellence</div>
+            <h1 className="slide-title">Execution Strategy</h1>
           </div>
-        </>
+
+          <motion.div
+            className="execution-content"
+            style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '12px' }}
+            variants={{
+              visible: { transition: { staggerChildren: 0.1 } }
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {[
+              { t: 'Data', d: 'Data Preparation & Depth Review' },
+              { t: 'Standard', d: 'Standardized Portfolio Formats' },
+              { t: 'CRM', d: '100% CRM Adoption & More' },
+              { t: 'AI', d: 'AI Tool Integration Across Org' },
+              { t: 'ICMM', d: '100% ICMM Mapping' }
+            ].map(item => (
+              <motion.div
+                key={item.t}
+                variants={{
+                  hidden: { opacity: 0, y: 15 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+                whileHover={{ y: -5, background: '#fff' }}
+                style={{ padding: '16px', background: '#F8FAFC', borderRadius: '16px', border: '1px solid #E2E8F0', textAlign: 'center', transition: 'all 0.2s ease' }}
+              >
+                <div style={{ color: 'var(--gold)', fontWeight: 900, fontSize: '12px', marginBottom: '8px', textTransform: 'uppercase' }}>{item.t}</div>
+                <div style={{ fontSize: '14px', fontWeight: 700, color: 'var(--navy)' }}>{item.d}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <div className="outcome-ownership-slide">
-
-            <h1>Outcome Ownership</h1>
-
-            <div className="outcome-columns">
-
-              <div className="outcome-left">
-                <ul>
-                  <li>
-                    Outcome to be owned
-                    <ul>
-                      <li>AUM Growth</li>
-                      <li>Net Inflows per RM</li>
-                      <li>Average ticket size growth</li>
-                      <li>Intense new client acquisition</li>
-                      <li>Client Retention</li>
-                      <li>SIP Persistency</li>
-                      <li>Focused SIP Growth</li>
-                      <li>Referral Velocity</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="outcome-right">
-                <ul>
-                  <li>
-                    What we control
-                    <ul>
-                      <li>Preparation</li>
-                      <li>Communication</li>
-                      <li>Conviction</li>
-                      <li>Follow-up</li>
-                      <li>Closure</li>
-                      <li>Build capabilities</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="execution-excellence-slide" style={{ padding: '30px', borderRadius: '24px' }}>
+          <div className="slide-header">
+            <div className="slide-label">The Standard</div>
+            <h1 className="slide-title">Execution to Excellence</h1>
           </div>
-        </>
+
+          <div className="execution-content">
+            <motion.div
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}
+              variants={{
+                visible: { transition: { staggerChildren: 0.05 } }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {[
+                'Data preparation',
+                '90% Client review in depth',
+                'Standardized portfolio review format across team.',
+                '100% CRM adoption and MORE',
+                'AI Tool integration in all process across the organization.',
+                'Market conviction',
+                'Performance is about standards nor an activity',
+                '100% clients mapped to Ideal Client Management Model'
+              ].map(point => (
+                <motion.div
+                  key={point}
+                  variants={{
+                    hidden: { opacity: 0, x: -10 },
+                    visible: { opacity: 1, x: 0 }
+                  }}
+                  whileHover={{ x: 5, background: 'white' }}
+                  style={{
+                    padding: '14px',
+                    background: '#F8FAFC',
+                    borderRadius: '12px',
+                    borderLeft: '4px solid var(--gold)',
+                    fontSize: '15px',
+                    fontWeight: 600,
+                    color: 'var(--navy)',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  {point}
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <div className="milestone-trajectory-slide">
-
-            <div className="slide-header">
-
-              <div className="decorative-blocks">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <h1>Milestone Trajectory</h1>
-
-            </div>
-
-            <div className="milestone-content">
-              <ul>
-                <li>FY26: ₹3,000 Cr</li>
-                <li>FY27: ₹4,500 Cr</li>
-                <li>FY28: ₹6,000 Cr</li>
-                <li>FY29: ₹7,500 Cr</li>
-                <li>FY30: ₹9,000 Cr</li>
-                <li>FY31: ₹10,000 Cr</li>
-              </ul>
-            </div>
-
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="outcome-ownership-slide" style={{ padding: '30px', borderRadius: '24px' }}>
+          <div className="slide-header">
+            <div className="slide-label">The Responsibility</div>
+            <h1 className="slide-title">Outcome Ownership</h1>
           </div>
-        </>
+
+          <div className="outcome-columns" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+            <motion.div
+              className="outcome-column"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              style={{ padding: '24px', background: '#F8FAFC', borderRadius: '24px' }}
+            >
+              <h3 style={{ fontSize: '20px', marginBottom: '16px', color: 'var(--navy)' }}>Outcome to be owned</h3>
+              <ul style={{ listStyle: 'none', padding: 0 }}>
+                {['Total AUM Growth', 'SIP persistence & growth', 'Client retention', 'Customer satisfaction', 'Operating efficiency'].map(item => (
+                  <li key={item} style={{ padding: '8px 0', borderBottom: '1px solid #E2E8F0', fontSize: '15px', color: '#475569', fontWeight: 600 }}>{item}</li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              className="outcome-column highlight"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              style={{ padding: '24px', background: 'var(--navy)', color: '#fff', borderRadius: '24px' }}
+            >
+              <h3 style={{ fontSize: '20px', marginBottom: '16px', color: 'var(--gold)' }}>What we control</h3>
+              <ul style={{ listStyle: 'none', padding: 0 }}>
+                {['Our Standards (ICMM)', 'Our Process (CRM)', 'Our Intelligence (AI)', 'Our Discipline (Team)'].map(item => (
+                  <li key={item} style={{ padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)', fontSize: '15px', fontWeight: 600 }}>{item}</li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="milestone-trajectory-slide" style={{ padding: '30px', borderRadius: '24px' }}>
+          <div className="slide-header">
+            <div className="slide-label">The Roadmap</div>
+            <h1 className="slide-title">Milestone Trajectory</h1>
+          </div>
+
+          <div className="milestone-content">
+            <motion.div
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '12px' }}
+              variants={{
+                visible: { transition: { staggerChildren: 0.1 } }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {[
+                { y: 'Mar 24', m: 'Mar 24: CRM audit and Data Preparation - done' },
+                { y: 'Jun 24', m: 'Jun 24: ICMM alignment across 100% clients- ongoing' },
+                { y: 'Sep 24', m: 'Sep 24: AI deployment for automated engagement' },
+                { y: 'Dec 24', m: 'Dec 24: Predictive intelligence scale-up' },
+                { y: 'Mar 25', m: 'Mar 25: ₹10,000 Cr Run-rate Standardized' }
+              ].map(item => (
+                <motion.div
+                  key={item.y}
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.9 },
+                    visible: { opacity: 1, scale: 1 }
+                  }}
+                  whileHover={{ y: -5, boxShadow: '0 15px 35px rgba(0,0,0,0.1)' }}
+                  style={{
+                    padding: '20px 12px',
+                    background: 'white',
+                    borderRadius: '20px',
+                    borderTop: '5px solid var(--gold)',
+                    boxShadow: '0 8px 24px rgba(0,0,0,0.05)',
+                    textAlign: 'center',
+                    transition: 'all 0.3s ease'
+                  }}
+                >
+                  <div style={{ fontSize: '20px', fontWeight: 900, color: 'var(--navy)', marginBottom: '8px' }}>{item.y}</div>
+                  <div style={{ fontSize: '12px', fontWeight: 600, color: '#64748B', lineHeight: '1.4' }}>{item.m}</div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* FINAL CALL TO ACTION */}
+      <motion.div
+        className="slide-section dark"
+        style={{ textAlign: 'center', padding: '120px 40px' }}
+        {...slideIn}
+      >
+        <div className="slide-label" style={{ color: 'var(--gold)' }}>CONCLUSION</div>
+        <h1 className="slide-title" style={{ fontSize: '64px', marginBottom: '32px' }}>One Delivery. One Success.</h1>
+        <p style={{ fontSize: '24px', maxWidth: '800px', margin: '0 auto 48px', color: 'rgba(255,255,255,0.7)', fontStyle: 'italic' }}>
+          "Success is not a destination. It is the quality of the journey we provide to every investor."
+        </p>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', padding: '20px 48px', background: 'var(--gold)', color: 'var(--navy)', borderRadius: '100px', fontWeight: 900, fontSize: '20px', cursor: 'pointer' }}>
+          Let's Transform Together <ArrowRight />
+        </div>
       </motion.div>
       <div style={{ height: '100px' }}></div>
       <style dangerouslySetInnerHTML={{
