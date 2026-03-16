@@ -4,7 +4,6 @@ import {
   Users,
   Award,
   Search,
-  Target,
   MessageSquare,
   TrendingUp as TrendingIcon,
   XCircle,
