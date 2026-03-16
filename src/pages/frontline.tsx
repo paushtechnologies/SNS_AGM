@@ -9,11 +9,20 @@ const FrontlineConnect: React.FC = () => {
     }, []);
 
     const slideIn = {
-        initial: { opacity: 0, y: 50 },
-        whileInView: { opacity: 1, y: 0 },
+        initial: { opacity: 0, scale: 0.9 },
+        whileInView: { opacity: 1, scale: 1 },
         viewport: { once: true },
-        transition: { duration: 0.8, ease: "easeOut" as any }
+        transition: { duration: 0.6, ease: "easeOut" as any }
     };
+
+    const cardColors = [
+        '#6366f1', // Indigo
+        '#ec4899', // Pink
+        '#8b5cf6', // Violet
+        '#10b981', // Emerald
+        '#f59e0b', // Amber
+        '#3b82f6'  // Blue
+    ];
 
     const participants = [
         "Neha Shah", "Jignesh Panani", "Samir Mehta", "Sachin Palekar",
@@ -102,23 +111,53 @@ const FrontlineConnect: React.FC = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    {participants.map((name) => (
-                        <motion.div 
-                            key={name}
-                            className="participant-card"
-                            variants={{
-                                hidden: { opacity: 0, scale: 0.9, y: 10 },
-                                visible: { opacity: 1, scale: 1, y: 0 }
-                            }}
-                            whileHover={{ scale: 1.05, background: '#F8FAFC', boxShadow: '0 10px 20px rgba(0,0,0,0.05)' }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                        >
-                            <div className="avatar-circle" style={{ background: 'var(--navy)', color: '#fff' }}>
-                                {name.charAt(0)}
-                            </div>
-                            <div className="participant-name">{name}</div>
-                        </motion.div>
-                    ))}
+                    {participants.map((name, index) => {
+                        const accentColor = cardColors[index % cardColors.length];
+                        return (
+                            <motion.div 
+                                key={name}
+                                className="participant-card creative"
+                                variants={{
+                                    hidden: { opacity: 0, scale: 0.8, rotate: -2 },
+                                    visible: { 
+                                        opacity: 1, 
+                                        scale: 1, 
+                                        rotate: 0,
+                                        transition: { type: "spring", damping: 12, stiffness: 100 }
+                                    }
+                                }}
+                                whileHover={{ 
+                                    scale: 1.05, 
+                                    rotate: 1,
+                                    zIndex: 10
+                                }}
+                                animate={{
+                                    y: [0, -4, 0],
+                                    transition: {
+                                        duration: 4,
+                                        repeat: Infinity,
+                                        delay: index * 0.2,
+                                        ease: "easeInOut"
+                                    }
+                                }}
+                                style={{
+                                    '--accent': accentColor,
+                                    borderColor: `${accentColor}30`
+                                } as any}
+                            >
+                                <div className="avatar-box" style={{ background: `linear-gradient(135deg, ${accentColor}, ${accentColor}dd)` }}>
+                                    {index + 1}
+                                </div>
+                                
+                                <div className="participant-info">
+                                    <div className="participant-name">{name}</div>
+                                    <div className="participant-role">Relationship Manager</div>
+                                </div>
+                                
+                                <div className="card-glow" style={{ background: `radial-gradient(circle at center, ${accentColor}20, transparent 70%)` }}></div>
+                            </motion.div>
+                        );
+                    })}
                 </motion.div>
             </motion.div>
 

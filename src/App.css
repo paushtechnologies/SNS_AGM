@@ -89,6 +89,12 @@ button {
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
   height: 96px;
   box-sizing: border-box;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scrolled .header {
+  height: 70px;
+  padding: 4px 20px;
 }
 
 .header-brand {
@@ -101,6 +107,11 @@ button {
   height: 60px;
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  transition: all 0.4s ease;
+}
+
+.scrolled .header-brand img {
+  height: 44px;
 }
 
 .header-name {
@@ -108,6 +119,11 @@ button {
   font-size: 28px;
   font-family: 'Playfair Display', serif;
   font-weight: 800;
+  transition: all 0.4s ease;
+}
+
+.scrolled .header-name {
+  font-size: 22px;
 }
 
 .header-tag {
@@ -117,26 +133,60 @@ button {
   margin-top: 2px;
   font-weight: 700;
   opacity: 0.8;
+  transition: all 0.4s ease;
 }
 
-.header-badge {
-  background: var(--navy);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 8px 22px;
-  border-radius: 20px;
-  letter-spacing: .8px;
-  text-transform: uppercase;
-  box-shadow: 0 4px 15px rgba(26, 39, 68, .3);
+.scrolled .header-tag {
+  font-size: 13px;
+  margin-top: 0px;
 }
 
-.header-sub {
-  color: var(--navy);
-  font-size: 19px;
-  margin-top: 5px;
-  text-align: right;
-  font-weight: 700;
+.header-logo {
+  height: 60px;
+  width: auto;
+  transition: all 0.4s ease;
+}
+
+.scrolled .header-logo {
+  height: 40px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  transition: gap 0.4s ease;
+}
+
+.scrolled .header-right {
+  gap: 15px;
+}
+
+.header-abpm-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  transition: all 0.4s ease;
+}
+
+.scrolled .header-abpm-text {
+  font-size: 16px;
+}
+
+.header-handshake {
+  height: 80px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  border: 2px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.4s ease;
+}
+
+.scrolled .header-handshake {
+  height: 50px;
 }
 
 /* ===================== NAV ===================== */
@@ -158,6 +208,13 @@ button {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
   height: 56px;
   box-sizing: border-box;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scrolled .nav {
+  top: 70px;
+  height: 48px;
+  padding: 4px 20px;
 }
 
 .nav::-webkit-scrollbar {
@@ -172,8 +229,13 @@ button {
   color: var(--text2);
   font-weight: 500;
   font-size: 18px;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   white-space: nowrap;
+}
+
+.scrolled .nav-btn {
+  font-size: 16px;
+  padding: 6px 14px;
 }
 
 .nav-btn:hover {
@@ -197,9 +259,14 @@ button {
 
 /* ===================== MAIN ===================== */
 .main {
-  padding: 190px 15px 30px;
+  padding: 180px 15px 30px;
   max-width: 1400px;
   margin: 0 auto;
+  transition: padding 0.4s ease;
+}
+
+.scrolled .main {
+  padding-top: 140px;
 }
 
 .page.active {

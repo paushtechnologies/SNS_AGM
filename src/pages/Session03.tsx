@@ -37,28 +37,29 @@ const Session03: React.FC = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         style={{
-          background: 'linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%)',
-          borderTop: 'none'
+          background: 'linear-gradient(90deg, #1e1b4b 0%, #0f172a 100%)',
+          borderTop: 'none',
+          color: '#ffffff'
         }}
       >
         {/* Layered Decorative Elements */}
-        <div style={{ position: 'absolute', top: '-20%', right: '-10%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(74,127,212,0.15) 0%, transparent 70%)', filter: 'blur(60px)', pointerEvents: 'none', zIndex: 0 }}></div>
+        <div style={{ position: 'absolute', top: '-20%', right: '-10%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(220,38,38,0.1) 0%, transparent 70%)', filter: 'blur(60px)', pointerEvents: 'none', zIndex: 0 }}></div>
         <div style={{ position: 'absolute', bottom: '-20%', left: '-10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none', zIndex: 0 }}></div>
 
-        <div style={{ position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px' }}>
+        <div style={{ position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '20px' }}>
           <div style={{ flex: '1', minWidth: '550px' }}>
-            <div className="slide-label" style={{ background: 'rgba(52, 211, 153, 0.15)', color: '#34D399' }}>SESSION 04 • THE TRANSFORMATION</div>
-            <h1 className="slide-title">
-              Align & <span style={{ color: 'var(--gold)', position: 'relative' }}>
+            <div className="slide-label" style={{ background: 'rgba(255,255,255,0.08)', color: 'var(--gold-light)', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '12px' }}>SESSION 04 • THE TRANSFORMATION</div>
+            <h1 className="slide-title" style={{ fontSize: '36px', marginBottom: '12px' }}>
+              Align & <span style={{ color: '#ffffff', position: 'relative' }}>
                 Accelerate.
-                <div style={{ position: 'absolute', bottom: '5px', left: 0, width: '100%', height: '4px', background: 'var(--gold)', borderRadius: '2px', opacity: 0.5 }}></div>
+                <div style={{ position: 'absolute', bottom: '5px', left: 0, width: '100%', height: '4px', background: 'var(--gold)', borderRadius: '2px', opacity: 0.8 }}></div>
               </span>
             </h1>
-            <p className="slide-subtitle" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '24px' }}>
+            <p className="slide-subtitle" style={{ color: '#ffffff', fontSize: '18px', opacity: 0.95, marginBottom: '16px' }}>
               One Team, One Standard, One Model & One Delivery.
             </p>
 
-            <h2 style={{ fontSize: '28px', color: '#fff', marginBottom: '24px', fontWeight: 800 }}>What are we trying to achieve?</h2>
+            <h2 style={{ fontSize: '20px', color: '#fff', marginBottom: '12px', fontWeight: 800 }}>What are we trying to achieve?</h2>
 
             <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
               {['Inspire', 'Improve', 'Impact'].map(item => (
@@ -89,17 +90,17 @@ const Session03: React.FC = () => {
               }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               style={{
-                padding: '50px',
+                padding: '30px',
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%)',
                 borderRadius: '50%',
                 backdropFilter: 'blur(30px)',
                 border: '2px solid rgba(212,175,55,0.3)',
-                width: '320px',
-                height: '320px',
+                width: '240px',
+                height: '240px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '120px',
+                fontSize: '100px',
                 boxShadow: '0 0 40px rgba(212,175,55,0.15), inset 0 0 20px rgba(255,255,255,0.05)'
               }}
             >
@@ -183,15 +184,13 @@ const Session03: React.FC = () => {
       </motion.div>
 
       <motion.div className="slide-section dark" {...slideIn} style={{ padding: '30px' }}>
-        <div className="tech-slide" style={{ padding: '30px', borderRadius: '24px' }}>
-          <div className="tech-header">
+        <div className="tech-slide" style={{ padding: '20px', borderRadius: '24px' }}>
+          <div className="tech-header" style={{ marginBottom: '16px' }}>
             <div className="decorative-blocks">
               <span></span>
               <span></span>
-              <span></span>
-              <span></span>
             </div>
-            <motion.h1 style={{ fontSize: '32px' }}>How to use Tech, Data & our Team to:</motion.h1>
+            <motion.h1 style={{ fontSize: '28px' }}>How to use Tech, Data & our Team to:</motion.h1>
           </div>
 
           <motion.ul
@@ -240,10 +239,10 @@ const Session03: React.FC = () => {
         className="slide-section"
         {...slideIn}
       >
-        <div className="slide-header">
-          <div className="slide-label">FOUNDATION ENGINE</div>
-          <h1 className="slide-title">CRM Optimization</h1>
-          <p className="slide-subtitle">
+        <div className="slide-header" style={{ marginBottom: '20px' }}>
+          <div className="slide-label" style={{ marginBottom: '12px' }}>FOUNDATION ENGINE</div>
+          <h1 className="slide-title" style={{ fontSize: '32px', marginBottom: '8px' }}>CRM Optimization</h1>
+          <p className="slide-subtitle" style={{ fontSize: '18px' }}>
             Activating the engine of growth through 100% CRM focus and data-driven discipline.
           </p>
         </div>
@@ -263,25 +262,33 @@ const Session03: React.FC = () => {
                 title: 'System Hardening',
                 icon: <Shield size={28} />,
                 items: ['Data Audit & Feedback', 'Risk Profiling', 'Client Auto-Categorization'],
-                color: '#1965e1'
+                color: '#1965e1',
+                pastelBg: '#E1EBFF',
+                pastelBorder: '#C2D6FF'
               },
               {
                 title: 'Strategic Intel',
                 icon: <BarChart3 size={28} />,
                 items: ['CEO Dashboard', 'Call Recording & Analysis'],
-                color: '#23bbdd'
+                color: '#0891b2',
+                pastelBg: '#DFF6F9',
+                pastelBorder: '#BADEF0'
               },
               {
                 title: 'Engine of Growth',
                 icon: <TrendingUp size={28} />,
                 items: ['Referral Management', 'Dormant Client List', 'GIC Renewal Feed'],
-                color: '#D4AF37'
+                color: '#b45309',
+                pastelBg: '#FFF4D1',
+                pastelBorder: '#FDE68A'
               },
               {
                 title: 'Workflow Dynamics',
                 icon: <PieChart size={28} />,
                 items: ['Action Plan Integration', 'Survey Integration', 'Daily Pulse'],
-                color: '#6f42c2'
+                color: '#6d28d9',
+                pastelBg: '#EFEBFF',
+                pastelBorder: '#DDD6FE'
               }
             ].map((cat, idx) => (
               <motion.div
@@ -292,14 +299,15 @@ const Session03: React.FC = () => {
                 }}
                 whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(0,0,0,0.15)' }}
                 style={{
-                  background: `${cat.color}15`,
+                  background: cat.pastelBg,
                   borderRadius: '24px',
-                  padding: '24px 20px',
-                  border: `2px solid ${cat.color}30`,
+                  padding: '20px 28px',
+                  border: `2px solid ${cat.pastelBorder}`,
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '16px',
-                  transition: 'all 0.3s ease'
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 12px 20px -5px rgba(0, 0, 0, 0.08)'
                 }}
               >
                 <div style={{
@@ -316,15 +324,15 @@ const Session03: React.FC = () => {
                   {React.cloneElement(cat.icon as React.ReactElement<any>, { size: 24 })}
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '16px', fontWeight: 900, color: 'var(--navy)', marginBottom: '12px', letterSpacing: '-0.5px' }}>{cat.title}</h4>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <h4 style={{ fontSize: '24px', fontWeight: 900, color: 'var(--navy)', marginBottom: '18px', letterSpacing: '-0.5px' }}>{cat.title}</h4>
+                  <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                     {cat.items.map(item => (
-                      <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', fontSize: '18px', color: 'var(--navy)', fontWeight: 600, lineHeight: '1.4', opacity: 0.9 }}>
-                        <div style={{ color: cat.color, marginTop: '2px' }}><CheckCircle2 size={16} strokeWidth={3} /></div>
+                      <li key={item} style={{ fontSize: '18px', color: '#334155', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <div style={{ width: '8px', height: '8px', background: cat.color, borderRadius: '50%', flexShrink: 0 }}></div>
                         {item}
-                      </div>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </motion.div>
             ))}
@@ -337,9 +345,9 @@ const Session03: React.FC = () => {
         className="slide-section"
         {...slideIn}
       >
-        <div className="slide-header">
-          <div className="slide-label">Why AI Matters Now</div>
-          <h1 className="slide-title">It's No Longer Optional.</h1>
+        <div className="slide-header" style={{ marginBottom: '20px' }}>
+          <div className="slide-label" style={{ marginBottom: '12px' }}>Why AI Matters Now</div>
+          <h1 className="slide-title" style={{ fontSize: '32px', marginBottom: '8px' }}>It's No Longer Optional.</h1>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
@@ -473,10 +481,10 @@ const Session03: React.FC = () => {
         className="slide-section"
         {...slideIn}
       >
-        <div className="slide-header">
-          <div className="slide-label">Our Current Reality</div>
-          <h1 className="slide-title">We Are Sitting on Powerful Data</h1>
-          <p className="slide-subtitle">Today we report data. Tomorrow we must activate intelligence.</p>
+        <div className="slide-header" style={{ marginBottom: '20px' }}>
+          <div className="slide-label" style={{ marginBottom: '12px' }}>Our Current Reality</div>
+          <h1 className="slide-title" style={{ fontSize: '32px', marginBottom: '8px' }}>We Are Sitting on Powerful Data</h1>
+          <p className="slide-subtitle" style={{ fontSize: '18px' }}>Today we report data. Tomorrow we must activate intelligence.</p>
         </div>
 
         <motion.div
@@ -484,7 +492,7 @@ const Session03: React.FC = () => {
             display: 'grid',
             gridTemplateColumns: 'repeat(5, 1fr)',
             gap: '12px',
-            marginBottom: '40px'
+            marginBottom: '20px'
           }}
           variants={{
             visible: { transition: { staggerChildren: 0.1 } }
@@ -509,13 +517,13 @@ const Session03: React.FC = () => {
               whileHover={{ y: -10, rotate: i % 2 === 0 ? 2 : -2 }}
               style={{
                 background: '#F8FAFC',
-                padding: '30px 15px',
+                padding: '16px 12px',
                 borderRadius: '20px',
                 borderBottom: '6px solid var(--gold)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
-                minHeight: '180px',
+                minHeight: '130px',
                 textAlign: 'center',
                 boxShadow: '0 8px 24px rgba(0,0,0,0.03)',
                 transition: 'transform 0.3s ease'
@@ -549,10 +557,10 @@ const Session03: React.FC = () => {
         className="slide-section"
         {...slideIn}
       >
-        <div className="slide-header">
-          <div className="slide-label">Relationship 2.0</div>
-          <h1 className="slide-title">Human + AI</h1>
-          <p className="slide-subtitle" style={{ color: 'var(--gold)', fontWeight: 800 }}>
+        <div className="slide-header" style={{ marginBottom: '20px' }}>
+          <div className="slide-label" style={{ marginBottom: '12px' }}>Relationship 2.0</div>
+          <h1 className="slide-title" style={{ fontSize: '32px', marginBottom: '8px' }}>Human + AI</h1>
+          <p className="slide-subtitle" style={{ color: 'var(--gold)', fontWeight: 800, fontSize: '18px' }}>
             AI Will Upgrade — Not Replace — Our Team
           </p>
         </div>
@@ -650,8 +658,9 @@ const Session03: React.FC = () => {
         </div>
       </motion.div>
 
-      <motion.div className="slide-section" {...slideIn} style={{ padding: '30px' }}>
-        <div className="investor-benefits-slide" style={{ padding: '30px', borderRadius: '24px' }}>
+      {/* NEW SECTION 1: Key Benefits for Business */}
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="business-benefits-slide" style={{ padding: '30px', borderRadius: '24px' }}>
           <div className="slide-header">
             <div className="decorative-blocks">
               <span></span>
@@ -659,7 +668,49 @@ const Session03: React.FC = () => {
               <span></span>
               <span></span>
             </div>
-            <h1 style={{ fontSize: '32px' }}>Key Benefits for Investors</h1>
+            <h1 className="slide-title">Key Benefits for Business</h1>
+          </div>
+
+          <motion.div
+            className="benefits-grid"
+            variants={{
+              visible: { transition: { staggerChildren: 0.1 } }
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {[
+              { t: 'Lower servicing cost', i: <Database size={32} /> },
+              { t: 'Higher RM productivity', i: <TrendingUp size={32} /> },
+              { t: 'Better retention & lower churn', i: <Users size={32} /> },
+              { t: 'Scalable growth without headcount increase', i: <Zap size={32} /> }
+            ].map((benefit, idx) => (
+              <motion.div
+                key={idx}
+                className="benefit-card business"
+                variants={{
+                  hidden: { opacity: 0, scale: 0.9 },
+                  visible: { opacity: 1, scale: 1 }
+                }}
+                whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
+              >
+                <div className="benefit-icon">{benefit.i}</div>
+                <h3>{benefit.t}</h3>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.div>
+
+      <motion.div className="slide-section" {...slideIn} style={{ padding: '30px' }}>
+        <div className="investor-benefits-slide" style={{ padding: '20px', borderRadius: '24px' }}>
+          <div className="slide-header" style={{ marginBottom: '20px' }}>
+            <div className="decorative-blocks">
+              <span></span>
+              <span></span>
+            </div>
+            <h1 style={{ fontSize: '28px' }}>Key Benefits for Investors</h1>
           </div>
 
           <div className="benefits-content">
@@ -694,14 +745,303 @@ const Session03: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* SECTION 7: DETAILED AREAS & ROI */}
       <motion.div
         className="slide-section"
         {...slideIn}
+        style={{
+          padding: '15px 40px',
+          minHeight: 'auto',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          textAlign: 'center'
+        }}
       >
-        <div className="slide-header">
-          <div className="slide-label">AI Landscape</div>
-          <h1 className="slide-title">Detailed Areas & ROI</h1>
+        <div
+          className="slide-header"
+          style={{
+            marginBottom: '15px',
+            textAlign: 'center',
+            width: '100%'
+          }}
+        >
+          <div
+            className="slide-label"
+            style={{ marginBottom: '8px', textAlign: 'center' }}
+          >
+            AI Landscape
+          </div>
+
+          <h1
+            className="slide-title"
+            style={{ fontSize: '28px', textAlign: 'center' }}
+          >
+            Detailed Areas & ROI
+          </h1>
+        </div>
+
+        <motion.div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '16px',
+            width: '100%',
+            maxWidth: '1100px',
+            justifyItems: 'center'
+          }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.1 } }
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+
+          {/* CARD 1 */}
+
+          <motion.div
+            className="standard-card"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
+            style={{
+              padding: '16px',
+              textAlign: 'center',
+              width: '100%'
+            }}
+          >
+
+            <div style={{ color: 'var(--gold)', marginBottom: '8px', display: 'flex', justifyContent: 'center' }}>
+              <Cpu size={20} />
+            </div>
+
+            <div className="ai-areas-slide">
+              <h1 style={{ fontSize: '20px', marginBottom: '8px', textAlign: 'center' }}>
+                Areas we can use AI
+              </h1>
+
+              <div className="ai-areas-content">
+
+                <ul
+                  style={{
+                    fontSize: '16px',
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr',
+                    gap: '6px 12px',
+                    padding: 0,
+                    listStylePosition: 'inside',
+                    fontWeight: 500,
+                    textAlign: 'left',
+                    margin: '0 auto',
+                    maxWidth: '320px'
+                  }}
+                >
+                  <li>AI chatbots for FAQs</li>
+                  <li>Onboarding help</li>
+                  <li>Predictive analytics</li>
+                  <li>SIP stoppage alerts</li>
+                  <li>Sentiment analysis</li>
+                  <li>QA CS survey</li>
+                  <li>CRM Optimization</li>
+                </ul>
+
+
+                <div
+                  style={{
+                    marginTop: '12px',
+                    padding: '12px',
+                    background: 'var(--blue-soft)',
+                    borderRadius: '12px',
+                    border: '1px solid var(--blue-mid)',
+                    textAlign: 'center'
+                  }}
+                >
+
+                  <div
+                    style={{
+                      color: 'var(--navy)',
+                      fontWeight: 900,
+                      fontSize: '16px',
+                      marginBottom: '8px',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: '4px',
+                        height: '14px',
+                        background: 'var(--gold)',
+                        borderRadius: '2px'
+                      }}
+                    ></div>
+
+                    Automate routine tasks:
+                  </div>
+
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(3, 1fr)',
+                      gap: '6px',
+                      justifyItems: 'center'
+                    }}
+                  >
+
+                    {['Portfolio review', 'AUM Journey', 'Capital gain', 'WhatsApp', 'Profiling', 'Clients'].map(task => (
+
+                      <div
+                        key={task}
+                        style={{
+                          fontSize: '13px',
+                          color: 'var(--navy)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '6px',
+                          background: '#ffffff',
+                          padding: '4px 8px',
+                          borderRadius: '6px',
+                          border: '1px solid rgba(0,0,0,0.05)',
+                          fontWeight: 700
+                        }}
+                      >
+
+                        <div
+                          style={{
+                            width: '4px',
+                            height: '4px',
+                            borderRadius: '50%',
+                            background: 'var(--gold)',
+                            flexShrink: 0
+                          }}
+                        ></div>
+
+                        {task}
+
+                      </div>
+
+                    ))}
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+
+          {/* CARD 2 */}
+
+          <motion.div
+            className="standard-card"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
+            style={{ padding: '16px', textAlign: 'center', width: '100%' }}
+          >
+
+            <div style={{ color: 'var(--gold)', marginBottom: '8px', display: 'flex', justifyContent: 'center' }}>
+              <MessageSquare size={20} />
+            </div>
+
+            <div className="genai-opportunities-slide">
+
+              <h1 style={{ fontSize: '20px', marginBottom: '8px', textAlign: 'center' }}>
+                Generative AI Opportunities
+              </h1>
+
+              <div className="genai-content">
+
+                <ul
+                  style={{
+                    fontSize: '16px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '10px',
+                    padding: 0,
+                    listStylePosition: 'inside',
+                    fontWeight: 500,
+                    textAlign: 'left',
+                    margin: '0 auto',
+                    maxWidth: '260px'
+                  }}
+                >
+                  <li>Investor communication drafts</li>
+                  <li>RM/CS call summaries</li>
+                  <li>Knowledge base creation</li>
+                  <li>Training & onboarding content</li>
+                </ul>
+
+              </div>
+            </div>
+          </motion.div>
+
+
+          {/* CARD 3 */}
+
+          <motion.div
+            className="standard-card"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
+            style={{ padding: '16px', textAlign: 'center', width: '100%' }}
+          >
+
+            <div style={{ color: 'var(--gold)', marginBottom: '8px', display: 'flex', justifyContent: 'center' }}>
+              <TrendingUp size={20} />
+            </div>
+
+            <div className="kpi-slide">
+
+              <h1 style={{ fontSize: '20px', marginBottom: '8px', textAlign: 'center' }}>
+                KPIs to Track ROI
+              </h1>
+
+              <div className="kpi-content">
+
+                <ul
+                  style={{
+                    fontSize: '16px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '8px',
+                    padding: 0,
+                    listStylePosition: 'inside',
+                    fontWeight: 500,
+                    textAlign: 'left',
+                    margin: '0 auto',
+                    maxWidth: '260px'
+                  }}
+                >
+                  <li>Customer Satisfaction</li>
+                  <li>First Contact Resolution</li>
+                  <li>Self-service adoption</li>
+                  <li>Churn rate & SIP persistence</li>
+                  <li>Revenue per advisor</li>
+                </ul>
+
+              </div>
+            </div>
+          </motion.div>
+
+        </motion.div>
+      </motion.div>
+      {/* <motion.div
+        className="slide-section"
+        {...slideIn}
+        style={{ padding: '15px 40px', minHeight: 'auto' }}
+      >
+        <div className="slide-header" style={{ marginBottom: '15px' }}>
+          <div className="slide-label" style={{ marginBottom: '8px' }}>AI Landscape</div>
+          <h1 className="slide-title" style={{ fontSize: '28px' }}>Detailed Areas & ROI</h1>
         </div>
 
         <motion.div
@@ -720,28 +1060,69 @@ const Session03: React.FC = () => {
               visible: { opacity: 1, y: 0 }
             }}
             whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
-            style={{ padding: '20px' }}
+            style={{ padding: '16px' }}
           >
-            <div style={{ color: 'var(--gold)', marginBottom: '16px' }}><Cpu size={24} /></div>
+            <div style={{ color: 'var(--gold)', marginBottom: '8px' }}><Cpu size={20} /></div>
             <div className="ai-areas-slide">
-              <h1 style={{ fontSize: '22px', marginBottom: '12px' }}>Areas we can use AI</h1>
+              <h1 style={{ fontSize: '20px', marginBottom: '8px' }}>Areas we can use AI</h1>
               <div className="ai-areas-content">
-                <ul style={{ fontSize: '18px' }}>
-                  <li>AI chatbots for FAQs & onboarding</li>
-                  <li>Predictive analytics for churn & SIP stoppage</li>
-                  <li>Sentiment analysis on calls & messages</li>
-                  <li>Quality assurance CS survey</li>
+                <ul style={{
+                  fontSize: '16px',
+                  display: 'grid',
+                  gridTemplateColumns: '1.2fr 1fr',
+                  gap: '6px 12px',
+                  padding: 0,
+                  listStylePosition: 'inside',
+                  fontWeight: 500
+                }}>
+                  <li>AI chatbots for FAQs</li>
+                  <li>Onboarding help</li>
+                  <li>Predictive analytics</li>
+                  <li>SIP stoppage alerts</li>
+                  <li>Sentiment analysis</li>
+                  <li>QA CS survey</li>
                   <li>CRM Optimization</li>
-                  <li style={{ marginTop: '12px', color: 'var(--gold)', fontWeight: 800 }}>Automate routine tasks:</li>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4px', marginLeft: '12px' }}>
-                    {['Portfolio review', 'AUM Journey', 'Capital gain statement', 'Whatsapp connect', 'Customer Profiling', 'Communication with clients'].map(task => (
-                      <div key={task} style={{ fontSize: '14px', color: '#64748B', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                        <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold)' }}></div>
+                </ul>
+
+                <div style={{
+                  marginTop: '12px',
+                  padding: '12px',
+                  background: 'var(--blue-soft)',
+                  borderRadius: '12px',
+                  border: '1px solid var(--blue-mid)'
+                }}>
+                  <div style={{
+                    color: 'var(--navy)',
+                    fontWeight: 900,
+                    fontSize: '16px',
+                    marginBottom: '8px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px'
+                  }}>
+                    <div style={{ width: '4px', height: '14px', background: 'var(--gold)', borderRadius: '2px' }}></div>
+                    Automate routine tasks:
+                  </div>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px' }}>
+                    {['Portfolio review', 'AUM Journey', 'Capital gain', 'WhatsApp', 'Profiling', 'Clients'].map(task => (
+                      <div key={task} style={{
+                        fontSize: '13px',
+                        color: 'var(--navy)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        background: '#ffffff',
+                        padding: '4px 8px',
+                        borderRadius: '6px',
+                        border: '1px solid rgba(0,0,0,0.05)',
+                        fontWeight: 700
+                      }}>
+                        <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--gold)', flexShrink: 0 }}></div>
                         {task}
                       </div>
                     ))}
                   </div>
-                </ul>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -753,13 +1134,21 @@ const Session03: React.FC = () => {
               visible: { opacity: 1, y: 0 }
             }}
             whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
-            style={{ padding: '20px' }}
+            style={{ padding: '16px' }}
           >
-            <div style={{ color: 'var(--gold)', marginBottom: '16px' }}><MessageSquare size={24} /></div>
+            <div style={{ color: 'var(--gold)', marginBottom: '8px' }}><MessageSquare size={20} /></div>
             <div className="genai-opportunities-slide">
-              <h1 style={{ fontSize: '22px', marginBottom: '12px' }}>Generative AI Opportunities</h1>
+              <h1 style={{ fontSize: '20px', marginBottom: '8px' }}>Generative AI Opportunities</h1>
               <div className="genai-content">
-                <ul style={{ fontSize: '16px' }}>
+                <ul style={{
+                  fontSize: '16px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '10px',
+                  padding: 0,
+                  listStylePosition: 'inside',
+                  fontWeight: 500
+                }}>
                   <li>Investor communication drafts</li>
                   <li>RM/CS call summaries</li>
                   <li>Knowledge base creation</li>
@@ -776,13 +1165,21 @@ const Session03: React.FC = () => {
               visible: { opacity: 1, y: 0 }
             }}
             whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
-            style={{ padding: '20px' }}
+            style={{ padding: '16px' }}
           >
-            <div style={{ color: 'var(--gold)', marginBottom: '16px' }}><TrendingUp size={24} /></div>
+            <div style={{ color: 'var(--gold)', marginBottom: '8px' }}><TrendingUp size={20} /></div>
             <div className="kpi-slide">
-              <h1 style={{ fontSize: '22px', marginBottom: '12px' }}>KPIs to Track ROI</h1>
+              <h1 style={{ fontSize: '20px', marginBottom: '8px' }}>KPIs to Track ROI</h1>
               <div className="kpi-content">
-                <ul style={{ fontSize: '16px' }}>
+                <ul style={{
+                  fontSize: '16px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '8px',
+                  padding: 0,
+                  listStylePosition: 'inside',
+                  fontWeight: 500
+                }}>
                   <li>Customer Satisfaction</li>
                   <li>First Contact Resolution</li>
                   <li>Self-service adoption</li>
@@ -793,16 +1190,16 @@ const Session03: React.FC = () => {
             </div>
           </motion.div>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
 
-      <motion.div className="slide-section" {...slideIn} style={{ padding: '30px' }}>
-        <div className="risks-guardrails-slide" style={{ padding: '30px', borderRadius: '24px' }}>
-          <div className="slide-header">
+      <motion.div className="slide-section" {...slideIn} style={{ padding: '20px 30px' }}>
+        <div className="risks-guardrails-slide" style={{ padding: '20px', borderRadius: '24px' }}>
+          <div className="slide-header" style={{ marginBottom: '24px' }}>
             <div className="decorative-blocks">
               <span></span>
               <span></span>
             </div>
-            <h1 style={{ fontSize: '32px' }}>Risks & Guardrails</h1>
+            <h1 style={{ fontSize: '48px', fontWeight: 900 }}>Risks & Guardrails</h1>
           </div>
 
           <div className="risks-content" style={{ display: 'flex', justifyContent: 'center' }}>
@@ -828,17 +1225,17 @@ const Session03: React.FC = () => {
                   }}
                   whileHover={{ y: -5, background: '#fff' }}
                   style={{
-                    padding: '20px',
+                    padding: '16px 20px',
                     background: '#F8FAFC',
                     borderRadius: '20px',
                     border: '1px solid #E2E8F0',
                     textAlign: 'center',
-                    minWidth: '200px',
+                    minWidth: '240px',
                     transition: 'all 0.2s ease'
                   }}
                 >
-                  <div style={{ color: 'var(--gold)', fontWeight: 900, fontSize: '11px', marginBottom: '6px', textTransform: 'uppercase' }}>{risk.t}</div>
-                  <div style={{ fontSize: '16px', fontWeight: 700, color: 'var(--navy)' }}>{risk.d}</div>
+                  <div style={{ color: 'var(--gold)', fontWeight: 900, fontSize: '14px', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '1px' }}>{risk.t}</div>
+                  <div style={{ fontSize: '20px', fontWeight: 900, color: 'var(--navy)' }}>{risk.d}</div>
                 </motion.li>
               ))}
             </motion.ul>
@@ -880,32 +1277,84 @@ const Session03: React.FC = () => {
                   visible: { opacity: 1, y: 0 }
                 }}
                 whileHover={{ scale: 1.05, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}
-                style={{ background: item.c, flex: '1', padding: '15px', borderRadius: '16px' }}
+                style={{ background: item.c, flex: '1', padding: '24px 20px', borderRadius: '16px' }}
               >
-                <div className="rr-ph" style={{ fontSize: '10px' }}>Phase {item.p}</div>
-                <div className="rr-t" style={{ fontSize: '18px' }}>{item.t}</div>
-                <div className="rr-d" style={{ fontSize: '12px' }}>{item.d}</div>
+                <div className="rr-ph" style={{ fontSize: '12px', fontWeight: 800, opacity: 0.9, textTransform: 'uppercase', marginBottom: '8px', letterSpacing: '1px' }}>Phase {item.p}</div>
+                <div className="rr-t" style={{ fontSize: '24px', fontWeight: 900, marginBottom: '6px' }}>{item.t}</div>
+                <div className="rr-d" style={{ fontSize: '14px', fontWeight: 500, opacity: 0.9 }}>{item.d}</div>
               </motion.div>
-              {idx < 3 && <div className="rr-arr" style={{ background: 'transparent', display: 'flex', alignItems: 'center' }}><ArrowRight color="var(--navy)" size={16} /></div>}
+              {idx < 3 && <div className="rr-arr" style={{ background: 'transparent', display: 'flex', alignItems: 'center' }}><ArrowRight color="var(--navy)" size={24} /></div>}
             </React.Fragment>
           ))}
         </motion.div>
 
-        <div className="quote-block" style={{ marginTop: '60px', background: 'var(--navy)' }}>
-          <div className="q-text">"AI is not replacing staff. AI is amplifying trust, scale, and consistency."</div>
+        <div className="quote-block" style={{ marginTop: '24px', background: 'var(--navy)', padding: '24px 30px', borderRadius: '24px' }}>
+          <div className="q-text" style={{ fontSize: '28px', fontWeight: 800, fontStyle: 'italic', color: '#fff' }}>"AI is not replacing staff. AI is amplifying trust, scale, and consistency."</div>
+        </div>
+      </motion.div>
+
+      {/* NEW SECTION 2: Where are we ? */}
+      <motion.div className="slide-section dark" {...slideIn}>
+        <div className="status-tracker-slide" style={{ padding: '16px', borderRadius: '24px' }}>
+          <div className="slide-header" style={{ marginBottom: '12px' }}>
+            <div className="decorative-blocks">
+              <span></span>
+              <span></span>
+            </div>
+            <h1 className="slide-title" style={{ fontSize: '32px' }}>Where are we ?</h1>
+          </div>
+
+          <div className="status-container">
+            <motion.div
+              className="status-card highlight"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              style={{
+                background: 'linear-gradient(135deg, #1c2635 0%, #6b5a32 100%)',
+                boxShadow: '0 30px 60px rgba(0,0,0,0.4)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                color: '#fff'
+              }}
+            >
+              <div className="status-metrics" style={{ justifyContent: 'space-between', padding: '0 40px', marginBottom: '30px' }}>
+                <div className="metric" style={{ textAlign: 'left' }}>
+                  <span className="metric-label" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px' }}>Current AUM</span>
+                  <span className="metric-value" style={{ color: '#fff', fontSize: '52px' }}>₹1,900 <small style={{ fontSize: '20px' }}>Crores</small></span>
+                </div>
+                <div className="metric-divider">
+                  <ArrowRight size={48} color="#D4AF37" />
+                </div>
+                <div className="metric" style={{ textAlign: 'right' }}>
+                  <span className="metric-label" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px' }}>2031 Milestone</span>
+                  <span className="metric-value" style={{ color: '#D4AF37', fontSize: '52px' }}>₹10,000 <small style={{ fontSize: '20px', color: '#fff' }}>Crores</small></span>
+                </div>
+              </div>
+
+              <div className="progress-track" style={{ background: 'rgba(255,255,255,0.1)' }}>
+                <motion.div
+                  className="progress-bar"
+                  initial={{ width: 0 }}
+                  whileInView={{ width: '19%' }}
+                  transition={{ duration: 1.5, ease: "easeOut" }}
+                  style={{ background: 'var(--gold)' }}
+                />
+              </div>
+              <p className="status-insight" style={{ color: '#fff' }}>AUM is the byproduct of our Standards, Consistency and Behavior.</p>
+            </motion.div>
+          </div>
         </div>
       </motion.div>
 
       {/* SECTION 10,000 CR MATTERS */}
-      <motion.div className="slide-section" {...slideIn}>
-        <div className="why-10000-slide" style={{ padding: '30px', borderRadius: '24px' }}>
-          <div className="slide-header">
+      <motion.div className="slide-section" {...slideIn} style={{ padding: '12px 30px' }}>
+        <div className="why-10000-slide" style={{ padding: '12px', borderRadius: '24px' }}>
+          <div className="slide-header" style={{ marginBottom: '16px' }}>
             <div className="decorative-blocks">
               <span></span>
               <span></span>
-              <span></span>
             </div>
-            <h1 className="slide-title" style={{ fontSize: '32px' }}>Why ₹10,000 Crores Matters</h1>
+            <h1 className="slide-title" style={{ fontSize: '32px', fontWeight: 900 }}>Why ₹10,000 Crores Matters</h1>
           </div>
 
           <div className="why-content">
@@ -918,8 +1367,8 @@ const Session03: React.FC = () => {
                 visible: { transition: { staggerChildren: 0.1 } }
               }}
             >
-              <div style={{ fontSize: '24px', fontWeight: 800, color: 'var(--navy)', marginBottom: '16px' }}>Market positioning & credibility lift</div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
+              <div style={{ fontSize: '30px', fontWeight: 900, color: 'var(--navy)', marginBottom: '20px', letterSpacing: '-0.5px' }}>Market positioning & credibility lift</div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px' }}>
                 {[
                   'Stronger AMC negotiation power',
                   'Operating leverage expansion',
@@ -932,7 +1381,7 @@ const Session03: React.FC = () => {
                       visible: { opacity: 1, y: 0 }
                     }}
                     whileHover={{ scale: 1.05, background: '#fff' }}
-                    style={{ padding: '16px', background: '#F8FAFC', borderRadius: '16px', border: '1px solid #E2E8F0', fontWeight: 700, color: '#475569', textAlign: 'center', fontSize: '14px', transition: 'all 0.2s ease' }}
+                    style={{ padding: '14px 16px', background: '#F8FAFC', borderRadius: '16px', border: '1px solid #E2E8F0', fontWeight: 900, color: 'var(--navy)', textAlign: 'center', fontSize: '17px', transition: 'all 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                   >
                     {point}
                   </motion.div>
@@ -943,24 +1392,24 @@ const Session03: React.FC = () => {
         </div>
       </motion.div>
 
-      <motion.div className="slide-section dark" {...slideIn}>
-        <div className="sns-commitment-slide" style={{ padding: '30px', borderRadius: '24px' }}>
-          <div className="slide-header">
-            <div className="slide-label">The Vision</div>
-            <h1 className="slide-title">SNS Commitment</h1>
+      <motion.div className="slide-section dark" {...slideIn} style={{ padding: '16px 30px', background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)' }}>
+        <div className="sns-commitment-slide" style={{ padding: '16px', borderRadius: '24px' }}>
+          <div className="slide-header" style={{ marginBottom: '16px' }}>
+            <div className="slide-label" style={{ background: 'rgba(255,255,255,0.1)', color: '#fff', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '8px' }}>The Vision</div>
+            <h1 className="slide-title" style={{ fontSize: '32px', fontWeight: 900 }}>SNS Commitment</h1>
           </div>
 
           <div className="commitment-content">
             <motion.div
-              style={{ background: 'rgba(212, 175, 55, 0.1)', padding: '30px', borderRadius: '24px', border: '1px solid rgba(212,175,55,0.2)' }}
+              style={{ background: 'rgba(255, 255, 255, 0.03)', padding: '24px 20px', borderRadius: '24px', border: '1px solid rgba(212,175,55,0.3)', backdropFilter: 'blur(10px)' }}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
-              <h2 style={{ fontSize: '28px', color: 'var(--gold)', marginBottom: '24px', textAlign: 'center' }}>₹10,000 Crores is not an aspiration.</h2>
+              <h2 style={{ fontSize: '28px', color: 'var(--gold)', marginBottom: '24px', textAlign: 'center', fontWeight: 900 }}>₹10,000 Crores is not an aspiration.</h2>
 
               <motion.div
-                style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}
+                style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}
                 variants={{
                   visible: { transition: { staggerChildren: 0.05 } }
                 }}
@@ -984,9 +1433,9 @@ const Session03: React.FC = () => {
                       visible: { opacity: 1, x: 0 }
                     }}
                     whileHover={{ x: 5, color: 'var(--gold)' }}
-                    style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '15px', fontWeight: 600, color: '#fff', transition: 'all 0.2s ease' }}
+                    style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '16px', fontWeight: 700, color: '#fff', transition: 'all 0.2s ease', lineHeight: '1.4' }}
                   >
-                    <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--gold)' }}></div>
+                    <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--gold)', flexShrink: 0 }}></div>
                     {point}
                   </motion.div>
                 ))}
@@ -997,51 +1446,10 @@ const Session03: React.FC = () => {
       </motion.div>
 
       <motion.div className="slide-section" {...slideIn}>
-        <div className="execution-strategy-slide" style={{ padding: '30px', borderRadius: '24px' }}>
-          <div className="slide-header">
-            <div className="slide-label">Path to Excellence</div>
-            <h1 className="slide-title">Execution Strategy</h1>
-          </div>
-
-          <motion.div
-            className="execution-content"
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '12px' }}
-            variants={{
-              visible: { transition: { staggerChildren: 0.1 } }
-            }}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {[
-              { t: 'Data', d: 'Data Preparation & Depth Review' },
-              { t: 'Standard', d: 'Standardized Portfolio Formats' },
-              { t: 'CRM', d: '100% CRM Adoption & More' },
-              { t: 'AI', d: 'AI Tool Integration Across Org' },
-              { t: 'ICMM', d: '100% ICMM Mapping' }
-            ].map(item => (
-              <motion.div
-                key={item.t}
-                variants={{
-                  hidden: { opacity: 0, y: 15 },
-                  visible: { opacity: 1, y: 0 }
-                }}
-                whileHover={{ y: -5, background: '#fff' }}
-                style={{ padding: '16px', background: '#F8FAFC', borderRadius: '16px', border: '1px solid #E2E8F0', textAlign: 'center', transition: 'all 0.2s ease' }}
-              >
-                <div style={{ color: 'var(--gold)', fontWeight: 900, fontSize: '12px', marginBottom: '8px', textTransform: 'uppercase' }}>{item.t}</div>
-                <div style={{ fontSize: '14px', fontWeight: 700, color: 'var(--navy)' }}>{item.d}</div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </motion.div>
-
-      <motion.div className="slide-section" {...slideIn}>
-        <div className="execution-excellence-slide" style={{ padding: '30px', borderRadius: '24px' }}>
-          <div className="slide-header">
-            <div className="slide-label">The Standard</div>
-            <h1 className="slide-title">Execution to Excellence</h1>
+        <div className="execution-excellence-slide" style={{ padding: '20px', borderRadius: '24px' }}>
+          <div className="slide-header" style={{ marginBottom: '16px' }}>
+            <div className="slide-label" style={{ marginBottom: '8px' }}>The Standard</div>
+            <h1 className="slide-title" style={{ fontSize: '28px' }}>Execution to Excellence</h1>
           </div>
 
           <div className="execution-content">
@@ -1091,10 +1499,10 @@ const Session03: React.FC = () => {
       </motion.div>
 
       <motion.div className="slide-section" {...slideIn}>
-        <div className="outcome-ownership-slide" style={{ padding: '30px', borderRadius: '24px' }}>
-          <div className="slide-header">
-            <div className="slide-label">The Responsibility</div>
-            <h1 className="slide-title">Outcome Ownership</h1>
+        <div className="outcome-ownership-slide" style={{ padding: '20px', borderRadius: '24px' }}>
+          <div className="slide-header" style={{ marginBottom: '16px' }}>
+            <div className="slide-label" style={{ marginBottom: '8px' }}>The Responsibility</div>
+            <h1 className="slide-title" style={{ fontSize: '28px' }}>Outcome Ownership</h1>
           </div>
 
           <div className="outcome-columns" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
@@ -1130,73 +1538,126 @@ const Session03: React.FC = () => {
           </div>
         </div>
       </motion.div>
-
-      <motion.div className="slide-section" {...slideIn}>
-        <div className="milestone-trajectory-slide" style={{ padding: '30px', borderRadius: '24px' }}>
-          <div className="slide-header">
-            <div className="slide-label">The Roadmap</div>
-            <h1 className="slide-title">Milestone Trajectory</h1>
+      <motion.div className="slide-section" {...slideIn} style={{ minHeight: 'auto', marginBottom: '15px' }}>
+        <div className="trajectory-slide" style={{ padding: '30px 40px' }}>
+          <div className="slide-header" style={{ marginBottom: '30px' }}>
+            <div className="decorative-blocks" style={{ marginBottom: '12px' }}>
+              <span></span>
+              <span></span>
+            </div>
+            <h1 className="slide-title" style={{ fontSize: '38px' }}>Milestone Trajectory</h1>
           </div>
 
-          <div className="milestone-content">
-            <motion.div
-              style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '12px' }}
-              variants={{
-                visible: { transition: { staggerChildren: 0.1 } }
-              }}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
+          <div className="trajectory-graph-container">
+            <svg className="trajectory-svg" viewBox="-60 -30 1200 460" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="graphGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#D4AF37" stopOpacity="0.4" />
+                  <stop offset="100%" stopColor="#D4AF37" stopOpacity="0" />
+                </linearGradient>
+                <pattern id="dotPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <circle cx="2" cy="2" r="1.5" fill="rgba(212, 175, 55, 0.1)" />
+                </pattern>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              {/* High-Tech Background Pattern */}
+              <rect x="0" y="0" width="1050" height="350" fill="url(#dotPattern)" />
+
+              {/* Grid Lines */}
+              {[0, 2500, 5000, 7500, 10000].map((val) => {
+                const y = 350 - (val / 10000) * 300;
+                return (
+                  <g key={val}>
+                    <line x1="0" y1={y} x2="1120" y2={y} className="graph-grid-line" />
+                    <text x="-30" y={y + 5} className="graph-axis-label" textAnchor="end">₹{(val / 1000).toFixed(1)}k Cr</text>
+                  </g>
+                );
+              })}
+
+              {/* Shadow Path */}
+              <motion.path
+                d="M 40 250 L 250 210 L 460 170 L 670 130 L 880 90 L 1090 50"
+                fill="none"
+                stroke="rgba(212, 175, 55, 0.2)"
+                strokeWidth="12"
+                strokeLinecap="round"
+                initial={{ pathLength: 0, opacity: 0 }}
+                whileInView={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 2, delay: 0.2 }}
+              />
+
+              {/* Data Area */}
+              <motion.path
+                d="M 40 350 L 40 250 L 250 210 L 460 170 L 670 130 L 880 90 L 1090 50 L 1090 350 Z"
+                className="graph-area"
+                initial={{ opacity: 0, scaleY: 0 }}
+                whileInView={{ opacity: 0.1, scaleY: 1 }}
+                style={{ originY: 1 }}
+                transition={{ duration: 1.5, delay: 0.5 }}
+              />
+
+              {/* Main Data Line */}
+              <motion.path
+                d="M 40 250 L 250 210 L 460 170 L 670 130 L 880 90 L 1090 50"
+                className="graph-line"
+                filter="url(#glow)"
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                transition={{ duration: 2, ease: "circOut" }}
+              />
+
+              {/* Data Points & Labels */}
               {[
-                { y: 'Mar 24', m: 'Mar 24: CRM audit and Data Preparation - done' },
-                { y: 'Jun 24', m: 'Jun 24: ICMM alignment across 100% clients- ongoing' },
-                { y: 'Sep 24', m: 'Sep 24: AI deployment for automated engagement' },
-                { y: 'Dec 24', m: 'Dec 24: Predictive intelligence scale-up' },
-                { y: 'Mar 25', m: 'Mar 25: ₹10,000 Cr Run-rate Standardized' }
-              ].map(item => (
-                <motion.div
-                  key={item.y}
-                  variants={{
-                    hidden: { opacity: 0, scale: 0.9 },
-                    visible: { opacity: 1, scale: 1 }
-                  }}
-                  whileHover={{ y: -5, boxShadow: '0 15px 35px rgba(0,0,0,0.1)' }}
-                  style={{
-                    padding: '20px 12px',
-                    background: 'white',
-                    borderRadius: '20px',
-                    borderTop: '5px solid var(--gold)',
-                    boxShadow: '0 8px 24px rgba(0,0,0,0.05)',
-                    textAlign: 'center',
-                    transition: 'all 0.3s ease'
-                  }}
-                >
-                  <div style={{ fontSize: '20px', fontWeight: 900, color: 'var(--navy)', marginBottom: '8px' }}>{item.y}</div>
-                  <div style={{ fontSize: '12px', fontWeight: 600, color: '#64748B', lineHeight: '1.4' }}>{item.m}</div>
-                </motion.div>
+                { x: 40, y: 250, year: 'FY26', val: '₹3,000 Cr' },
+                { x: 250, y: 210, year: 'FY27', val: '₹4,500 Cr' },
+                { x: 460, y: 170, year: 'FY28', val: '₹6,000 Cr' },
+                { x: 670, y: 130, year: 'FY29', val: '₹7,500 Cr' },
+                { x: 880, y: 90, year: 'FY30', val: '₹9,000 Cr' },
+                { x: 1090, y: 50, year: 'FY31', val: '₹10,000 Cr', target: true }
+              ].map((point, i) => (
+                <g key={i}>
+                  {point.target && (
+                    <circle cx={point.x} cy={point.y} r="15" fill="rgba(212, 175, 55, 0.2)" className="pulse-target" />
+                  )}
+
+                  <motion.circle
+                    cx={point.x}
+                    cy={point.y}
+                    r={point.target ? "10" : "8"}
+                    className="graph-point"
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ type: 'spring', delay: 1.2 + i * 0.15 }}
+                  />
+
+                  <motion.g
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.5 + i * 0.1 }}
+                  >
+                    <text x={point.x} y={point.y - 40} className="graph-label-value" style={{ fill: point.target ? 'var(--gold)' : '#fff' }}>
+                      {point.val}
+                    </text>
+                    <text x={point.x} y="400" className="graph-label-year">
+                      {point.year}
+                    </text>
+                  </motion.g>
+                </g>
               ))}
-            </motion.div>
+            </svg>
           </div>
         </div>
       </motion.div>
 
-      {/* FINAL CALL TO ACTION */}
-      <motion.div
-        className="slide-section dark"
-        style={{ textAlign: 'center', padding: '120px 40px' }}
-        {...slideIn}
-      >
-        <div className="slide-label" style={{ color: 'var(--gold)' }}>CONCLUSION</div>
-        <h1 className="slide-title" style={{ fontSize: '64px', marginBottom: '32px' }}>One Delivery. One Success.</h1>
-        <p style={{ fontSize: '24px', maxWidth: '800px', margin: '0 auto 48px', color: 'rgba(255,255,255,0.7)', fontStyle: 'italic' }}>
-          "Success is not a destination. It is the quality of the journey we provide to every investor."
-        </p>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', padding: '20px 48px', background: 'var(--gold)', color: 'var(--navy)', borderRadius: '100px', fontWeight: 900, fontSize: '20px', cursor: 'pointer' }}>
-          Let's Transform Together <ArrowRight />
-        </div>
-      </motion.div>
-      <div style={{ height: '100px' }}></div>
+
+      <div style={{ height: '40px' }}></div>
       <style dangerouslySetInnerHTML={{
         __html: `
         .li-dot { font-weight: 900 !important; color: var(--gold) !important; }

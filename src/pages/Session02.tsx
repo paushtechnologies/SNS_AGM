@@ -128,18 +128,31 @@ const Session02: React.FC = () => {
           </p>
         </motion.div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            visible: { transition: { staggerChildren: 0.05 } }
-          }}
-        >
-          <motion.strong style={{ display: 'block', marginBottom: '10px' }} variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+        <div style={{ marginTop: '40px', marginBottom: '40px' }}>
+          <div className="label" style={{ color: '#5F8E8E', letterSpacing: '4px', fontSize: '14px', marginBottom: '12px', fontWeight: 800 }}>GOALS</div>
+          <h2 style={{
+            fontSize: '36px',
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 900,
+            color: 'var(--navy)',
+            marginBottom: '32px'
+          }}>
             Objective of Ideal Client Management
-          </motion.strong>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
+          </h2>
+
+          <motion.div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap: '16px'
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              visible: { transition: { staggerChildren: 0.05 } }
+            }}
+          >
             {[
               'Improve client experience',
               'Focus on high-value relationships',
@@ -148,20 +161,62 @@ const Session02: React.FC = () => {
               'Improve retention and referrals',
               'Structured servicing model'
             ].map((text, idx) => (
-              <motion.li
+              <motion.div
                 key={idx}
-                style={{ fontSize: '19px', marginBottom: '6px', color: 'var(--text2)', display: 'flex', alignItems: 'center', gap: '8px' }}
                 variants={{
-                  hidden: { opacity: 0, x: -10 },
-                  visible: { opacity: 1, x: 0 }
+                  hidden: { opacity: 0, scale: 0.95, y: 10 },
+                  visible: { opacity: 1, scale: 1, y: 0 }
+                }}
+                whileHover={{ y: -5, background: '#fff', borderColor: '#5F8E8E' }}
+                style={{
+                  background: '#fcfdfd',
+                  padding: '24px',
+                  borderRadius: '20px',
+                  border: '1px solid #E2E8F0',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                  transition: 'all 0.3s ease',
+                  position: 'relative',
+                  overflow: 'hidden'
                 }}
               >
-                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#5F8E8E' }}></div>
-                {text}
-              </motion.li>
+                <div style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '10px',
+                  background: 'rgba(95, 142, 142, 0.1)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#5F8E8E'
+                }}>
+                  <Target size={18} strokeWidth={3} />
+                </div>
+                <div style={{
+                  fontSize: '18px',
+                  fontWeight: 800,
+                  color: 'var(--navy)',
+                  lineHeight: '1.3'
+                }}>
+                  {text}
+                </div>
+                <div style={{
+                  position: 'absolute',
+                  bottom: '-10px',
+                  right: '-10px',
+                  fontSize: '60px',
+                  opacity: 0.03,
+                  fontWeight: 900,
+                  color: '#5F8E8E',
+                  pointerEvents: 'none'
+                }}>
+                  {idx + 1}
+                </div>
+              </motion.div>
             ))}
-          </ul>
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* Mantra Section */}
         <div className="grid2" style={{ gap: '16px', margin: '24px 0', gridTemplateColumns: '1fr 1fr' }}>

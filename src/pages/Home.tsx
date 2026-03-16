@@ -167,7 +167,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             bottom: '15%',
             right: '10%',
             width: '300px',
-            height: '300px',
+            height: '500px',
             borderRadius: '50%',
             background: 'radial-gradient(circle, rgba(74, 127, 212, 0.05) 0%, transparent 70%)',
             filter: 'blur(40px)',
@@ -236,7 +236,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </motion.div>
       </motion.div>
 
-      <motion.div className="label" style={{ opacity: 0.6 }} variants={itemVariants}>Navigate the Sessions</motion.div>
+      <motion.div className="label" style={{ opacity: 0.6, marginTop: '100px', }} variants={itemVariants}>Navigate the Sessions</motion.div>
       <motion.h2 className="section-title" style={{ fontSize: '56px', marginBottom: '32px' }} variants={itemVariants}>Six Sessions</motion.h2>
 
       <motion.div

@@ -107,11 +107,75 @@ const MomentumBuilder: React.FC = () => {
                     hidden: { y: 20, opacity: 0 },
                     visible: { y: 0, opacity: 1 }
                   }}
-                  whileHover={{ y: -5, boxShadow: '0 15px 30px rgba(0,0,0,0.1)' }}
+                  whileHover={{ y: -5 }}
                 >
-                    <div className="pillar-icon" style={{ color: pillar.c }}>{React.cloneElement(pillar.icon as React.ReactElement, { size: 40 } as any)}</div>
-                    <h3 style={{ fontSize: '32px', color: '#1E293B', marginBottom: '16px' }}>{pillar.t}</h3>
-                    <p style={{ color: '#64748B', lineHeight: '1.6', fontSize: '19px' }}>{pillar.d}</p>
+                    {/* Background Glow */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '-20%',
+                      right: '-20%',
+                      width: '140px',
+                      height: '140px',
+                      background: pillar.c,
+                      opacity: 0.03,
+                      filter: 'blur(50px)',
+                      borderRadius: '50%',
+                      pointerEvents: 'none'
+                    }}></div>
+
+                    <div style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '6px',
+                      background: pillar.c,
+                      opacity: 0.8
+                    }}></div>
+
+                    <div className="pillar-icon" style={{ 
+                      color: pillar.c,
+                      background: `${pillar.c}08`,
+                      borderRadius: '16px',
+                      marginBottom: '16px'
+                    }}>
+                      {React.cloneElement(pillar.icon as React.ReactElement, { size: 36 } as any)}
+                    </div>
+                    
+                    <h3 style={{ 
+                      fontSize: '30px', 
+                      color: '#1E293B', 
+                      marginBottom: '10px',
+                      fontWeight: 900,
+                      fontFamily: "'Playfair Display', serif",
+                      letterSpacing: '-0.5px'
+                    }}>
+                      {pillar.t}
+                    </h3>
+
+                    <div style={{
+                      width: '40px',
+                      height: '2px',
+                      background: '#e2e8f0',
+                      margin: '0 auto 12px'
+                    }}></div>
+                    
+                    <div style={{
+                      background: '#f8fafc',
+                      padding: '12px 20px',
+                      borderRadius: '16px',
+                      border: '1px solid #f1f5f9'
+                    }}>
+                      <p style={{ 
+                        color: '#475569', 
+                        lineHeight: '1.6', 
+                        fontSize: '18px',
+                        fontWeight: 500,
+                        margin: 0
+                      }}>
+                        {pillar.d}
+                      </p>
+                    </div>
                 </motion.div>
             ))}
         </motion.div>
@@ -163,30 +227,82 @@ const MomentumBuilder: React.FC = () => {
       {/* VISION SLIDE */}
       <motion.div 
         className="slide-section dark"
-        style={{ textAlign: 'center', background: 'linear-gradient(135deg, #1A2744 0%, #1E293B 100%)', padding: '40px' }}
+        style={{ 
+          background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', 
+          padding: '30px 40px',
+          position: 'relative',
+          overflow: 'hidden',
+          display: 'grid',
+          gridTemplateColumns: '1.2fr 0.8fr',
+          alignItems: 'center',
+          gap: '40px',
+          minHeight: '400px'
+        }}
         {...slideIn}
       >
         <motion.div 
-          initial={{ scale: 0.9, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
+          initial={{ x: -30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
+          style={{ textAlign: 'left', zIndex: 2 }}
         >
-          <div className="slide-label" style={{ color: '#D4AF37' }}>THE VISION</div>
-          <h1 className="slide-title">Human Wisdom Meets <br /> Digital Intelligence</h1>
-          <p className="slide-subtitle" style={{ fontSize: '20px', opacity: 0.8, maxWidth: '800px', margin: '0 auto 20px' }}>
-              "Navigating the next chapter of SNS Group. Building the standards that define our ₹10,000 Crore future."
+          <div className="slide-label" style={{ color: '#D4AF37', letterSpacing: '6px', marginBottom: '16px' }}>THE VISION</div>
+          <h1 className="slide-title" style={{ fontSize: '56px', fontWeight: 900, marginBottom: '20px', lineHeight: '1.1' }}>
+            Human Wisdom Meets <br /> 
+            <span style={{ color: 'var(--gold)' }}>Digital Intelligence</span>
+          </h1>
+          <p className="slide-subtitle" style={{ fontSize: '20px', opacity: 0.9, maxWidth: '600px', margin: '0 0 32px 0', lineHeight: '1.6' }}>
+              "Navigating the next chapter of SNS Group. Building the standards that define our <span style={{ color: '#D4AF37', fontWeight: 900 }}>₹10,000 Crore</span> future."
           </p>
           
           <motion.div 
-            style={{ marginTop: '30px' }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 32px', background: '#D4AF37', color: '#1A2744', borderRadius: '100px', fontWeight: 900, fontSize: '18px', cursor: 'pointer' }}>
-                  Build the Future <TrendingUp size={20} />
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', padding: '14px 40px', background: '#D4AF37', color: '#1A2744', borderRadius: '100px', fontWeight: 900, fontSize: '18px', cursor: 'pointer', boxShadow: '0 8px 25px rgba(212, 175, 55, 0.4)' }}>
+                  Build the Future <TrendingUp size={24} />
               </div>
           </motion.div>
         </motion.div>
+
+        {/* High-Impact Feathered Atmospheric Image */}
+        <div style={{ position: 'absolute', right: '-10%', top: '50%', transform: 'translateY(-50%)', width: '60%', height: '120%', zIndex: 1, pointerEvents: 'none' }}>
+            <motion.div
+                animate={{
+                    scale: [1, 1.05, 1],
+                    x: [0, 10, 0]
+                }}
+                transition={{
+                    duration: 12,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    backgroundImage: 'url("/premium_handshake.png")',
+                    backgroundSize: 'contain',
+                    backgroundPosition: 'center right',
+                    backgroundRepeat: 'no-repeat',
+                    opacity: 0.6,
+                    mixBlendMode: 'plus-lighter', // Creates a "glowing" effect on dark bg
+                    maskImage: 'radial-gradient(circle at center, black 10%, transparent 70%)',
+                    WebkitMaskImage: 'radial-gradient(circle at center, black 10%, transparent 70%)',
+                    filter: 'grayscale(100%) brightness(1.2) contrast(1.1)'
+                }}
+            />
+            {/* Soft Ambient Radiance */}
+            <div style={{ 
+                position: 'absolute', 
+                top: '50%', 
+                left: '50%', 
+                transform: 'translate(-50%, -50%)', 
+                width: '100%', 
+                height: '100%', 
+                background: 'radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%)',
+                zIndex: -1 
+            }}></div>
+        </div>
       </motion.div>
     </div>
   );

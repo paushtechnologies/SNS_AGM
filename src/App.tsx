@@ -12,6 +12,15 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('home');
+  const [scrolled, setScrolled] = useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -27,7 +36,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="app-container">
+    <div className={`app-container ${scrolled ? 'scrolled' : ''}`}>
       <Header />
       <Nav activePage={currentPage} onNavigate={setCurrentPage} />
       <main className="main">
