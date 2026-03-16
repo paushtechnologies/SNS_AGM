@@ -107,19 +107,20 @@ const Session04: React.FC = () => {
       {/* WHAT WE ACTUALLY DO */}
       <div style={{ padding: '80px 0' }}>
         <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '50px' }}>What We Actually Do</h2>
+        <h6 className="label" style={{ textAlign: 'center', marginBottom: '50px', fontSize: '16px' }}>Our role is to help clients stay rational and disciplined.</h6>
         <div className="grid3" style={{ gap: '30px' }}>
           {[
             { icon: <ShieldCheck size={48} />, t: 'Guidance', d: 'Helping clients make sound decisions in volatile markets.' },
             { icon: <TrendingUp size={48} />, t: 'Perspective', d: 'Framing short-term noise against long-term wealth goals.' },
             { icon: <Users size={48} />, t: 'Understanding', d: 'Knowing each client\'s behaviour, goals, and fears.' }
           ].map(item => (
-            <div key={item.t} style={{ 
-              background: 'linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%)', 
-              padding: '50px 35px', 
-              borderRadius: '32px', 
-              textAlign: 'center', 
-              border: '1px solid #E2E8F0', 
-              boxShadow: '0 15px 35px rgba(0,0,0,0.03)' 
+            <div key={item.t} style={{
+              background: 'linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%)',
+              padding: '50px 35px',
+              borderRadius: '32px',
+              textAlign: 'center',
+              border: '1px solid #E2E8F0',
+              boxShadow: '0 15px 35px rgba(0,0,0,0.03)'
             }}>
               <div style={{ color: '#1A2744', marginBottom: '24px', display: 'flex', justifyContent: 'center', opacity: 0.9 }}>{item.icon}</div>
               <h4 style={{ fontSize: '26px', fontWeight: 900, color: '#1E293B', marginBottom: '18px' }}>{item.t}</h4>
@@ -132,24 +133,72 @@ const Session04: React.FC = () => {
       {/* OUR FOUNDATION CARDS */}
       <motion.div className="mb" style={{ padding: '80px 0' }} {...fadeIn}>
         <div className="label" style={{ color: '#64748B', textAlign: 'center', marginBottom: '50px', fontSize: '16px' }}>OUR FOUNDATION</div>
+        <div className="section-title" style={{ textAlign: 'center', marginBottom: '50px' }}>The Foundation of SNS</div>
         <div className="grid3" style={{ gap: '30px' }}>
           {[
             { icon: <History size={64} />, label: '60+ Years of Legacy' },
             { icon: <Users size={64} />, label: '3 Generations of Trust' },
             { icon: <Infinity size={64} />, label: 'Infinite Relationships' }
           ].map(item => (
-            <div key={item.label} style={{ 
-              background: '#fff', 
-              padding: '60px 24px', 
-              borderRadius: '40px', 
-              textAlign: 'center', 
-              border: '1px solid #E2E8F0', 
-              boxShadow: '0 20px 40px rgba(0,0,0,0.04)' 
-            }}>
-              <div style={{ color: '#D4AF37', marginBottom: '28px', display: 'flex', justifyContent: 'center' }}>{item.icon}</div>
-              <div style={{ color: '#1E293B', fontSize: '24px', fontWeight: 900 }}>{item.label}</div>
-            </div>
+            <>
+              <div key={item.label} style={{
+                background: '#fff',
+                padding: '60px 24px',
+                borderRadius: '40px',
+                textAlign: 'center',
+                border: '1px solid #E2E8F0',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.04)'
+              }}>
+                <div style={{ color: '#D4AF37', marginBottom: '28px', display: 'flex', justifyContent: 'center' }}>{item.icon}</div>
+                <div style={{ color: '#1E293B', fontSize: '24px', fontWeight: 900 }}>{item.label}</div>
+              </div>
+            </>
           ))}
+        </div>
+        <p style={{ color: '#475569', lineHeight: 1.6, fontSize: '18px', fontWeight: 500 }}>Trust is our strongest asset. Mindset converts trust into scale.</p>
+      </motion.div>
+
+      <motion.div className="mb" style={{ padding: '80px 0' }} {...fadeIn}>
+        <h1 className="section-title" style={{ textAlign: 'center', marginBottom: '60px' }}>Why do most distribution firms never scale?</h1>
+        <span className="label" style={{ color: '#64748B', textAlign: 'center', marginBottom: '50px', fontSize: '16px' }}>✗  Not markets!</span>
+        <span className="label" style={{ color: '#64748B', textAlign: 'center', marginBottom: '50px', fontSize: '16px' }}>✗  Not products!</span>
+        <p>The biggest limitation is MINDSET.</p>
+      </motion.div>
+
+
+      <motion.div>
+        <div>
+          <p>KEY CONCEPT</p>
+        </div>
+
+        <h1>Grow vs Scale</h1>
+
+        <div>
+
+          <div>
+            <h2>Growth</h2>
+            <ul>
+              <li>Linear expansion</li>
+              <li>Requires more effort & resources</li>
+              <li>Driven by transactions</li>
+              <li>More clients → more meetings → more AUM</li>
+            </ul>
+          </div>
+
+          <div>
+            <span>→</span>
+          </div>
+
+          <div>
+            <h2>Scale</h2>
+            <ul>
+              <li>Exponential expansion</li>
+              <li>Driven by systems & reputation</li>
+              <li>Powered by relationships & referrals</li>
+              <li>Trust + Referrals + Systems → Exponential AUM</li>
+            </ul>
+          </div>
+
         </div>
       </motion.div>
       {/* THE DISTRIBUTION TRAP */}
