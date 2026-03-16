@@ -11,7 +11,7 @@ const Nav: React.FC<NavProps> = ({ activePage, onNavigate }) => {
     { id: 's1', label: '01 Momentum Builder' },
     { id: 's2', label: '02 Awake & Ignite' },
     { id: 's3', label: '03 Align & Accelerate' },
-    { id: 's4', label: '04 Elevate & Scale' },
+    { id: 's4', label: '04 Elevate, Multiply & Scale' },
   ];
 
   return (

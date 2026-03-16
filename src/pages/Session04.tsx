@@ -31,7 +31,7 @@ const Session04: React.FC = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         style={{
-          background: 'linear-gradient(135deg, #1A2744 0%, #2D3E50 60%, #1A2744 100%)',
+          background: 'linear-gradient(135deg, #2D343E 0%, #454E59 40%, #BFA169 100%)',
           padding: '70px 80px',
           borderRadius: '40px',
           marginBottom: '50px',

@@ -82,8 +82,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             marginBottom: '16px',
             letterSpacing: '-2px'
           }}>
-            Annual General <br />
-            <span style={{ color: 'var(--gold)', display: 'block', marginTop: '4px' }}>Meeting 2026</span>
+            Annual Business <br />
+            <span style={{ color: 'var(--gold)', display: 'block', marginTop: '4px' }}>Plan Meet 2026</span>
           </h1>
           <div style={{ width: '60px', height: '4px', background: 'var(--gold)', marginBottom: '24px' }}></div>
           <p style={{
@@ -117,16 +117,16 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       <div className="sessions-grid">
         {sessions.map((session) => {
           // Define a light tinted background based on the session's theme color
-          const lightBg = session.id === 's1' ? '#F0F5FF' : 
-                          session.id === 's2' ? '#F0F9FB' : 
-                          session.id === 's3' ? '#F6F2FF' : 
-                          '#FEFAF0';
-          
+          const lightBg = session.id === 's1' ? '#F0F5FF' :
+            session.id === 's2' ? '#F0F9FB' :
+              session.id === 's3' ? '#F6F2FF' :
+                '#FEFAF0';
+
           return (
             <div
               key={session.id}
               className="session-card"
-              style={{ 
+              style={{
                 background: lightBg,
                 borderTop: `6px solid ${session.color}`,
                 display: 'flex',
@@ -136,54 +136,54 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               }}
               onClick={() => onNavigate(session.id)}
             >
-            <div className="s-head">
-              <div className="s-meta">
-                <div className="s-sublabel" style={{ 
+              <div className="s-head">
+                <div className="s-meta">
+                  <div className="s-sublabel" style={{
+                    color: session.color,
+                    fontWeight: 900,
+                    fontSize: '13px'
+                  }}>{session.sublabel}</div>
+                  <h3 style={{
+                    color: 'var(--navy)',
+                    marginTop: '4px'
+                  }}>{session.title}</h3>
+                  <p style={{ color: 'var(--text3)' }}>Click to explore &rarr;</p>
+                </div>
+                <div className="s-num" style={{
                   color: session.color,
-                  fontWeight: 900,
-                  fontSize: '13px'
-                }}>{session.sublabel}</div>
-                <h3 style={{ 
-                  color: 'var(--navy)',
-                  marginTop: '4px'
-                }}>{session.title}</h3>
-                <p style={{ color: 'var(--text3)' }}>Click to explore &rarr;</p>
+                  opacity: 0.4,
+                  fontSize: '110px',
+                  bottom: '5px',
+                  right: '15px',
+                  lineHeight: '1',
+                  pointerEvents: 'none',
+                  fontWeight: 900
+                }}>{session.num}</div>
               </div>
-              <div className="s-num" style={{ 
-                color: session.color, 
-                opacity: 0.4,
-                fontSize: '110px',
-                bottom: '5px',
-                right: '15px',
-                lineHeight: '1',
-                pointerEvents: 'none',
-                fontWeight: 900
-              }}>{session.num}</div>
+              <div className="s-body">
+                <ul className="s-points">
+                  {session.points.map((point, index) => (
+                    <li key={index} style={{
+                      color: 'var(--text2)',
+                      borderColor: 'rgba(0,0,0,0.05)',
+                      display: 'flex',
+                      alignItems: 'baseline',
+                      gap: '16px'
+                    }}>
+                      <span style={{
+                        color: session.color,
+                        fontWeight: 900,
+                        fontSize: '18px',
+                        minWidth: '24px'
+                      }}>{index + 1}.</span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="s-body">
-              <ul className="s-points">
-                {session.points.map((point, index) => (
-                  <li key={index} style={{ 
-                    color: 'var(--text2)',
-                    borderColor: 'rgba(0,0,0,0.05)',
-                    display: 'flex',
-                    alignItems: 'baseline',
-                    gap: '16px'
-                  }}>
-                    <span style={{ 
-                      color: session.color, 
-                      fontWeight: 900, 
-                      fontSize: '18px',
-                      minWidth: '24px'
-                    }}>{index + 1}.</span>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
       </div>
     </div>
   );
