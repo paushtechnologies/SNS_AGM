@@ -1,0 +1,251 @@
+/* Session03.css - Premium Slide Styles */
+
+:root {
+  --navy: #1E293B;
+  --gold: #D4AF37;
+  --gold-light: #F1E4C3;
+  --white: #FFFFFF;
+  --border: rgba(0, 0, 0, 0.08);
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.session03-container {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Base Slide Section */
+.slide-section {
+  background: var(--white);
+  border-radius: 40px;
+  padding: 80px;
+  margin-bottom: 80px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-section.dark {
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* Header & Titles */
+.slide-label {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.slide-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 950;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -1.5px;
+}
+
+.slide-section.dark .slide-title {
+  color: var(--white);
+}
+
+.slide-subtitle {
+  font-size: 22px;
+  color: #64748B;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-bottom: 48px;
+}
+
+.slide-section.dark .slide-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Strategic Component Styles */
+.tech-slide, 
+.investor-benefits-slide, 
+.ai-areas-slide, 
+.genai-opportunities-slide, 
+.kpi-slide, 
+.risks-guardrails-slide, 
+.why-10000-slide, 
+.sns-commitment-slide, 
+.execution-strategy-slide, 
+.execution-excellence-slide, 
+.outcome-ownership-slide, 
+.milestone-trajectory-slide {
+  padding: 60px;
+  background: var(--white);
+  border-radius: 32px;
+  margin-bottom: 60px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.tech-header, .slide-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  border-bottom: 2px solid var(--gold-light);
+  padding-bottom: 20px;
+}
+
+.decorative-blocks {
+  display: flex;
+  gap: 8px;
+}
+
+.decorative-blocks span {
+  width: 12px;
+  height: 12px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+.tech-header h1, .slide-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: var(--navy);
+  margin: 0;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.tech-points, .tech-content ul, .benefits-content ul, .ai-areas-content ul, .genai-content ul, .kpi-content ul, .risks-content ul, .why-content ul, .commitment-content ul, .execution-content ul, .milestone-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-points li, .tech-content li, .benefits-content li, .ai-areas-content li, .genai-content li, .kpi-content li, .risks-content li, .why-content li, .commitment-content li, .execution-content li, .milestone-content li {
+  font-size: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.tech-points li::before, .benefits-content li::before, .ai-areas-content li::before, .genai-content li::before, .kpi-content li::before, .risks-content li::before, .why-content li::before, .commitment-content li::before, .execution-content li::before, .milestone-content li::before {
+  content: "→";
+  color: var(--gold);
+  margin-right: 15px;
+  font-weight: 900;
+}
+
+.tech-footer {
+  margin-top: 40px;
+  background: var(--navy);
+  color: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.footer-text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Outcome Ownership Column Styles */
+.outcome-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.outcome-left, .outcome-right {
+  background: var(--gold-light);
+  padding: 40px;
+  border-radius: 24px;
+}
+
+.outcome-right {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.outcome-columns h1 {
+  grid-column: span 2;
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+/* Industry Shift List */
+.industry-shift-list {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 24px;
+  margin-top: 24px;
+}
+
+.ai-necessity {
+  margin-top: 24px;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Grid Utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid-4, .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .slide-title {
+    font-size: 36px;
+  }
+}

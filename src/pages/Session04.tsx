@@ -6,176 +6,185 @@ import {
   CheckCircle2,
   XCircle,
   ArrowRight,
-  Infinity,
+  Infinity as InfiniteIcon,
   History,
   Users
 } from 'lucide-react';
+import './Session04.css';
 
 const Session04: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const fadeIn = {
-    initial: { opacity: 0, y: 30 },
+  const slideIn = {
+    initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.6 }
+    transition: { duration: 0.8, ease: "easeOut" as any }
   };
 
   return (
-    <div id="page-s4" className="page active" style={{ background: '#F8F9FB', color: '#1E293B', paddingBottom: '100px' }}>
+    <div className="page active session04-container">
 
       {/* HERO SECTION */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        className="slide-section"
         style={{
-          background: 'linear-gradient(135deg, #2D343E 0%, #454E59 40%, #BFA169 100%)',
-          padding: '70px 80px',
-          borderRadius: '40px',
-          marginBottom: '50px',
+          background: 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
           color: '#FFFFFF',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          gap: '40px',
-          position: 'relative',
-          overflow: 'hidden',
-          border: '1px solid rgba(255,255,255,0.1)',
-          boxShadow: '0 30px 60px rgba(0,0,0,0.2)'
+          border: 'none'
         }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
       >
-        <div style={{ flex: '1.2', zIndex: 1 }}>
-          <div className="label" style={{ color: '#D4AF37', marginBottom: '16px', letterSpacing: '4px', fontSize: '13px', fontWeight: 800 }}>SESSION 04 • THE VISION</div>
-          <h1 style={{
-            fontSize: '60px',
-            fontFamily: "'Playfair Display', serif",
-            marginBottom: '20px',
-            fontWeight: 900,
-            lineHeight: 1.1,
-            background: 'linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 25%, #D4AF37 75%, #B8860B 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            display: 'inline-block'
-          }}>
-            Elevate, Multiply & Scale.
-          </h1>
-          <p style={{ fontSize: '20px', color: 'rgba(255,255,255,0.8)', maxWidth: '550px', lineHeight: 1.6, fontWeight: 500 }}>
-            Building the ₹10,000 Crore Mindset. The next chapter of SNS Group starts with a transformation in how we behave.
-          </p>
-        </div>
-        <div style={{ flex: '0.8', display: 'flex', justifyContent: 'center', position: 'relative' }}>
-          <div style={{
-            background: 'rgba(255, 255, 255, 0.05)',
-            width: '200px', height: '200px',
-            borderRadius: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            border: '2px solid rgba(212, 175, 55, 0.3)',
-            boxShadow: '0 0 50px rgba(212, 175, 55, 0.15)',
-            backdropFilter: 'blur(10px)'
-          }}>
-            <TrendingUp size={90} color="#D4AF37" />
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px' }}>
+          <div style={{ flex: '1.2' }}>
+            <div className="slide-label" style={{ background: 'rgba(212, 175, 55, 0.2)', color: '#D4AF37' }}>SESSION 04 • THE VISION</div>
+            <h1 className="slide-title" style={{
+              fontSize: '72px',
+              color: '#FFFFFF',
+              background: 'linear-gradient(135deg, #FFFFFF 0%, #D4AF37 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              marginBottom: '32px'
+            }}>
+              Elevate, Multiply & Scale.
+            </h1>
+            <p className="slide-subtitle" style={{ color: 'rgba(255,255,255,0.7)', textAlign: 'left', margin: '0' }}>
+              Building the ₹10,000 Crore Mindset. The next chapter of SNS Group starts with a transformation in how we behave.
+            </p>
+          </div>
+          <div style={{ flex: '0.8', display: 'flex', justifyContent: 'center' }}>
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              style={{
+                width: '300px', height: '300px',
+                borderRadius: '50%',
+                border: '1px dashed rgba(212,175,55,0.3)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                position: 'relative'
+              }}
+            >
+              <div style={{
+                background: 'rgba(255, 255, 255, 0.05)',
+                width: '220px', height: '220px',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(255,255,255,0.1)'
+              }}>
+                <TrendingUp size={100} color="#D4AF37" />
+              </div>
+            </motion.div>
           </div>
         </div>
       </motion.div>
 
       {/* ORIGIN STORY: THE BEHAVIOURAL GAP */}
-      <motion.div className="mb" style={{ padding: '60px 0', maxWidth: '1000px', margin: '0 auto' }} {...fadeIn}>
-        <div className="label" style={{ textAlign: 'center', marginBottom: '40px', color: '#64748B' }}>ORIGIN STORY: MARCH 2020</div>
-        <div className="grid2" style={{ gap: '24px' }}>
-          <div style={{ background: '#fff', padding: '40px 30px', borderRadius: '24px', textAlign: 'center', border: '1px solid #E2E8F0', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="slide-header">
+          <div className="slide-label">ORIGIN STORY: MARCH 2020</div>
+          <h2 className="slide-title">The Behavioural Gap</h2>
+        </div>
+        <div className="comparison-container" style={{ gridTemplateColumns: '1fr 1fr' }}>
+          <div className="comparison-card" style={{ borderTop: '4px solid #C53030' }}>
             <div style={{ fontSize: '14px', fontWeight: 900, color: '#C53030', marginBottom: '16px', letterSpacing: '2px', textTransform: 'uppercase' }}>INVESTOR A</div>
-            <XCircle size={48} color="#C53030" style={{ marginBottom: '20px', opacity: 0.8 }} />
-            <p style={{ fontSize: '18px', fontWeight: 800, color: '#1E293B', marginBottom: '20px', lineHeight: 1.4 }}>Panicked and exited <br />the market</p>
-            <div style={{ background: '#FFF5F5', color: '#C53030', padding: '10px', borderRadius: '8px', fontSize: '14px', fontWeight: 800 }}>Outcome: Missed recovery ✗</div>
+            <XCircle size={64} color="#C53030" style={{ marginBottom: '24px', opacity: 0.8 }} />
+            <p style={{ fontSize: '24px', fontWeight: 800, color: '#1E293B', marginBottom: '24px', lineHeight: 1.4 }}>Panicked and exited <br />the market</p>
+            <div style={{ background: '#FFF5F5', color: '#C53030', padding: '16px', borderRadius: '12px', fontSize: '16px', fontWeight: 800 }}>Outcome: Missed recovery ✗</div>
           </div>
-          <div style={{ background: '#fff', padding: '40px 30px', borderRadius: '24px', textAlign: 'center', border: '1px solid #E2E8F0', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
+          <div className="comparison-card" style={{ borderTop: '4px solid #2F855A' }}>
             <div style={{ fontSize: '14px', fontWeight: 900, color: '#2F855A', marginBottom: '16px', letterSpacing: '2px', textTransform: 'uppercase' }}>INVESTOR B</div>
-            <CheckCircle2 size={48} color="#2F855A" style={{ marginBottom: '20px', opacity: 0.8 }} />
-            <p style={{ fontSize: '18px', fontWeight: 800, color: '#1E293B', marginBottom: '20px', lineHeight: 1.4 }}>Stayed invested and <br />continued</p>
-            <div style={{ background: '#F0FFF4', color: '#2F855A', padding: '10px', borderRadius: '8px', fontSize: '14px', fontWeight: 800 }}>Outcome: Created Wealth ✓</div>
+            <CheckCircle2 size={64} color="#2F855A" style={{ marginBottom: '24px', opacity: 0.8 }} />
+            <p style={{ fontSize: '24px', fontWeight: 800, color: '#1E293B', marginBottom: '24px', lineHeight: 1.4 }}>Stayed invested and <br />continued</p>
+            <div style={{ background: '#F0FFF4', color: '#2F855A', padding: '16px', borderRadius: '12px', fontSize: '16px', fontWeight: 800 }}>Outcome: Created Wealth ✓</div>
           </div>
         </div>
-        <div style={{ marginTop: '40px', textAlign: 'center', color: '#475569', fontSize: '20px', fontStyle: 'italic', maxWidth: '700px', margin: '40px auto 0', lineHeight: 1.5 }}>
+        <div style={{ marginTop: '60px', textAlign: 'center', color: '#475569', fontSize: '24px', fontStyle: 'italic', maxWidth: '800px', margin: '60px auto 0', lineHeight: 1.5 }}>
           "The difference was behaviour — and behaviour is shaped by guidance."
         </div>
       </motion.div>
 
       {/* WHAT WE ACTUALLY DO */}
-      <div style={{ padding: '80px 0' }}>
-        <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '50px' }}>What We Actually Do</h2>
-        <h6 className="label" style={{ textAlign: 'center', marginBottom: '50px', fontSize: '16px' }}>Our role is to help clients stay rational and disciplined.</h6>
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="slide-header">
+          <div className="slide-label">OUR CORE ROLE</div>
+          <h2 className="slide-title">What We Actually Do</h2>
+          <p className="slide-subtitle">Our role is to help clients stay rational and disciplined.</p>
+        </div>
         <div className="grid3" style={{ gap: '30px' }}>
           {[
-            { icon: <ShieldCheck size={48} />, t: 'Guidance', d: 'Helping clients make sound decisions in volatile markets.' },
-            { icon: <TrendingUp size={48} />, t: 'Perspective', d: 'Framing short-term noise against long-term wealth goals.' },
-            { icon: <Users size={48} />, t: 'Understanding', d: 'Knowing each client\'s behaviour, goals, and fears.' }
+            { icon: <ShieldCheck size={56} />, t: 'Guidance', d: 'Helping clients make sound decisions in volatile markets.' },
+            { icon: <TrendingUp size={56} />, t: 'Perspective', d: 'Framing short-term noise against long-term wealth goals.' },
+            { icon: <Users size={56} />, t: 'Understanding', d: 'Knowing each client\'s behaviour, goals, and fears.' }
           ].map(item => (
-            <div key={item.t} style={{
-              background: 'linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%)',
-              padding: '50px 35px',
-              borderRadius: '32px',
-              textAlign: 'center',
-              border: '1px solid #E2E8F0',
-              boxShadow: '0 15px 35px rgba(0,0,0,0.03)'
-            }}>
-              <div style={{ color: '#1A2744', marginBottom: '24px', display: 'flex', justifyContent: 'center', opacity: 0.9 }}>{item.icon}</div>
-              <h4 style={{ fontSize: '26px', fontWeight: 900, color: '#1E293B', marginBottom: '18px' }}>{item.t}</h4>
+            <div key={item.t} className="comparison-card" style={{ textAlign: 'center' }}>
+              <div style={{ color: '#D4AF37', marginBottom: '24px', display: 'flex', justifyContent: 'center' }}>{item.icon}</div>
+              <h4 style={{ fontSize: '28px', fontWeight: 900, color: '#1E293B', marginBottom: '18px' }}>{item.t}</h4>
               <p style={{ color: '#475569', lineHeight: 1.6, fontSize: '18px', fontWeight: 500 }}>{item.d}</p>
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* OUR FOUNDATION CARDS */}
-      <motion.div className="mb" style={{ padding: '80px 0' }} {...fadeIn}>
-        <div className="label" style={{ color: '#64748B', textAlign: 'center', marginBottom: '50px', fontSize: '16px' }}>OUR FOUNDATION</div>
-        <div className="section-title" style={{ textAlign: 'center', marginBottom: '50px' }}>The Foundation of SNS</div>
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="slide-header">
+          <div className="slide-label">OUR FOUNDATION</div>
+          <h2 className="slide-title">The Foundation of SNS</h2>
+        </div>
         <div className="grid3" style={{ gap: '30px' }}>
           {[
-            { icon: <History size={64} />, label: '60+ Years of Legacy' },
-            { icon: <Users size={64} />, label: '3 Generations of Trust' },
-            { icon: <Infinity size={64} />, label: 'Infinite Relationships' }
+            { icon: <History size={80} />, label: '60+ Years of Legacy' },
+            { icon: <Users size={80} />, label: '3 Generations of Trust' },
+            { icon: <InfiniteIcon size={80} />, label: 'Infinite Relationships' }
           ].map(item => (
-            <>
-              <div key={item.label} style={{
-                background: '#fff',
-                padding: '60px 24px',
-                borderRadius: '40px',
-                textAlign: 'center',
-                border: '1px solid #E2E8F0',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.04)'
-              }}>
-                <div style={{ color: '#D4AF37', marginBottom: '28px', display: 'flex', justifyContent: 'center' }}>{item.icon}</div>
-                <div style={{ color: '#1E293B', fontSize: '24px', fontWeight: 900 }}>{item.label}</div>
-              </div>
-            </>
+            <div key={item.label} className="comparison-card" style={{ textAlign: 'center', padding: '60px 24px' }}>
+              <div style={{ color: '#D4AF37', marginBottom: '32px', display: 'flex', justifyContent: 'center' }}>{item.icon}</div>
+              <div style={{ color: '#1E293B', fontSize: '28px', fontWeight: 900 }}>{item.label}</div>
+            </div>
           ))}
         </div>
-        <p style={{ color: '#475569', lineHeight: 1.6, fontSize: '18px', fontWeight: 500 }}>Trust is our strongest asset. Mindset converts trust into scale.</p>
+        <div style={{ textAlign: 'center', marginTop: '40px' }}>
+          <p style={{ color: '#475569', lineHeight: 1.6, fontSize: '20px', fontWeight: 500 }}>
+            <span style={{ color: '#B8860B', fontWeight: 900 }}>Trust is our strongest asset.</span> Mindset converts trust into scale.
+          </p>
+        </div>
       </motion.div>
 
-      <motion.div className="mb" style={{ padding: '80px 0' }} {...fadeIn}>
-        <h1 className="section-title" style={{ textAlign: 'center', marginBottom: '60px' }}>Why do most distribution firms never scale?</h1>
-        <span className="label" style={{ color: '#64748B', textAlign: 'center', marginBottom: '50px', fontSize: '16px' }}>✗  Not markets!</span>
-        <span className="label" style={{ color: '#64748B', textAlign: 'center', marginBottom: '50px', fontSize: '16px' }}>✗  Not products!</span>
-        <p>The biggest limitation is MINDSET.</p>
+      <motion.div className="slide-section" style={{ background: '#1E293B', color: '#fff' }} {...slideIn}>
+        <div className="slide-header">
+          <h1 className="slide-title" style={{ color: '#fff', fontSize: '64px' }}>Why do most distribution firms never scale?</h1>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', marginBottom: '60px' }}>
+          <div className="slide-label" style={{ background: 'rgba(220, 38, 38, 0.2)', color: '#FCA5A5', border: '1px solid rgba(220,38,38,0.3)' }}>✗  Not markets!</div>
+          <div className="slide-label" style={{ background: 'rgba(220, 38, 38, 0.2)', color: '#FCA5A5', border: '1px solid rgba(220,38,38,0.3)' }}>✗  Not products!</div>
+        </div>
+        <motion.p
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          style={{ fontSize: '48px', fontWeight: 900, textAlign: 'center', color: '#D4AF37' }}
+        >
+          The biggest limitation is MINDSET.
+        </motion.p>
       </motion.div>
 
 
-      <motion.div>
-        <div>
-          <p>KEY CONCEPT</p>
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="slide-header">
+          <div className="slide-label">KEY CONCEPT</div>
+          <h1 className="slide-title">Grow vs Scale</h1>
         </div>
 
-        <h1>Grow vs Scale</h1>
-
-        <div>
-
-          <div>
+        <div className="comparison-container">
+          <div className="comparison-card">
             <h2>Growth</h2>
             <ul>
               <li>Linear expansion</li>
@@ -185,12 +194,10 @@ const Session04: React.FC = () => {
             </ul>
           </div>
 
-          <div>
-            <span>→</span>
-          </div>
+          <div className="comparison-arrow">→</div>
 
-          <div>
-            <h2>Scale</h2>
+          <div className="comparison-card" style={{ border: '2px solid #D4AF37' }}>
+            <h2 style={{ color: '#D4AF37' }}>Scale</h2>
             <ul>
               <li>Exponential expansion</li>
               <li>Driven by systems & reputation</li>
@@ -198,715 +205,385 @@ const Session04: React.FC = () => {
               <li>Trust + Referrals + Systems → Exponential AUM</li>
             </ul>
           </div>
-
         </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <div className="case-studies-label">
-            <span>CASE STUDIES</span>
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="slide-header">
+          <div className="slide-label">CASE STUDIES</div>
+          <h1 className="slide-title">Lessons from the World's Best</h1>
+        </div>
+
+        <div className="case-studies-container">
+          <div className="case-card amazon">
+            <h2>Amazon</h2>
+            <h4>Client Obsession</h4>
+            <p>Every decision starts with:</p>
+            <p style={{ fontWeight: 800, fontSize: '20px', margin: '10px 0' }}>"What is best for the customer?"</p>
+            <p>The scale desired, comes from relentless focus on the client.</p>
           </div>
 
-          <h1>Lessons from the World's Best</h1>
-
-          <div className="case-studies-container">
-
-            <div className="case-card amazon">
-              <h2>Amazon</h2>
-              <hr />
-              <h4>Client Obsession</h4>
-
-              <p>Every decision starts with:</p>
-              <p>"What is best for the customer?"</p>
-              <p>
-                The scale desired, comes from relentless focus on the client.
-              </p>
-            </div>
-
-            <div className="case-card fidelity">
-              <h2>Fidelity</h2>
-              <hr />
-              <h4>Proactive Communication</h4>
-
-              <p>
-                Clients left not due to poor returns — but because they felt ignored.
-                Proactive communication builds trust.
-              </p>
-            </div>
-
-            <div className="case-card toyota">
-              <h2>Toyota</h2>
-              <hr />
-              <h4>Kaizen</h4>
-
-              <p>
-                Small improvements every day create massive long-term scale.
-                Consistency compounds into competitive advantage.
-              </p>
-
-              <p>1^365 = 1 &nbsp; But 1.01^365 = 37.8</p>
-            </div>
-
+          <div className="case-card fidelity">
+            <h2>Fidelity</h2>
+            <h4>Proactive Communication</h4>
+            <p>Clients left not due to poor returns — but because they felt ignored.</p>
+            <p style={{ fontWeight: 800, fontSize: '20px', margin: '10px 0' }}>Proactive communication builds trust.</p>
           </div>
-        </>
+
+          <div className="case-card toyota">
+            <h2>Toyota</h2>
+            <h4>Kaizen</h4>
+            <p>Small improvements every day create massive long-term scale. Consistency compounds into competitive advantage.</p>
+            <p style={{ fontWeight: 800, fontSize: '20px', margin: '10px 0' }}>1.01^365 = 37.8</p>
+            <p>vs 1^365 = 1</p>
+          </div>
+        </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <h1>The Distribution Trap</h1>
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="slide-header">
+          <h1 className="slide-title">The Distribution Trap</h1>
+        </div>
 
-          {/* Trapped Firms Section */}
-          <div className="trapped-firms-section">
-            <p>Trapped Firms:</p>
-
+        <div className="trapped-scaling-container">
+          <div className="flow-section">
+            <p>TRAPPED FIRMS</p>
             <div className="flow-row">
-              <div className="flow-box">
-                <span>Product</span>
-              </div>
-
+              <div className="flow-box">Product</div>
               <span>→</span>
-
-              <div className="flow-box">
-                <span>Transaction</span>
-              </div>
-
+              <div className="flow-box">Transaction</div>
               <span>→</span>
-
-              <div className="flow-box">
-                <span>Commission</span>
-              </div>
+              <div className="flow-box">Commission</div>
             </div>
           </div>
 
-          {/* Scaling Firms Section */}
-          <div className="scaling-firms-section">
-            <p>Scaling Firms:</p>
-
+          <div className="flow-section" style={{ border: '1px solid #D4AF37' }}>
+            <p style={{ color: '#D4AF37' }}>SCALING FIRMS</p>
             <div className="flow-row">
-              <div className="flow-box">
-                <span>Client</span>
-              </div>
-
+              <div className="flow-box">Client</div>
               <span>→</span>
-
-              <div className="flow-box">
-                <span>Relationship</span>
-              </div>
-
+              <div className="flow-box">Relationship</div>
               <span>→</span>
-
-              <div className="flow-box">
-                <span>Compounding</span>
-              </div>
+              <div className="flow-box">Compounding</div>
             </div>
           </div>
+        </div>
 
-          <p className="slide-footer">
-            Same industry. Different mindset. Completely different outcomes.
-          </p>
-        </>
+        <p className="slide-subtitle" style={{ marginTop: '60px', fontWeight: 700 }}>
+          Same industry. Different mindset. Completely different outcomes.
+        </p>
       </motion.div>
 
-      <motion.div>
-        <>
-          <div className="formula-label">
-            <span>THE FORMULA</span>
-          </div>
-
-          <h1>Trust Compounding Formula</h1>
-
-          <p className="subtitle">
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="slide-header">
+          <div className="slide-label">THE FORMULA</div>
+          <h1 className="slide-title">Trust Compounding Formula</h1>
+          <p className="slide-subtitle">
             Trust grows through repetition. Every interaction either strengthens trust or weakens it.
           </p>
+        </div>
 
-          <div className="formula-row">
-
-            <div className="formula-box">
-              <h3>Clarity</h3>
-              <p>Clear, jargon-free communication</p>
-            </div>
-
-            <span>+</span>
-
-            <div className="formula-box">
-              <h3>Consistency</h3>
-              <p>Reliable presence across markets</p>
-            </div>
-
-            <span>+</span>
-
-            <div className="formula-box">
-              <h3>Communication</h3>
-              <p>Proactive, not reactive touch</p>
-            </div>
-
-            <span>+</span>
-
-            <div className="formula-box">
-              <h3>Time</h3>
-              <p>Compounding requires patience</p>
-            </div>
-
+        <div className="formula-row">
+          <div className="formula-box">
+            <h3>Clarity</h3>
+            <p>Clear, jargon-free communication</p>
           </div>
-
-          <div className="trust-result">
-            <h2>= TRUST</h2>
-            <p>The compound interest of human relationships.</p>
+          <span style={{ fontSize: '32px', color: '#D4AF37' }}>+</span>
+          <div className="formula-box">
+            <h3>Consistency</h3>
+            <p>Reliable presence across markets</p>
           </div>
-        </>
+          <span style={{ fontSize: '32px', color: '#D4AF37' }}>+</span>
+          <div className="formula-box">
+            <h3>Communication</h3>
+            <p>Proactive, not reactive touch</p>
+          </div>
+          <span style={{ fontSize: '32px', color: '#D4AF37' }}>+</span>
+          <div className="formula-box">
+            <h3>Time</h3>
+            <p>Compounding requires patience</p>
+          </div>
+        </div>
+
+        <div className="trust-result">
+          <h2>= TRUST</h2>
+          <p style={{ fontSize: '20px', margin: 0 }}>The compound interest of human relationships.</p>
+        </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <h1>The Wealth Flywheel</h1>
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="slide-header">
+          <h1 className="slide-title">The Wealth Flywheel</h1>
+          <p className="slide-subtitle">Once the flywheel spins, growth becomes self-reinforcing.</p>
+        </div>
 
-          <p className="subtitle">
-            Once the flywheel spins, growth becomes self-reinforcing.
-          </p>
-
-          <div className="flywheel-container">
-
-            <div className="flywheel-center">
-              <p>Self-reinforcing</p>
-              <p>growth</p>
-            </div>
-
-            {/* Top */}
-            <div className="flywheel-item client-trust">
-              <h4>Client Trust</h4>
-              <p>Foundation</p>
-            </div>
-
-            {/* Top Right */}
-            <div className="flywheel-item better-guidance">
-              <h4>Better Guidance</h4>
-              <p>Informed advice</p>
-            </div>
-
-            {/* Right */}
-            <div className="flywheel-item better-behaviour">
-              <h4>Better Behaviour</h4>
-              <p>Client action</p>
-            </div>
-
-            {/* Bottom Right */}
-            <div className="flywheel-item better-outcomes">
-              <h4>Better Outcomes</h4>
-              <p>Real results</p>
-            </div>
-
-            {/* Bottom */}
-            <div className="flywheel-item client-confidence">
-              <h4>Client Confidence</h4>
-              <p>Felt security</p>
-            </div>
-
-            {/* Bottom Left */}
-            <div className="flywheel-item referrals">
-              <h4>Referrals</h4>
-              <p>Word of mouth</p>
-            </div>
-
-            {/* Left */}
-            <div className="flywheel-item net-inflows">
-              <h4>Net Inflows</h4>
-              <p>Capital growth</p>
-            </div>
-
-            {/* Top Left */}
-            <div className="flywheel-item aum-growth">
-              <h4>AUM Growth</h4>
-              <p>Scale & capacity</p>
-            </div>
-
+        <div className="flywheel-container">
+          <div className="flywheel-center">
+            <p style={{ fontSize: '18px', margin: 0 }}>SELF-REINFORCING</p>
+            <p style={{ fontSize: '24px', color: '#D4AF37', margin: 0 }}>GROWTH</p>
           </div>
 
-          <div className="flywheel-legend">
-            <div className="legend-item">
-              <span className="legend-box business"></span>
-              <p>Business outcomes</p>
-            </div>
-
-            <div className="legend-item">
-              <span className="legend-box client"></span>
-              <p>Client experience</p>
-            </div>
+          <div className="flywheel-item client-trust">
+            <h4>Client Trust</h4>
+            <p>Foundation</p>
           </div>
-        </>
+          <div className="flywheel-item better-guidance">
+            <h4>Better Guidance</h4>
+            <p>Informed advice</p>
+          </div>
+          <div className="flywheel-item better-behaviour">
+            <h4>Better Behaviour</h4>
+            <p>Client action</p>
+          </div>
+          <div className="flywheel-item better-outcomes">
+            <h4>Better Outcomes</h4>
+            <p>Real results</p>
+          </div>
+          <div className="flywheel-item client-confidence">
+            <h4>Client Confidence</h4>
+            <p>Felt security</p>
+          </div>
+          <div className="flywheel-item referrals">
+            <h4>Referrals</h4>
+            <p>Word of mouth</p>
+          </div>
+          <div className="flywheel-item net-inflows">
+            <h4>Net Inflows</h4>
+            <p>Capital growth</p>
+          </div>
+          <div className="flywheel-item aum-growth">
+            <h4>AUM Growth</h4>
+            <p>Scale & capacity</p>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', marginTop: '40px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <div style={{ width: '20px', height: '20px', background: '#D4AF37', borderRadius: '4px' }}></div>
+            <p style={{ fontSize: '14px', fontWeight: 700, margin: 0 }}>Business outcomes</p>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <div style={{ width: '20px', height: '20px', background: '#1E293B', borderRadius: '4px' }}></div>
+            <p style={{ fontSize: '14px', fontWeight: 700, margin: 0 }}>Client experience</p>
+          </div>
+        </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <div className="capability-label">
-            <span>CAPABILITY PYRAMID</span>
-          </div>
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="slide-header">
+          <div className="slide-label">CAPABILITY PYRAMID</div>
+          <h1 className="slide-title">₹10,000 Crore Capability Pyramid</h1>
+          <p className="slide-subtitle">Strong foundations create scalable trust.</p>
+        </div>
 
-          <h1>₹10,000 Crore Capability Pyramid</h1>
-
-          <p className="subtitle">
-            Strong foundations create scalable trust.
-          </p>
-
-          <div className="pyramid-container">
-
-            <div className="pyramid-level level-5">
-              <span>Level 5 — Legacy Relationships</span>
-            </div>
-
-            <div className="pyramid-level level-4">
-              <span>Level 4 — Relationship Compounding</span>
-            </div>
-
-            <div className="pyramid-level level-3">
-              <span>Level 3 — Consistent Engagement</span>
-            </div>
-
-            <div className="pyramid-level level-2">
-              <span>Level 2 — Deep Client Understanding</span>
-            </div>
-
-            <div className="pyramid-level level-1">
-              <span>Level 1 — Preparation</span>
-            </div>
-
-          </div>
-        </>
+        <div className="pyramid-container">
+          <div className="pyramid-level level-5">Level 5 — Legacy Relationships</div>
+          <div className="pyramid-level level-4">Level 4 — Relationship Compounding</div>
+          <div className="pyramid-level level-3">Level 3 — Consistent Engagement</div>
+          <div className="pyramid-level level-2">Level 2 — Deep Client Understanding</div>
+          <div className="pyramid-level level-1">Level 1 — Preparation</div>
+        </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <h1>The 3 Mindset Shifts</h1>
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="slide-header">
+          <h1 className="slide-title">The 3 Mindset Shifts</h1>
+        </div>
 
-          <div className="mindset-container">
-
-            {/* Shift 1 */}
-            <div className="mindset-row">
-              <div className="mindset-number">
-                <span>01</span>
-              </div>
-
+        <div className="mindset-container">
+          {[
+            { n: '01', f: 'Product Thinking', t: 'Client Thinking' },
+            { n: '02', f: 'Activity', t: 'Impact' },
+            { n: '03', f: 'Short-Term Thinking', t: 'Compounding Relationships' }
+          ].map(shift => (
+            <div key={shift.n} className="mindset-row">
+              <div className="mindset-number">{shift.n}</div>
               <div className="mindset-content">
-                <span>Product Thinking</span>
+                <span>{shift.f}</span>
                 <span>→</span>
-                <span>Client Thinking</span>
+                <span>{shift.t}</span>
               </div>
             </div>
-
-            {/* Shift 2 */}
-            <div className="mindset-row">
-              <div className="mindset-number">
-                <span>02</span>
-              </div>
-
-              <div className="mindset-content">
-                <span>Activity</span>
-                <span>→</span>
-                <span>Impact</span>
-              </div>
-            </div>
-
-            {/* Shift 3 */}
-            <div className="mindset-row">
-              <div className="mindset-number">
-                <span>03</span>
-              </div>
-
-              <div className="mindset-content">
-                <span>Short-Term Thinking</span>
-                <span>→</span>
-                <span>Compounding Relationships</span>
-              </div>
-            </div>
-
-          </div>
-        </>
+          ))}
+        </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <div className="conversation-model-label">
-            <span>CONVERSATION MODEL</span>
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="slide-header">
+          <div className="slide-label">CONVERSATION MODEL</div>
+          <h1 className="slide-title">₹10,000 Crore Client Conversation Model</h1>
+        </div>
+
+        <div className="conversation-container">
+          <div className="conversation-level level-1">
+            <div className="conversation-left">
+              <span>Level 1</span>
+              <h3>Transaction Conversation</h3>
+            </div>
+            <div className="conversation-right">"What scheme should I invest in?"</div>
           </div>
 
-          <h1>₹10,000 Crore Client Conversation Model</h1>
-
-          <div className="conversation-container">
-
-            {/* Level 1 */}
-            <div className="conversation-level level-1">
-              <div className="conversation-left">
-                <span>Level 1</span>
-                <h3>Transaction Conversation</h3>
-              </div>
-
-              <div className="conversation-right">
-                <p>"What scheme should I invest in?"</p>
-              </div>
+          <div className="conversation-level level-2">
+            <div className="conversation-left">
+              <span>Level 2</span>
+              <h3>Portfolio Conversation</h3>
             </div>
-
-            {/* Level 2 */}
-            <div className="conversation-level level-2">
-              <div className="conversation-left">
-                <span>Level 2</span>
-                <h3>Portfolio Conversation</h3>
-              </div>
-
-              <div className="conversation-right">
-                <p>"How is my portfolio performing?"</p>
-              </div>
-            </div>
-
-            {/* Level 3 */}
-            <div className="conversation-level level-3">
-              <div className="conversation-left">
-                <span>Level 3</span>
-                <h3>Wealth Conversation</h3>
-              </div>
-
-              <div className="conversation-right">
-                <p>"How do I build long-term wealth?"</p>
-              </div>
-            </div>
-
+            <div className="conversation-right">"How is my portfolio performing?"</div>
           </div>
 
-          <p className="conversation-footer">
-            Move every client conversation up the levels.
-          </p>
-        </>
+          <div className="conversation-level level-3">
+            <div className="conversation-left">
+              <span>Level 3</span>
+              <h3>Wealth Conversation</h3>
+            </div>
+            <div className="conversation-right">"How do I build long-term wealth?"</div>
+          </div>
+        </div>
+
+        <p className="slide-subtitle" style={{ marginTop: '40px', fontWeight: 800, color: '#D4AF37' }}>
+          Move every client conversation up the levels.
+        </p>
       </motion.div>
 
-      <motion.div>
-        <>
-          <h1>5 Behaviours of a ₹10,000 Crore Firm</h1>
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="slide-header">
+          <h1 className="slide-title">5 Behaviours of a ₹10,000 Crore Firm</h1>
+        </div>
 
-          <div className="behaviours-container">
-
-            {/* Behaviour 01 */}
-            <div className="behaviour-card">
-              <div className="behaviour-number">
-                <span>01</span>
-              </div>
-
+        <div className="behaviours-container">
+          {[
+            { n: '01', t: 'Preparation first', d: 'Walk in over-prepared. Every meeting matters.' },
+            { n: '02', t: 'Proactive communication', d: 'Reach clients before they wonder where you are.' },
+            { n: '03', t: 'Conviction in long-term investing', d: 'Protect clients from their own short-term impulses.' },
+            { n: '04', t: 'Relationship compounding', d: 'Every interaction is an investment in the relationship.' },
+            { n: '05', t: 'Consistency of standards', d: 'The same quality, every time, for every client.' }
+          ].map(beh => (
+            <div key={beh.n} className="behaviour-card">
+              <div className="behaviour-number">{beh.n}</div>
               <div className="behaviour-content">
-                <h3>Preparation first</h3>
-                <p>Walk in over-prepared. Every meeting matters.</p>
+                <h3>{beh.t}</h3>
+                <p>{beh.d}</p>
               </div>
             </div>
-
-            {/* Behaviour 02 */}
-            <div className="behaviour-card">
-              <div className="behaviour-number">
-                <span>02</span>
-              </div>
-
-              <div className="behaviour-content">
-                <h3>Proactive communication</h3>
-                <p>Reach clients before they wonder where you are.</p>
-              </div>
-            </div>
-
-            {/* Behaviour 03 */}
-            <div className="behaviour-card">
-              <div className="behaviour-number">
-                <span>03</span>
-              </div>
-
-              <div className="behaviour-content">
-                <h3>Conviction in long-term investing</h3>
-                <p>Protect clients from their own short-term impulses.</p>
-              </div>
-            </div>
-
-            {/* Behaviour 04 */}
-            <div className="behaviour-card">
-              <div className="behaviour-number">
-                <span>04</span>
-              </div>
-
-              <div className="behaviour-content">
-                <h3>Relationship compounding</h3>
-                <p>Every interaction is an investment in the relationship.</p>
-              </div>
-            </div>
-
-            {/* Behaviour 05 */}
-            <div className="behaviour-card">
-              <div className="behaviour-number">
-                <span>05</span>
-              </div>
-
-              <div className="behaviour-content">
-                <h3>Consistency of standards</h3>
-                <p>The same quality, every time, for every client.</p>
-              </div>
-            </div>
-
-          </div>
-        </>
+          ))}
+        </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <h1>The ₹10,000 Crore Equation</h1>
+      <motion.div className="slide-section" {...slideIn} style={{ background: '#1E293B', color: '#fff' }}>
+        <div className="slide-header">
+          <h1 className="slide-title" style={{ color: '#fff' }}>The ₹10,000 Crore Equation</h1>
+        </div>
 
-          <div className="equation-banner">
-            <p>
-              AUM Scalability = Client Trust × Consistency × Conviction × Referrals
-            </p>
-          </div>
+        <div className="equation-banner">
+          AUM Scalability = Client Trust × Consistency × Conviction × Referrals
+        </div>
 
-          <div className="equation-cards">
-
-            {/* Card 1 */}
-            <div className="equation-card">
-              <span className="equation-number">1</span>
-
-              <h3>Client Trust</h3>
-
-              <p>
-                Earned through clarity,
-                consistency and time
-              </p>
+        <div className="equation-cards">
+          {[
+            { n: '1', t: 'Client Trust', d: 'Earned through clarity, consistency and time' },
+            { n: '2', t: 'Consistency', d: 'Same standard at every market — bull or bear' },
+            { n: '3', t: 'Conviction', d: 'Guiding clients to stay long-term disciplined' },
+            { n: '4', t: 'Referrals', d: 'The proof that relationships have compounded' }
+          ].map(card => (
+            <div key={card.n} className="equation-card">
+              <span className="equation-number">{card.n}</span>
+              <h3 style={{ color: '#1E293B', fontSize: '20px' }}>{card.t}</h3>
+              <p style={{ color: '#64748B', fontSize: '14px' }}>{card.d}</p>
             </div>
-
-            {/* Card 2 */}
-            <div className="equation-card">
-              <span className="equation-number">2</span>
-
-              <h3>Consistency</h3>
-
-              <p>
-                Same standard at every
-                market — bull or bear
-              </p>
-            </div>
-
-            {/* Card 3 */}
-            <div className="equation-card">
-              <span className="equation-number">3</span>
-
-              <h3>Conviction</h3>
-
-              <p>
-                Guiding clients to stay long-
-                term disciplined
-              </p>
-            </div>
-
-            {/* Card 4 */}
-            <div className="equation-card">
-              <span className="equation-number">4</span>
-
-              <h3>Referrals</h3>
-
-              <p>
-                The proof that relationships
-                have compounded
-              </p>
-            </div>
-
-          </div>
-        </>
+          ))}
+        </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <h1>₹10,000 Crore Journey Roadmap</h1>
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="slide-header">
+          <h1 className="slide-title">₹10,000 Crore Journey Roadmap</h1>
+        </div>
 
-          <div className="roadmap-container">
-
-            {/* Timeline */}
-            <div className="timeline">
-
-              <div className="timeline-step">
-                <span className="timeline-number">1</span>
-              </div>
-
-              <div className="timeline-step">
-                <span className="timeline-number">2</span>
-              </div>
-
-              <div className="timeline-step">
-                <span className="timeline-number">3</span>
-              </div>
-
-              <div className="timeline-step">
-                <span className="timeline-number">4</span>
-              </div>
-
-              <div className="timeline-line">
-                <span className="timeline-dot"></span>
-                <span className="timeline-dot"></span>
-                <span className="timeline-dot"></span>
-                <span className="timeline-dot"></span>
-                <span className="timeline-arrow">→</span>
-              </div>
-
-            </div>
-
-            {/* Stage Cards */}
-
-            <div className="roadmap-stages">
-
-              {/* Stage 1 */}
-              <div className="stage-card stage-1">
-                <span className="stage-label">Stage 1</span>
-                <h3>Distributor</h3>
-                <p>Product-focused, transaction-driven</p>
-              </div>
-
-              {/* Stage 2 */}
-              <div className="stage-card stage-2">
-                <span className="stage-label">Stage 2</span>
-                <h3>Trusted Guide</h3>
-                <p>Behaviour coaching, proactive communication</p>
-              </div>
-
-              {/* Stage 3 */}
-              <div className="stage-card stage-3">
-                <span className="stage-label">Stage 3</span>
-                <h3>Relationship Institution</h3>
-                <p>Referral engine, compounding AUM</p>
-              </div>
-
-              {/* Stage 4 */}
-              <div className="stage-card stage-4">
-                <span className="stage-label">Stage 4</span>
-                <h3>Generational Wealth Platform</h3>
-                <p>Legacy relationships across families</p>
-              </div>
-
-            </div>
-
+        <div className="roadmap-container">
+          <div className="timeline">
+            <div className="timeline-line"></div>
+            {[1, 2, 3, 4].map(n => (
+              <div key={n} className="timeline-step">{n}</div>
+            ))}
           </div>
-        </>
+
+          <div className="roadmap-stages">
+            {[
+              { s: '1', t: 'Distributor', d: 'Product-focused, transaction-driven' },
+              { s: '2', t: 'Trusted Guide', d: 'Behaviour coaching, proactive communication' },
+              { s: '3', t: 'Relationship Institution', d: 'Referral engine, compounding AUM' },
+              { s: '4', t: 'Generational Wealth Platform', d: 'Legacy relationships across families' }
+            ].map(stage => (
+            <div key={stage.s} className="stage-card">
+                <span className="stage-label">Stage {stage.s}</span>
+                <h3 style={{ color: '#1E293B', fontSize: '20px', marginBottom: '12px' }}>{stage.t}</h3>
+                <p style={{ color: '#64748B', fontSize: '14px' }}>{stage.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <div className="quote-container">
-
-            <div className="quote-icon">
-              <span>“</span>
-              <span>”</span>
-            </div>
-
-            <blockquote className="main-quote">
-              "The stock market transfers money from the impatient to the patient."
-            </blockquote>
-
-            <p className="quote-author">— Warren Buffett</p>
-
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="quote-container">
+          <div className="main-quote">
+            "The stock market transfers money from the impatient to the patient."
           </div>
+          <p className="quote-author">— Warren Buffett</p>
 
-          <p className="quote-subtitle">
-            Our role is to help clients:
-          </p>
+          <p className="quote-subtitle">Our role is to help clients:</p>
 
           <div className="quote-actions">
-
-            <div className="action-card">
-              <span>Stay disciplined</span>
-            </div>
-
-            <div className="action-card">
-              <span>Stay invested</span>
-            </div>
-
-            <div className="action-card">
-              <span>Stay patient</span>
-            </div>
-
+            <div className="action-card">Stay disciplined</div>
+            <div className="action-card">Stay invested</div>
+            <div className="action-card">Stay patient</div>
           </div>
-        </>
+        </div>
       </motion.div>
 
       {/* FINAL MANTRA */}
-      <motion.div className="mb" style={{ background: '#D4AF37', color: '#fff', padding: '100px 60px', borderRadius: '40px', textAlign: 'center' }} {...fadeIn}>
-        <h2 style={{ fontSize: '48px', marginBottom: '32px', fontWeight: 900 }}>The ₹10,000 Crore Mindset</h2>
-        <p style={{ fontSize: '32px', maxWidth: '850px', margin: '0 auto', fontStyle: 'italic', fontWeight: 500 }}>
+      <motion.div className="slide-section" style={{ background: '#D4AF37', color: '#fff', border: 'none' }} {...slideIn}>
+        <h2 style={{ fontSize: '64px', marginBottom: '32px', fontWeight: 900, fontFamily: "'Playfair Display', serif" }}>The ₹10,000 Crore Mindset</h2>
+        <p style={{ fontSize: '36px', maxWidth: '900px', margin: '0 auto', fontStyle: 'italic', fontWeight: 600, lineHeight: 1.4 }}>
           "If SNS was already a ₹10,000 Crore firm, how would we behave tomorrow morning?"
         </p>
       </motion.div>
 
-      <motion.div>
-        <>
-          <div className="closing-slide">
-
-            <p className="closing-text-light">
-              The future of SNS will not be decided
-              <br />
-              by markets or products.
-            </p>
-
-            <h2 className="closing-text-bold">
-              It will be decided by the standards
-              <br />
-              we set for ourselves.
-            </h2>
-
-            <hr className="closing-divider" />
-
-            <p className="closing-highlight">
-              Let us build the ₹10,000 Crore mindset.
-            </p>
-
-          </div>
-        </>
+      <motion.div className="slide-section" {...slideIn}>
+        <div className="closing-slide">
+          <p className="closing-text-light">
+            The future of SNS will not be decided <br /> by markets or products.
+          </p>
+          <h2 className="closing-text-bold">
+            It will be decided by the standards <br /> we set for ourselves.
+          </h2>
+          <hr className="closing-divider" />
+          <p className="closing-highlight">Let us build the ₹10,000 Crore mindset.</p>
+        </div>
       </motion.div>
 
-      <motion.div>
-        <>
-          <div className="cover-slide">
-
-            <div className="cover-left">
-
-              <div className="logo-container">
-                <img src="logo.png" alt="Shah & Shah" />
-                <h3>Shah & Shah</h3>
-              </div>
-
-              <hr className="trust-divider" />
-
-              <p className="trust-text">
-                60+ Years of Trust
-              </p>
-
+      <motion.div className="slide-section" style={{ background: '#F8FAFC' }} {...slideIn}>
+        <div className="cover-slide">
+          <div className="cover-left">
+            <div className="logo-container">
+              <ShieldCheck size={80} color="#D4AF37" />
+              <h3>Shah & Shah</h3>
             </div>
-
-            <div className="cover-divider"></div>
-
-            <div className="cover-right">
-
-              <p className="cover-subtitle">
-                Building the
-              </p>
-
-              <h1 className="cover-title">
-                ₹10,000
-                <br />
-                Crore
-                <br />
-                Mindset
-              </h1>
-
-              <p className="cover-footer">
-                The Next Chapter of SNS Group
-              </p>
-
-            </div>
-
+            <hr className="trust-divider" />
+            <p className="trust-text">60+ YEARS OF TRUST</p>
           </div>
-        </>
-      </motion.div>
 
-      <style dangerouslySetInnerHTML={{
-        __html: `
-        #page-s4 .section-title { font-size: 52px !important; color: #0F172A !important; font-weight: 900 !important; }
-        #page-s4 .label { font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 4px; }
-      `}} />
+          <div className="cover-divider"></div>
+
+          <div className="cover-right">
+            <p className="cover-subtitle">Building the</p>
+            <h1 className="cover-title">
+              ₹10,000 <br /> Crore <br /> Mindset
+            </h1>
+            <p className="cover-footer">THE NEXT CHAPTER OF SNS GROUP</p>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 };

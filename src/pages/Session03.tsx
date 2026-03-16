@@ -85,7 +85,7 @@ const Session03: React.FC = () => {
               Ideal Client Management Model (ICMM): Our standardized framework for delivering consistent value.
             </div>
           </p>
-
+          <h1>What are we trying to achieve? </h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
             {['Inspire', 'Improve', 'Impact'].map(item => (
               <div key={item} style={{
@@ -108,8 +108,8 @@ const Session03: React.FC = () => {
         </div>
 
         <div style={{ flex: '0 0 auto', zIndex: 1, position: 'relative' }}>
-          <motion.div 
-            animate={{ 
+          <motion.div
+            animate={{
               scale: [1, 1.05, 1],
               opacity: [0.8, 1, 0.8]
             }}
@@ -173,8 +173,8 @@ const Session03: React.FC = () => {
           {[
             'Embed AI into daily workflow process',
             'Deploy AI-driven client intelligence',
-            'Team Fluency (Data & Process Training)',
-            'Structured Data Architecture'
+            'Train team – Personal & Professional development (data & process fluency)',
+            'Build structured data architecture'
           ].map(area => (
             <div key={area} style={{
               display: 'flex',
@@ -193,6 +193,51 @@ const Session03: React.FC = () => {
             </div>
           ))}
         </div>
+      </motion.div>
+
+      <motion.div>
+        <>
+          <div className="tech-slide">
+
+            <div className="tech-header">
+
+              <div className="decorative-blocks">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <h1>How to use Tech, Data & our Team to:</h1>
+
+              <div className="logo">
+                <img src="logo.png" alt="Shah & Shah" />
+              </div>
+
+            </div>
+
+            <ul className="tech-points">
+              <li>Enhance investors’ experience</li>
+              <li>Improve Growth and efficiency</li>
+              <li>Scale up & personalize clients engagements</li>
+              <li>Create a One team, One standard, One model, One delivery</li>
+            </ul>
+
+            <div className="tech-footer">
+
+              <p className="footer-text">
+                Our vision : To provide peace of mind by bringing significance in our Customer Service.
+              </p>
+
+              <div className="footer-bottom">
+                <span>www.snsgroup.in</span>
+                <span>“AMFI-registered Mutual Fund Distributor”</span>
+              </div>
+
+            </div>
+
+          </div>
+        </>
       </motion.div>
 
       {/* SECTION 3: CRM OPTIMIZATION OVERHAUL */}
@@ -243,7 +288,7 @@ const Session03: React.FC = () => {
               {
                 title: 'Workflow Dynamics',
                 icon: <PieChart size={28} />,
-                items: ['Action Plan Integration', 'Survey Integration', 'Inward/Outward Tracker'],
+                items: ['Action Plan Integration', 'Survey Integration', 'Daily Pulse'],
                 color: '#6f42c2'
               }
             ].map((cat, idx) => (
@@ -310,9 +355,31 @@ const Session03: React.FC = () => {
           </p>
           <div className="check-list" style={{ color: '#fff' }}>
             <li style={{ borderBottomColor: 'rgba(255,255,255,0.1)' }}><span style={{ color: 'var(--gold-light)' }}>→</span>Rising Investor Expectations</li>
-            <li style={{ borderBottomColor: 'rgba(255,255,255,0.1)' }}><span style={{ color: 'var(--gold-light)' }}>→</span>Fintech Benchmarks resetting Service</li>
-            <li style={{ borderBottomColor: 'rgba(255,255,255,0.1)' }}><span style={{ color: 'var(--gold-light)' }}>→</span>Tightening Margins & Compliance</li>
+            <li style={{ borderBottomColor: 'rgba(255,255,255,0.1)' }}><span style={{ color: 'var(--gold-light)' }}>→</span>Need for personalization at scale</li>
+            <li style={{ borderBottomColor: 'rgba(255,255,255,0.1)' }}><span style={{ color: 'var(--gold-light)' }}>→</span>Cost & efficiency pressure</li>
             <li style={{ borderBottomColor: 'rgba(255,255,255,0.1)' }}><span style={{ color: 'var(--gold-light)' }}>→</span>Data-rich but Insight-poor reality</li>
+            <li style={{ borderBottomColor: 'rgba(255,255,255,0.1)' }}><span style={{ color: 'var(--gold-light)' }}>→</span>Business across industries are investing heavily in AI to & therefore a necessity for survival. </li>
+            <>
+              <ul className="industry-shift-list">
+                <li>
+                  The Industry Has Shifted
+                  <ul>
+                    <li>Investors expect digital-first, personalized experience</li>
+                    <li>
+                      Fintech platforms have reset service benchmarks
+                      (not withstanding beneficial or not to investors)
+                    </li>
+                    <li>Margins are tightening</li>
+                    <li>Compliance expectations are rising</li>
+                    <li>KYC process getting strengthened &amp; integrated</li>
+                  </ul>
+                </li>
+
+                <li className="ai-necessity">
+                  AI is no longer optional. It is a competitive necessity.
+                </li>
+              </ul>
+            </>
           </div>
           <div style={{ marginTop: '30px', padding: '24px', background: 'var(--gold)', borderRadius: '16px', color: 'var(--navy)', fontWeight: 800, textAlign: 'center', fontSize: '20px' }}>
             AI is a Competitive Necessity.
@@ -320,15 +387,16 @@ const Session03: React.FC = () => {
         </motion.div>
 
         <motion.div className="card" {...fadeIn}>
-          <div className="label">The Impact</div>
-          <h2>Decision Intelligence at Scale</h2>
+          <div className="label">What AI will change</div>
+          <h2>AI= Decision Intelligence at Scale</h2>
           <p style={{ fontSize: '18px', marginBottom: '32px' }}>Empowering the same team to achieve 3X Productivity.</p>
           <div className="grid2">
             {[
               { icon: <TrendingUp />, t: 'Predict Churn', d: 'Before Redemption' },
               { icon: <Zap />, t: 'Identify SIPs', d: 'Top-up Opportunities' },
-              { icon: <Database />, t: 'Auto-Portfolio', d: 'Instant Insights' },
-              { icon: <Users />, t: 'Meeting Briefs', d: 'AI Preparations' }
+              { icon: <Database />, t: 'Auto-generate', d: 'Portfolio Insights' },
+              { icon: <Users />, t: 'RM meeting', d: 'intelligence briefs' },
+              { icon: <Users />, t: 'Personalized communication ', d: 'at scale' },
             ].map(item => (
               <div key={item.t} style={{ padding: '20px', border: '1px solid var(--border)', borderRadius: '16px' }}>
                 <div style={{ color: 'var(--gold)', marginBottom: '10px' }}>{item.icon}</div>
@@ -337,6 +405,7 @@ const Session03: React.FC = () => {
               </div>
             ))}
           </div>
+          <p style={{ fontSize: '18px', marginBottom: '32px' }}>Same team. 3X productivity. Higher retention.</p>
         </motion.div>
       </div>
 
@@ -354,7 +423,8 @@ const Session03: React.FC = () => {
             { n: '₹1,900+', l: 'Cr Total AUM', s: '42px' },
             { n: '10+', l: 'Years Transaction History', s: '42px' },
             { n: 'Redemption', l: 'Cycle Intelligence', s: '32px' },
-            { n: 'SIP', l: 'Behavior Trends', s: '42px' }
+            { n: 'SIP', l: 'Behavior Trends', s: '42px' },
+            { n: 'Client', l: 'Segmentation Patterns', s: '42px' },
           ].map((item, i) => (
             <div key={i} style={{
               background: '#fff',
@@ -405,18 +475,24 @@ const Session03: React.FC = () => {
             <li><span className="li-dot">◉</span>Data-backed client conversations</li>
             <li><span className="li-dot">◉</span>Proactive risk alerts (Alpha/Churn)</li>
             <li><span className="li-dot">◉</span>Instant goal simulations for confidence</li>
+            <li><span className="li-dot">◉</span>Higher confidence, stronger advice</li>
             <li><span className="li-dot">◉</span>Trust Deepens. Relationships Scale.</li>
           </ul>
         </motion.div>
 
         <motion.div className="card" style={{ background: 'var(--navy)', color: '#fff' }} {...fadeIn}>
-          <div className="label" style={{ color: 'var(--gold-light)' }}>AI in CX</div>
-          <h3>The Experience Standard</h3>
+          <div className="label" style={{ color: 'var(--gold-light)' }}>What AI in CX Means for MF Distributors</div>
           <div className="grid2" style={{ gap: '15px', marginTop: '20px' }}>
             {[
-              'Faster Investor Support', 'Personalized Advice Nudges',
-              'Omni-channel Consistency', 'Proactive Engagement',
-              'Automated Backend Tasks', 'Personalized Scaling'
+
+              "How we apply AI to improve our client engagement activities.",
+              "Identify key client engagement where use AI to scale up client touch points without diluting personal touch.",
+              "Identify backend work to be automated",
+              "Faster investor support",
+              "Personalized advice nudges",
+              "Consistent omni-channel experience",
+              "Proactive engagement, not reactive service"
+
             ].map(c => (
               <div key={c} style={{ background: 'rgba(255,255,255,0.08)', padding: '15px', borderRadius: '12px', fontSize: '14px', fontWeight: 600 }}>
                 {c}
@@ -426,24 +502,160 @@ const Session03: React.FC = () => {
         </motion.div>
       </div>
 
+      <motion.div>
+        <>
+          <div className="investor-benefits-slide">
+
+            <div className="slide-header">
+
+              <div className="decorative-blocks">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <h1>Key Benefits for Investors</h1>
+
+            </div>
+
+            <div className="benefits-content">
+              <ul>
+                <li>Faster query resolution</li>
+                <li>24x7 assistance</li>
+                <li>Relevant fund &amp; goal-based insights</li>
+                <li>Reduced friction across journeys</li>
+              </ul>
+            </div>
+
+          </div>
+        </>
+      </motion.div>
+
       {/* SECTION 7: DETAILED AREAS & ROI */}
       <div className="grid3 mb">
         <motion.div className="card" {...fadeIn}>
           <div style={{ color: 'var(--gold)', marginBottom: '15px' }}><Cpu size={32} /></div>
-          <h3>Application Areas</h3>
-          <p style={{ fontSize: '14px', color: 'var(--text2)', lineHeight: 1.5 }}>AI Chatbots, Predictive Analytics, Sentiment Analysis, Quality Assurance, Portfolio Review, WhatsApp Connect.</p>
+          <>
+            <div className="ai-areas-slide">
+
+              <h1>Areas we can use AI</h1>
+
+              <div className="ai-areas-content">
+                <ul>
+                  <li>AI chatbots for FAQs &amp; onboarding</li>
+                  <li>Predictive analytics for churn &amp; SIP stoppage</li>
+                  <li>Sentiment analysis on calls &amp; messages</li>
+                  <li>Quality assurance CS survey</li>
+                  <li>CRM Optimization</li>
+
+                  <li>
+                    Automate routine tasks.
+                    <ul>
+                      <li>Portfolio review</li>
+                      <li>AUM Journey</li>
+                      <li>Capital gain statement</li>
+                      <li>Whatsapp connect</li>
+                      <li>Customer Profiling</li>
+                      <li>Communication with clients</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </>
         </motion.div>
         <motion.div className="card" {...fadeIn}>
           <div style={{ color: 'var(--gold)', marginBottom: '15px' }}><MessageSquare size={32} /></div>
           <h3>GenAI Opportunities</h3>
-          <p style={{ fontSize: '14px', color: 'var(--text2)', lineHeight: 1.5 }}>Communication Drafts, Call Summaries, Knowledge Base creation, Training content & Team onboarding.</p>
+          <>
+            <div className="genai-opportunities-slide">
+
+              <div className="slide-header">
+
+                <div className="decorative-blocks">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <h1>Generative AI Opportunities</h1>
+
+              </div>
+
+              <div className="genai-content">
+                <ul>
+                  <li>Investor communication drafts</li>
+                  <li>RM/CS call summaries</li>
+                  <li>Knowledge base creation</li>
+                  <li>Training &amp; onboarding content</li>
+                </ul>
+              </div>
+
+            </div>
+          </>
         </motion.div>
         <motion.div className="card" {...fadeIn}>
-          <div style={{ color: 'var(--gold)', marginBottom: '15px' }}><TrendingUp size={32} /></div>
-          <h3>KPIs to Track ROI</h3>
-          <p style={{ fontSize: '14px', color: 'var(--text2)', lineHeight: 1.5 }}>CSAT, First Contact Resolution, Self-service Adoption, Churn Rate, Revenue per Advisor.</p>
+          <>
+            <div className="kpi-slide">
+
+              <div className="slide-header">
+
+                <div className="decorative-blocks">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <h1>KPIs to Track ROI</h1>
+
+              </div>
+
+              <div className="kpi-content">
+                <ul>
+                  <li>Customer Satisfaction</li>
+                  <li>First Contact Resolution</li>
+                  <li>Self-service adoption</li>
+                  <li>Churn rate &amp; SIP persistence</li>
+                  <li>Revenue per advisor</li>
+                </ul>
+              </div>
+
+            </div>
+          </>
         </motion.div>
       </div>
+
+
+      <motion.div>
+        <>
+          <div className="risks-guardrails-slide">
+
+            <div className="slide-header">
+
+              <div className="decorative-blocks">
+                <span></span>
+                <span></span>
+              </div>
+
+              <h1>Risks &amp; Guardrails</h1>
+
+            </div>
+
+            <div className="risks-content">
+              <ul>
+                <li>Maintain human touch for advice</li>
+                <li>Data privacy &amp; SEBI compliance</li>
+                <li>Strong change management</li>
+              </ul>
+            </div>
+
+          </div>
+        </>
+      </motion.div>
 
       {/* SECTION 8: ROADMAP & STRATEGY */}
       <motion.div className="card mb" {...fadeIn}>
@@ -473,100 +685,216 @@ const Session03: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* SECTION 9: VISION 10,000 CRORE */}
-      <motion.div
-        className="vision-end"
-        style={{
-          background: 'linear-gradient(135deg, #1A2744 0%, #2C4A8A 100%)',
-          textAlign: 'center',
-          padding: '80px 40px'
-        }}
-        {...fadeIn}
-      >
-        <div className="label" style={{ color: 'var(--gold-light)' }}>The Milestone</div>
-        <h1 style={{ fontSize: '64px', marginBottom: '20px' }}>The ₹10,000 Cr Journey</h1>
-        <div className="grid2" style={{ maxWidth: '900px', margin: '40px auto', gap: '30px' }}>
-          <div style={{ background: 'rgba(255,255,255,0.05)', padding: '30px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.1)' }}>
-            <div style={{ fontSize: '18px', opacity: 0.7 }}>Current Platform AUM</div>
-            <div style={{ fontSize: '48px', fontWeight: 900, color: 'var(--gold-light)' }}>₹1,900 Cr</div>
-          </div>
-          <div style={{ background: 'rgba(255,255,255,0.05)', padding: '30px', borderRadius: '24px', border: '1px solid var(--gold)' }}>
-            <div style={{ fontSize: '18px', opacity: 0.7 }}>Milestone Future AUM</div>
-            <div style={{ fontSize: '48px', fontWeight: 900, color: 'var(--gold)' }}>₹10,000 Cr</div>
-          </div>
-        </div>
-        <p style={{ fontSize: '24px', maxWidth: '800px', margin: '0 auto 40px', opacity: 0.9 }}>Value Lift: Credibility, AMC Negotiation, Operating Leverage, Valuation Multiples.</p>
+      <motion.div>
+        <>
+          <div className="why-10000-slide">
 
-        <div className="grid4 mb">
-          {[
-            { t: 'Disciplined', d: 'Execution Outcome' },
-            { t: 'Performance', d: 'Scale with Quality' },
-            { t: 'Standard', d: 'New Thinking Model' },
-            { t: 'Leadership', d: '2nd Line Creation' }
-          ].map(item => (
-            <div key={item.t} style={{ textAlign: 'center', padding: '20px' }}>
-              <div style={{ fontWeight: 800, color: 'var(--gold-light)', textTransform: 'uppercase', fontSize: '14px', marginBottom: '8px' }}>{item.t}</div>
-              <div style={{ fontSize: '16px', fontWeight: 600 }}>{item.d}</div>
-            </div>
-          ))}
-        </div>
-      </motion.div>
+            <div className="slide-header">
 
-      {/* SECTION 10: EXECUTION & OUTCOME */}
-      <div className="grid2 mb" style={{ marginTop: '60px' }}>
-        <motion.div className="card" {...fadeIn}>
-          <div className="label">Path to Excellence</div>
-          <h2>Execution Strategy</h2>
-          <ul className="check-list">
-            <li><CheckCircle2 size={18} color="var(--gold)" /> Data Preparation & Depth Review</li>
-            <li><CheckCircle2 size={18} color="var(--gold)" /> Standardized Portfolio Formats</li>
-            <li><CheckCircle2 size={18} color="var(--gold)" /> 100% CRM Adoption & More</li>
-            <li><CheckCircle2 size={18} color="var(--gold)" /> AI Tool Integration Across Org</li>
-            <li><CheckCircle2 size={18} color="var(--gold)" /> 100% ICMM Mapping</li>
-          </ul>
-        </motion.div>
-
-        <motion.div className="card" style={{ background: 'var(--navy)', color: '#fff' }} {...fadeIn}>
-          <div className="label" style={{ color: 'var(--gold-light)' }}>Ownership</div>
-          <h3>Outcome Ownership</h3>
-          <div className="grid2" style={{ gap: '15px', marginTop: '10px' }}>
-            {[
-              'AUM Growth', 'Net Inflows per RM', 'Ticket Size Growth',
-              'New Acquisitions', 'Client Retention', 'SIP Persistency',
-              'Focused SIP Growth', 'Referral Velocity'
-            ].map(o => (
-              <div key={o} style={{ background: 'rgba(255,255,255,0.08)', padding: '12px', borderRadius: '10px', fontSize: '13px', fontWeight: 600 }}>
-                {o}
+              <div className="decorative-blocks">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-            ))}
-          </div>
-          <div style={{ marginTop: '20px', fontSize: '14px', color: 'var(--gold-light)', opacity: 0.7 }}>
-            What we control: Preparation, Communication, Conviction, Follow-up, Closure.
-          </div>
-        </motion.div>
-      </div>
 
-      {/* SECTION 11: TRAJECTORY */}
-      <motion.div className="card" style={{ padding: '60px', background: 'var(--white)', borderTop: '6px solid var(--gold)' }} {...fadeIn}>
-        <div className="label">The Roadmap</div>
-        <h2 style={{ fontSize: '42px', marginBottom: '40px' }}>Milestone Trajectory</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '15px' }}>
-          {[
-            { f: 'FY26', v: '₹3,000 Cr' },
-            { f: 'FY27', v: '₹4,500 Cr' },
-            { f: 'FY28', v: '₹6,000 Cr' },
-            { f: 'FY29', v: '₹7,500 Cr' },
-            { f: 'FY30', v: '₹9,000 Cr' },
-            { f: 'FY31', v: '₹10,000 Cr' }
-          ].map(year => (
-            <div key={year.f} style={{ background: 'var(--blue-soft)', padding: '24px 15px', borderRadius: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '16px', color: 'var(--text3)', fontWeight: 700, marginBottom: '8px' }}>{year.f}</div>
-              <div style={{ fontSize: '22px', color: 'var(--navy)', fontWeight: 900 }}>{year.v}</div>
+              <h1>Why ₹10,000 Crores Matters</h1>
+
             </div>
-          ))}
-        </div>
+
+            <div className="why-content">
+              <ul>
+                <li>
+                  Market positioning &amp; credibility lift
+                  <ul>
+                    <li>Stronger AMC negotiation power</li>
+                    <li>Operating leverage expansion</li>
+                    <li>Enterprise valuation multiple re-rating</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </>
       </motion.div>
 
+      <motion.div>
+        <>
+          <div className="sns-commitment-slide">
+
+            <div className="slide-header">
+
+              <div className="decorative-blocks">
+                <span></span>
+              </div>
+
+              <h1>SNS Commitment</h1>
+
+            </div>
+
+            <div className="commitment-content">
+              <ul>
+                <li>
+                  ₹10,000 Crores is not an aspiration.
+                  <ul>
+                    <li>Build for ₹10,000</li>
+                    <li>It is a structured outcome of disciplined execution.</li>
+                    <li>Scale with performance.</li>
+                    <li>Scale is not a number it is a “Standard of thinking”</li>
+                    <li>Lead with transformation.</li>
+                    <li>2<sup>nd</sup> line leadership creation</li>
+                    <li>Zero single point dependency in client management &amp; servicing</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </>
+      </motion.div>
+      <motion.div>
+        <>
+          <div className="execution-strategy-slide">
+
+            <div className="slide-header">
+
+              <div className="decorative-blocks">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <h1>Execution Strategy</h1>
+
+            </div>
+
+            <div className="execution-content">
+              <ul>
+                <li>Data Preparation &amp; Depth Review</li>
+                <li>Standardized Portfolio Formats</li>
+                <li>100% CRM Adoption &amp; More</li>
+                <li>AI Tool Integration Across Org</li>
+                <li>100% ICMM Mapping</li>
+              </ul>
+            </div>
+
+          </div>
+        </>
+      </motion.div>
+
+      <motion.div>
+        <>
+          <div className="execution-excellence-slide">
+
+            <div className="slide-header">
+
+              <div className="decorative-blocks">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <h1>Execution to Excellence</h1>
+
+            </div>
+
+            <div className="execution-content">
+              <ul>
+                <li>Data preparation</li>
+                <li>90% Client review in depth</li>
+                <li>Standardized portfolio review format across team.</li>
+                <li>100% CRM adoption and MORE</li>
+                <li>AI Tool integration in all process across the organization.</li>
+                <li>Market conviction</li>
+                <li>Performance is about standards nor an activity</li>
+                <li>100% clients mapped to Ideal Client Management Model</li>
+              </ul>
+            </div>
+
+          </div>
+        </>
+      </motion.div>
+
+      <motion.div>
+        <>
+          <div className="outcome-ownership-slide">
+
+            <h1>Outcome Ownership</h1>
+
+            <div className="outcome-columns">
+
+              <div className="outcome-left">
+                <ul>
+                  <li>
+                    Outcome to be owned
+                    <ul>
+                      <li>AUM Growth</li>
+                      <li>Net Inflows per RM</li>
+                      <li>Average ticket size growth</li>
+                      <li>Intense new client acquisition</li>
+                      <li>Client Retention</li>
+                      <li>SIP Persistency</li>
+                      <li>Focused SIP Growth</li>
+                      <li>Referral Velocity</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="outcome-right">
+                <ul>
+                  <li>
+                    What we control
+                    <ul>
+                      <li>Preparation</li>
+                      <li>Communication</li>
+                      <li>Conviction</li>
+                      <li>Follow-up</li>
+                      <li>Closure</li>
+                      <li>Build capabilities</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+        </>
+      </motion.div>
+
+      <motion.div>
+        <>
+          <div className="milestone-trajectory-slide">
+
+            <div className="slide-header">
+
+              <div className="decorative-blocks">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <h1>Milestone Trajectory</h1>
+
+            </div>
+
+            <div className="milestone-content">
+              <ul>
+                <li>FY26: ₹3,000 Cr</li>
+                <li>FY27: ₹4,500 Cr</li>
+                <li>FY28: ₹6,000 Cr</li>
+                <li>FY29: ₹7,500 Cr</li>
+                <li>FY30: ₹9,000 Cr</li>
+                <li>FY31: ₹10,000 Cr</li>
+              </ul>
+            </div>
+
+          </div>
+        </>
+      </motion.div>
       <div style={{ height: '100px' }}></div>
       <style dangerouslySetInnerHTML={{
         __html: `
