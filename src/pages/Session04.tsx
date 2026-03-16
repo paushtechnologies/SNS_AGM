@@ -5,7 +5,6 @@ import {
   TrendingUp,
   CheckCircle2,
   XCircle,
-  ArrowRight,
   Infinity as InfiniteIcon,
   History,
   Users
@@ -93,8 +92,8 @@ const Session04: React.FC = () => {
           <div className="slide-label">ORIGIN STORY: MARCH 2020</div>
           <h2 className="slide-title">The Behavioural Gap</h2>
         </div>
-        <motion.div 
-          className="comparison-container" 
+        <motion.div
+          className="comparison-container"
           style={{ gridTemplateColumns: '1fr 1fr', gap: '20px' }}
           variants={{
             visible: { transition: { staggerChildren: 0.2 } }
@@ -103,8 +102,8 @@ const Session04: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.div 
-            className="comparison-card" 
+          <motion.div
+            className="comparison-card"
             variants={{
               hidden: { opacity: 0, x: -20 },
               visible: { opacity: 1, x: 0 }
@@ -117,8 +116,8 @@ const Session04: React.FC = () => {
             <p style={{ fontSize: '20px', fontWeight: 800, color: '#1E293B', marginBottom: '16px', lineHeight: 1.4 }}>Panicked and exited <br />the market</p>
             <div style={{ background: '#FFF5F5', color: '#C53030', padding: '12px', borderRadius: '12px', fontSize: '19px', fontWeight: 800 }}>Outcome: Missed recovery ✗</div>
           </motion.div>
-          <motion.div 
-            className="comparison-card" 
+          <motion.div
+            className="comparison-card"
             variants={{
               hidden: { opacity: 0, x: 20 },
               visible: { opacity: 1, x: 0 }
@@ -132,7 +131,7 @@ const Session04: React.FC = () => {
             <div style={{ background: '#F0FFF4', color: '#2F855A', padding: '12px', borderRadius: '12px', fontSize: '19px', fontWeight: 800 }}>Outcome: Created Wealth ✓</div>
           </motion.div>
         </motion.div>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
@@ -149,8 +148,8 @@ const Session04: React.FC = () => {
           <h2 className="slide-title">What We Actually Do</h2>
           <p className="slide-subtitle">Our role is to help clients stay rational and disciplined.</p>
         </div>
-        <motion.div 
-          className="grid3" 
+        <motion.div
+          className="grid3"
           style={{ gap: '20px' }}
           variants={{
             visible: { transition: { staggerChildren: 0.1 } }
@@ -164,14 +163,14 @@ const Session04: React.FC = () => {
             { icon: <TrendingUp size={40} />, t: 'Perspective', d: 'Framing short-term noise against long-term wealth goals.' },
             { icon: <Users size={40} />, t: 'Understanding', d: 'Knowing each client\'s behaviour, goals, and fears.' }
           ].map(item => (
-            <motion.div 
-              key={item.t} 
+            <motion.div
+              key={item.t}
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 }
               }}
               whileHover={{ y: -8, boxShadow: '0 15px 35px rgba(0,0,0,0.1)' }}
-              className="comparison-card" 
+              className="comparison-card"
               style={{ textAlign: 'center', padding: '30px 20px' }}
             >
               <div style={{ color: '#D4AF37', marginBottom: '16px', display: 'flex', justifyContent: 'center' }}>{item.icon}</div>
@@ -188,8 +187,8 @@ const Session04: React.FC = () => {
           <div className="slide-label">OUR FOUNDATION</div>
           <h2 className="slide-title">The Foundation of SNS</h2>
         </div>
-        <motion.div 
-          className="grid3" 
+        <motion.div
+          className="grid3"
           style={{ gap: '20px' }}
           variants={{
             visible: { transition: { staggerChildren: 0.1 } }
@@ -203,14 +202,14 @@ const Session04: React.FC = () => {
             { icon: <Users size={64} />, label: '3 Generations of Trust' },
             { icon: <InfiniteIcon size={64} />, label: 'Infinite Relationships' }
           ].map(item => (
-            <motion.div 
-              key={item.label} 
+            <motion.div
+              key={item.label}
               variants={{
                 hidden: { opacity: 0, scale: 0.9 },
                 visible: { opacity: 1, scale: 1 }
               }}
               whileHover={{ scale: 1.05, boxShadow: '0 15px 35px rgba(0,0,0,0.1)' }}
-              className="comparison-card" 
+              className="comparison-card"
               style={{ textAlign: 'center', padding: '40px 20px' }}
             >
               <div style={{ color: '#D4AF37', marginBottom: '24px', display: 'flex', justifyContent: 'center' }}>{item.icon}</div>
@@ -251,7 +250,7 @@ const Session04: React.FC = () => {
         </div>
 
         <div className="comparison-container" style={{ gap: '15px' }}>
-          <motion.div 
+          <motion.div
             className="comparison-card"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -259,7 +258,7 @@ const Session04: React.FC = () => {
             style={{ padding: '24px' }}
           >
             <h2 style={{ fontSize: '24px', marginBottom: '20px' }}>Growth</h2>
-            <motion.ul 
+            <motion.ul
               style={{ listStyle: 'none', padding: 0 }}
               variants={{
                 visible: { transition: { staggerChildren: 0.1 } }
@@ -274,8 +273,8 @@ const Session04: React.FC = () => {
                 'Driven by transactions',
                 'More clients → more meetings → more AUM'
               ].map(item => (
-                <motion.li 
-                  key={item} 
+                <motion.li
+                  key={item}
                   variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}
                   style={{ marginBottom: '12px', fontSize: '19px', color: '#475569', fontWeight: 600 }}
                 >
@@ -287,15 +286,15 @@ const Session04: React.FC = () => {
 
           <div className="comparison-arrow">→</div>
 
-          <motion.div 
-            className="comparison-card" 
+          <motion.div
+            className="comparison-card"
             style={{ border: '2px solid #D4AF37', padding: '24px' }}
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
             <h2 style={{ color: '#D4AF37', fontSize: '24px', marginBottom: '20px' }}>Scale</h2>
-            <motion.ul 
+            <motion.ul
               style={{ listStyle: 'none', padding: 0 }}
               variants={{
                 visible: { transition: { staggerChildren: 0.1 } }
@@ -310,8 +309,8 @@ const Session04: React.FC = () => {
                 'Powered by relationships & referrals',
                 'Trust + Referrals + Systems → Exponential AUM'
               ].map(item => (
-                <motion.li 
-                  key={item} 
+                <motion.li
+                  key={item}
                   variants={{ hidden: { opacity: 0, x: 10 }, visible: { opacity: 1, x: 0 } }}
                   style={{ marginBottom: '12px', fontSize: '19px', color: '#1E293B', fontWeight: 700 }}
                 >
@@ -329,8 +328,8 @@ const Session04: React.FC = () => {
           <h1 className="slide-title">Lessons from the World's Best</h1>
         </div>
 
-        <motion.div 
-          className="case-studies-container" 
+        <motion.div
+          className="case-studies-container"
           style={{ gap: '15px' }}
           variants={{
             visible: { transition: { staggerChildren: 0.15 } }
@@ -365,14 +364,14 @@ const Session04: React.FC = () => {
               p3: 'vs 1^365 = 1'
             }
           ].map(caseStudy => (
-            <motion.div 
-              key={caseStudy.id} 
+            <motion.div
+              key={caseStudy.id}
               variants={{
                 hidden: { opacity: 0, scale: 0.95 },
                 visible: { opacity: 1, scale: 1 }
               }}
               whileHover={{ y: -8, boxShadow: '0 15px 35px rgba(0,0,0,0.1)' }}
-              className={`case-card ${caseStudy.id}`} 
+              className={`case-card ${caseStudy.id}`}
               style={{ padding: '24px' }}
             >
               <h2 style={{ fontSize: '26px' }}>{caseStudy.h1}</h2>
@@ -391,7 +390,7 @@ const Session04: React.FC = () => {
         </div>
 
         <div className="trapped-scaling-container" style={{ gap: '20px' }}>
-          <motion.div 
+          <motion.div
             className="flow-section"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -408,8 +407,8 @@ const Session04: React.FC = () => {
             </div>
           </motion.div>
 
-          <motion.div 
-            className="flow-section" 
+          <motion.div
+            className="flow-section"
             style={{ border: '1px solid #D4AF37', padding: '24px' }}
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -440,8 +439,8 @@ const Session04: React.FC = () => {
           </p>
         </div>
 
-        <motion.div 
-          className="formula-row" 
+        <motion.div
+          className="formula-row"
           style={{ gap: '10px' }}
           variants={{
             visible: { transition: { staggerChildren: 0.1 } }
@@ -457,7 +456,7 @@ const Session04: React.FC = () => {
             { t: 'Time', d: 'Compounding requires patience' }
           ].map((item, idx) => (
             <React.Fragment key={item.t}>
-               <motion.div 
+              <motion.div
                 className="formula-box"
                 variants={{
                   hidden: { opacity: 0, scale: 0.9 },
@@ -474,7 +473,7 @@ const Session04: React.FC = () => {
           ))}
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="trust-result"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -493,7 +492,7 @@ const Session04: React.FC = () => {
         </div>
 
         <div className="flywheel-container" style={{ transform: 'scale(0.9)' }}>
-          <motion.div 
+          <motion.div
             className="flywheel-center"
             animate={{ rotate: 360 }}
             transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
@@ -512,8 +511,8 @@ const Session04: React.FC = () => {
             { t: 'Net Inflows', d: 'Capital growth', c: 'net-inflows' },
             { t: 'AUM Growth', d: 'Scale & capacity', c: 'aum-growth' }
           ].map((item, idx) => (
-            <motion.div 
-              key={item.t} 
+            <motion.div
+              key={item.t}
               className={`flywheel-item ${item.c}`}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -545,8 +544,8 @@ const Session04: React.FC = () => {
           <p className="slide-subtitle">Strong foundations create scalable trust.</p>
         </div>
 
-        <motion.div 
-          className="pyramid-container" 
+        <motion.div
+          className="pyramid-container"
           style={{ transform: 'scale(0.95)' }}
           variants={{
             visible: { transition: { staggerChildren: 0.1, staggerDirection: -1 } }
@@ -562,8 +561,8 @@ const Session04: React.FC = () => {
             { l: 2, t: 'Level 2 — Deep Client Understanding' },
             { l: 1, t: 'Level 1 — Preparation' }
           ].map(level => (
-            <motion.div 
-              key={level.l} 
+            <motion.div
+              key={level.l}
               className={`pyramid-level level-${level.l}`}
               variants={{
                 hidden: { opacity: 0, scaleX: 0.8 },
@@ -583,7 +582,7 @@ const Session04: React.FC = () => {
           <h1 className="slide-title">The 3 Mindset Shifts</h1>
         </div>
 
-        <motion.div 
+        <motion.div
           className="mindset-container"
           variants={{
             visible: { transition: { staggerChildren: 0.2 } }
@@ -597,8 +596,8 @@ const Session04: React.FC = () => {
             { n: '02', f: 'Activity', t: 'Impact' },
             { n: '03', f: 'Short-Term Thinking', t: 'Compounding Relationships' }
           ].map(shift => (
-            <motion.div 
-              key={shift.n} 
+            <motion.div
+              key={shift.n}
               className="mindset-row"
               variants={{
                 hidden: { opacity: 0, x: -20 },
@@ -624,7 +623,7 @@ const Session04: React.FC = () => {
           <h1 className="slide-title">₹10,000 Crore Client Conversation Model</h1>
         </div>
 
-        <motion.div 
+        <motion.div
           className="conversation-container"
           variants={{
             visible: { transition: { staggerChildren: 0.15 } }
@@ -638,8 +637,8 @@ const Session04: React.FC = () => {
             { l: 2, t: 'Portfolio Conversation', q: '"How is my portfolio performing?"' },
             { l: 3, t: 'Wealth Conversation', q: '"How do I build long-term wealth?"' }
           ].map(level => (
-            <motion.div 
-              key={level.l} 
+            <motion.div
+              key={level.l}
               className={`conversation-level level-${level.l}`}
               variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -657,11 +656,11 @@ const Session04: React.FC = () => {
           ))}
         </motion.div>
 
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="slide-subtitle" 
+          className="slide-subtitle"
           style={{ marginTop: '30px', fontWeight: 800, color: '#D4AF37', fontSize: '18px' }}
         >
           Move every client conversation up the levels.
@@ -673,7 +672,7 @@ const Session04: React.FC = () => {
           <h1 className="slide-title">5 Behaviours of a ₹10,000 Crore Firm</h1>
         </div>
 
-        <motion.div 
+        <motion.div
           className="behaviours-container"
           variants={{
             visible: { transition: { staggerChildren: 0.1 } }
@@ -689,8 +688,8 @@ const Session04: React.FC = () => {
             { n: '04', t: 'Relationship compounding', d: 'Every interaction is an investment in the relationship.' },
             { n: '05', t: 'Consistency of standards', d: 'The same quality, every time, for every client.' }
           ].map(beh => (
-            <motion.div 
-              key={beh.n} 
+            <motion.div
+              key={beh.n}
               className="behaviour-card"
               variants={{
                 hidden: { opacity: 0, x: -20 },
@@ -714,7 +713,7 @@ const Session04: React.FC = () => {
           <h1 className="slide-title" style={{ color: '#fff', fontSize: '36px' }}>The ₹10,000 Crore Equation</h1>
         </div>
 
-        <motion.div 
+        <motion.div
           className="equation-banner"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -723,8 +722,8 @@ const Session04: React.FC = () => {
           AUM Scalability = Client Trust × Consistency × Conviction × Referrals
         </motion.div>
 
-        <motion.div 
-          className="equation-cards" 
+        <motion.div
+          className="equation-cards"
           style={{ gap: '15px' }}
           variants={{
             visible: { transition: { staggerChildren: 0.1 } }
@@ -739,8 +738,8 @@ const Session04: React.FC = () => {
             { n: '3', t: 'Conviction', d: 'Guiding clients to stay long-term disciplined' },
             { n: '4', t: 'Referrals', d: 'The proof that relationships have compounded' }
           ].map(card => (
-            <motion.div 
-              key={card.n} 
+            <motion.div
+              key={card.n}
               className="equation-card"
               variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -766,8 +765,8 @@ const Session04: React.FC = () => {
           <div className="timeline">
             <div className="timeline-line"></div>
             {[1, 2, 3, 4].map(n => (
-              <motion.div 
-                key={n} 
+              <motion.div
+                key={n}
                 className="timeline-step"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
@@ -778,8 +777,8 @@ const Session04: React.FC = () => {
             ))}
           </div>
 
-          <motion.div 
-            className="roadmap-stages" 
+          <motion.div
+            className="roadmap-stages"
             style={{ gap: '15px' }}
             variants={{
               visible: { transition: { staggerChildren: 0.2 } }
@@ -794,8 +793,8 @@ const Session04: React.FC = () => {
               { s: '3', t: 'Relationship Institution', d: 'Referral engine, compounding AUM' },
               { s: '4', t: 'Generational Wealth Platform', d: 'Legacy relationships across families' }
             ].map(stage => (
-            <motion.div 
-                key={stage.s} 
+              <motion.div
+                key={stage.s}
                 className="stage-card"
                 variants={{
                   hidden: { opacity: 0, y: 20 },
@@ -814,7 +813,7 @@ const Session04: React.FC = () => {
       </motion.div>
 
       <motion.div className="slide-section" {...slideIn}>
-        <motion.div 
+        <motion.div
           className="quote-container"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -827,8 +826,8 @@ const Session04: React.FC = () => {
 
           <p className="quote-subtitle" style={{ fontSize: '18px', marginTop: '40px' }}>Our role is to help clients:</p>
 
-          <motion.div 
-            className="quote-actions" 
+          <motion.div
+            className="quote-actions"
             style={{ gap: '15px', marginTop: '24px' }}
             variants={{
               visible: { transition: { staggerChildren: 0.1 } }
@@ -838,8 +837,8 @@ const Session04: React.FC = () => {
             viewport={{ once: true }}
           >
             {['Stay disciplined', 'Stay invested', 'Stay patient'].map(action => (
-              <motion.div 
-                key={action} 
+              <motion.div
+                key={action}
                 className="action-card"
                 variants={{
                   hidden: { opacity: 0, scale: 0.8 },
@@ -858,7 +857,7 @@ const Session04: React.FC = () => {
       {/* FINAL MANTRA */}
       <motion.div className="slide-section" style={{ background: '#D4AF37', color: '#fff', border: 'none', padding: '100px 40px' }} {...slideIn}>
         <h2 style={{ fontSize: '48px', marginBottom: '24px', fontWeight: 900, fontFamily: "'Playfair Display', serif" }}>The ₹10,000 Crore Mindset</h2>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -877,10 +876,10 @@ const Session04: React.FC = () => {
             It will be decided by the standards <br /> we set for ourselves.
           </h2>
           <hr className="closing-divider" style={{ width: '80px', margin: '0 auto 30px' }} />
-          <motion.p 
+          <motion.p
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="closing-highlight" 
+            className="closing-highlight"
             style={{ fontSize: '24px' }}
           >
             Let us build the ₹10,000 Crore mindset.
