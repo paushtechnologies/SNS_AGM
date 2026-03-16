@@ -108,24 +108,24 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
   const heroImageVariants = {
     hidden: { scale: 0.8, opacity: 0, rotate: -5 },
-    visible: { 
-      scale: 1, 
-      opacity: 1, 
+    visible: {
+      scale: 1,
+      opacity: 1,
       rotate: -1,
       transition: { duration: 1, ease: "backOut" as any }
     }
   };
 
   return (
-    <motion.div 
-      id="page-home" 
+    <motion.div
+      id="page-home"
       className="page active"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <motion.div 
-        className="hero" 
+      <motion.div
+        className="hero"
         style={{
           background: 'linear-gradient(165deg, #FBF8F0 0%, #F3EBD9 60%, #E6D5B8 100%)',
           textAlign: 'left',
@@ -136,7 +136,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           alignItems: 'center',
           gap: '20px',
           borderRadius: '32px',
-          margin: '0 0 20px',
+          margin: '60px 0 20px',
           position: 'relative',
           overflow: 'hidden'
         }}
@@ -144,46 +144,46 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       >
         {/* Floating background elements */}
         <motion.div
-           style={{
-             position: 'absolute',
-             top: '10%',
-             left: '5%',
-             width: '200px',
-             height: '200px',
-             borderRadius: '50%',
-             background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)',
-             filter: 'blur(30px)',
-             zIndex: 0
-           }}
-           animate={{
-             y: [0, -20, 0],
-             opacity: [0.5, 0.8, 0.5]
-           }}
-           transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+          style={{
+            position: 'absolute',
+            top: '10%',
+            left: '5%',
+            width: '200px',
+            height: '200px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)',
+            filter: 'blur(30px)',
+            zIndex: 0
+          }}
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0.5, 0.8, 0.5]
+          }}
+          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
-           style={{
-             position: 'absolute',
-             bottom: '15%',
-             right: '10%',
-             width: '300px',
-             height: '300px',
-             borderRadius: '50%',
-             background: 'radial-gradient(circle, rgba(74, 127, 212, 0.05) 0%, transparent 70%)',
-             filter: 'blur(40px)',
-             zIndex: 0
-           }}
-           animate={{
-             y: [0, 25, 0],
-             opacity: [0.3, 0.6, 0.3]
-           }}
-           transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+          style={{
+            position: 'absolute',
+            bottom: '15%',
+            right: '10%',
+            width: '300px',
+            height: '300px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(74, 127, 212, 0.05) 0%, transparent 70%)',
+            filter: 'blur(40px)',
+            zIndex: 0
+          }}
+          animate={{
+            y: [0, 25, 0],
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
         />
         <div className="hero-text" style={{ flex: '1.2', margin: '0', maxWidth: 'none' }}>
-          <motion.h1 
+          <motion.h1
             style={{
               color: 'var(--navy)',
-              fontSize: '64px',
+              fontSize: '72px',
               lineHeight: '1.05',
               marginBottom: '12px',
               letterSpacing: '-1.5px'
@@ -195,13 +195,13 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             Annual Business <br />
             <span style={{ color: 'var(--gold)', display: 'block', marginTop: '4px' }}>Plan Meet 2026-27</span>
           </motion.h1>
-          <motion.div 
+          <motion.div
             style={{ width: '80px', height: '5px', background: 'var(--gold)', marginBottom: '24px', borderRadius: '10px' }}
             initial={{ width: 0 }}
             animate={{ width: '80px' }}
             transition={{ duration: 0.8, delay: 0.6 }}
           ></motion.div>
-          <motion.p 
+          <motion.p
             style={{
               margin: '0',
               color: 'var(--text)',
@@ -219,8 +219,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             Building the standards that define our ₹10,000 Crore future.
           </motion.p>
         </div>
-        <motion.div 
-          className="hero-img" 
+        <motion.div
+          className="hero-img"
           style={{
             flex: '1',
             boxShadow: 'var(--sh3)',
@@ -239,7 +239,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       <motion.div className="label" style={{ opacity: 0.6 }} variants={itemVariants}>Navigate the Sessions</motion.div>
       <motion.h2 className="section-title" style={{ fontSize: '56px', marginBottom: '32px' }} variants={itemVariants}>Six Sessions</motion.h2>
 
-      <motion.div 
+      <motion.div
         className="sessions-grid"
         variants={containerVariants}
       >
@@ -264,8 +264,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 borderBottom: '1px solid rgba(0,0,0,0.08)'
               }}
               variants={itemVariants}
-              whileHover={{ 
-                y: -10, 
+              whileHover={{
+                y: -10,
                 boxShadow: '0 20px 50px rgba(0,0,0,0.1)',
                 borderTopWidth: '10px'
               }}
@@ -285,26 +285,27 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   }}>{session.title}</h3>
                   <p style={{ color: 'var(--text3)', fontSize: '16px' }}>Click to explore &rarr;</p>
                 </div>
-                <motion.div 
-                  className="s-num" 
+                <motion.div
+                  className="s-num"
                   style={{
                     color: session.color,
-                    opacity: 0.1,
-                    fontSize: '80px',
-                    bottom: '5px',
+                    opacity: 0.25,
+                    fontSize: '100px',
+                    bottom: '0px',
                     right: '15px',
                     lineHeight: '1',
                     pointerEvents: 'none',
-                    fontWeight: 900
+                    fontWeight: 900,
+                    position: 'absolute'
                   }}
-                  whileHover={{ opacity: 0.2, scale: 1.1 }}
+                  whileHover={{ opacity: 0.4, scale: 1.1 }}
                 >{session.num}</motion.div>
               </div>
               <div className="s-body" style={{ padding: '0 30px 24px' }}>
                 <ul className="s-points">
                   {session.points.map((point, index) => (
-                    <motion.li 
-                      key={index} 
+                    <motion.li
+                      key={index}
                       style={{
                         color: 'var(--text2)',
                         borderColor: 'rgba(0,0,0,0.05)',

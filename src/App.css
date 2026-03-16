@@ -145,7 +145,7 @@ button {
   background: rgba(253, 251, 247, 0.9);
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 6px;
   overflow-x: auto;
   scrollbar-width: none;
   padding: 6px 20px;

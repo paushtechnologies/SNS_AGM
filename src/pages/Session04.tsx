@@ -485,20 +485,78 @@ const Session04: React.FC = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div className="slide-section" {...slideIn}>
+      <motion.div className="slide-section flywheel-section" {...slideIn}>
         <div className="slide-header">
+          <div className="slide-label">GROWTH ENGINE</div>
           <h1 className="slide-title">The Wealth Flywheel</h1>
-          <p className="slide-subtitle">Once the flywheel spins, growth becomes self-reinforcing.</p>
+          <p className="slide-subtitle">Once the flywheel spins, growth becomes self-reinforcing and exponential.</p>
         </div>
 
-        <div className="flywheel-container" style={{ transform: 'scale(0.9)' }}>
+        <div className="flywheel-wrapper" style={{ transform: 'scale(1)' }}>
+          {/* Animated SVG Flow Ring */}
+          <svg className="flywheel-svg-flow" viewBox="0 0 580 580" style={{ position: 'absolute', width: '100%', height: '100%', pointerEvents: 'none', zIndex: 1 }}>
+            <motion.circle
+              cx="290"
+              cy="290"
+              r="210"
+              fill="none"
+              stroke="rgba(212, 175, 55, 0.1)"
+              strokeWidth="2"
+              strokeDasharray="10 25"
+              animate={{ strokeDashoffset: [0, -35] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+            />
+            <motion.circle
+              cx="290"
+              cy="290"
+              r="210"
+              fill="none"
+              stroke="url(#goldGradient)"
+              strokeWidth="2"
+              strokeDasharray="60 400"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+              style={{ transformOrigin: 'center' }}
+            />
+            <defs>
+              <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="transparent" />
+                <stop offset="50%" stopColor="#D4AF37" />
+                <stop offset="100%" stopColor="transparent" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Animated decorative rings */}
+          <motion.div 
+            className="flywheel-outer-ring"
+            animate={{ rotate: -360 }}
+            transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+          />
+          
           <motion.div
             className="flywheel-center"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            animate={{ 
+              boxShadow: [
+                "0 0 30px rgba(212, 175, 55, 0.2)",
+                "0 0 50px rgba(212, 175, 55, 0.4)",
+                "0 0 30px rgba(212, 175, 55, 0.2)"
+              ]
+            }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
-            <p style={{ fontSize: '14px', margin: 0 }}>SELF-REINFORCING</p>
-            <p style={{ fontSize: '18px', color: '#D4AF37', margin: 0 }}>GROWTH</p>
+            <motion.div 
+              className="flywheel-center-ring"
+              animate={{ rotate: 360, scale: [1, 1.05, 1] }}
+              transition={{ 
+                rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+                scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+              }}
+            />
+            <p style={{ fontSize: '11px', fontWeight: 600, margin: 0, letterSpacing: '2px', opacity: 0.8 }}>SELF-REINFORCING</p>
+            <p style={{ fontSize: '24px', color: '#D4AF37', fontWeight: 900, margin: '2px 0', textShadow: '0 0 10px rgba(212,175,55,0.4)' }}>GROWTH</p>
           </motion.div>
 
           {[
@@ -514,25 +572,34 @@ const Session04: React.FC = () => {
             <motion.div
               key={item.t}
               className={`flywheel-item ${item.c}`}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: idx * 0.1 }}
-              whileHover={{ scale: 1.1, zIndex: 10 }}
+              initial={{ opacity: 0, scale: 0.5, x: 0, y: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ 
+                delay: idx * 0.1, 
+                type: 'spring', 
+                stiffness: 100,
+                damping: 10
+              }}
+              whileHover={{ 
+                y: -15,
+                scale: 1.05,
+                boxShadow: "0 20px 40px rgba(212, 175, 55, 0.2)"
+              }}
             >
-              <h4 style={{ fontSize: '16px' }}>{item.t}</h4>
-              <p style={{ fontSize: '16px' }}>{item.d}</p>
+              <h4>{item.t}</h4>
+              <p>{item.d}</p>
             </motion.div>
           ))}
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', marginTop: '20px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div style={{ width: '16px', height: '16px', background: '#D4AF37', borderRadius: '4px' }}></div>
-            <p style={{ fontSize: '12px', fontWeight: 700, margin: 0 }}>Business outcomes</p>
+        <div className="flywheel-legend">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div style={{ width: '24px', height: '12px', background: '#D4AF37', borderRadius: '4px' }}></div>
+            <p style={{ fontSize: '16px', fontWeight: 800, color: '#1E293B', margin: 0 }}>Business Outcomes</p>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div style={{ width: '16px', height: '16px', background: '#1E293B', borderRadius: '4px' }}></div>
-            <p style={{ fontSize: '12px', fontWeight: 700, margin: 0 }}>Client experience</p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div style={{ width: '24px', height: '12px', background: '#1E293B', borderRadius: '4px' }}></div>
+            <p style={{ fontSize: '16px', fontWeight: 800, color: '#1E293B', margin: 0 }}>Client Experience</p>
           </div>
         </div>
       </motion.div>
@@ -891,8 +958,7 @@ const Session04: React.FC = () => {
         <div className="cover-slide" style={{ gap: '40px' }}>
           <div className="cover-left" style={{ flex: 1 }}>
             <div className="logo-container">
-              <ShieldCheck size={64} color="#D4AF37" />
-              <h3 style={{ fontSize: '24px' }}>Shah & Shah</h3>
+              <img src="/SNS Logo.png" alt="SNS Logo" />
             </div>
             <hr className="trust-divider" style={{ width: '40px', margin: '20px 0' }} />
             <p className="trust-text" style={{ fontSize: '12px' }}>60+ YEARS OF TRUST</p>

@@ -50,7 +50,7 @@ const Session02: React.FC = () => {
         <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)', filter: 'blur(40px)', pointerEvents: 'none' }}></div>
 
         <div style={{ flex: '1', zIndex: 1, minWidth: '550px' }}>
-          <div className="label" style={{ color: 'var(--navy)', marginBottom: '12px', letterSpacing: '4px', fontSize: '14px', opacity: 0.7, fontWeight: 800 }}>SESSION 02 • THE CLARITY</div>
+          <div className="label" style={{ color: 'var(--navy)', marginBottom: '12px', letterSpacing: '4px', fontSize: '14px', opacity: 0.7, fontWeight: 800 }}>SESSION 03 • THE CLARITY</div>
           <h1 style={{
             color: 'var(--navy)',
             fontSize: '64px',
