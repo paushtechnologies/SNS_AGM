@@ -7,7 +7,7 @@ const Header: React.FC = () => {
         <img src="/SNS Logo.png" alt="SNS Logo" className="header-logo" />
         <div className="header-info">
           <div className="header-name">SNS ABPM DASHBOARD</div>
-          <div className="header-tag">Our transformation continues…</div>
+          {/* <div className="header-tag">Our transformation continues…</div> */}
         </div>
       </div>
       <div className="header-right">

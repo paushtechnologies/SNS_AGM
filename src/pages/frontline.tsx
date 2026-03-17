@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Target, ArrowRight, MessageSquare } from 'lucide-react';
+import { Users, Target, ArrowRight, MessageSquare, TrendingUp } from 'lucide-react';
 import './frontline.css';
 
 const FrontlineConnect: React.FC = () => {
@@ -33,42 +33,105 @@ const FrontlineConnect: React.FC = () => {
     return (
         <div className="frontline-container">
             {/* HER0 SLIDE */}
-            <motion.div 
+            <motion.div
                 className="slide-section dark"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
             >
                 <div className="connect-icon"><Users size={200} /></div>
-                
+
                 <div className="slide-header">
                     <div className="slide-label">SESSION 02 • THE DIALOGUE</div>
                     <h1 className="slide-title">Frontline Connect</h1>
-                    <p className="slide-subtitle">
+                    <p className="slide-subtitle" style={{ fontSize: '28px', maxWidth: '1000px', fontWeight: 700, margin: '0 auto', color: 'rgba(255,255,255,0.9)' }}>
                         One-on-one interaction between Relationship Managers and the senior management team.
                     </p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '30px', marginTop: '40px' }}>
-                    <div className="participant-card">
-                        <div className="avatar-circle"><Target /></div>
-                        <div>
-                            <div className="participant-name">Performance Review</div>
-                            <p style={{ margin: 0, opacity: 0.7, fontSize: '18px' }}>Deep dive into FY25 achievements and learning.</p>
-                        </div>
-                    </div>
-                    <div className="participant-card">
-                        <div className="avatar-circle"><ArrowRight /></div>
-                        <div>
-                            <div className="participant-name">Goal Alignment</div>
-                            <p style={{ margin: 0, opacity: 0.7, fontSize: '18px' }}>Setting the trajectory for FY26 growth.</p>
-                        </div>
-                    </div>
+                <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '20px',
+                    marginTop: '0px',
+                    width: '100%',
+                    position: 'relative'
+                }}>
+                    <motion.div
+                        whileHover={{ y: -10 }}
+                        style={{
+                            flex: 1,
+                            background: 'rgba(255,255,255,0.05)',
+                            padding: '32px',
+                            borderRadius: '24px',
+                            border: '1.5px solid rgba(255,255,255,0.1)',
+                            backdropFilter: 'blur(10px)',
+                            textAlign: 'left',
+                            boxShadow: '0 20px 40px rgba(0,0,0,0.2)'
+                        }}
+                    >
+                        <div style={{
+                            width: '60px',
+                            height: '60px',
+                            background: 'rgba(16, 185, 129, 0.2)',
+                            borderRadius: '16px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            color: '#10B981',
+                            marginBottom: '20px',
+                            boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)'
+                        }}><Target size={32} /></div>
+                        <div style={{ fontSize: '26px', fontWeight: 900, marginBottom: '8px', color: '#fff' }}>Performance Review</div>
+                        <p style={{ margin: 0, opacity: 0.8, fontSize: '20px', fontWeight: 500, lineHeight: 1.4 }}>
+                            Deep dive into 2025-26 achievements and learning.
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        animate={{ x: [0, 10, 0] }}
+                        transition={{ repeat: Infinity, duration: 1.5 }}
+                        style={{ color: '#10B981', opacity: 0.8 }}
+                    >
+                        <ArrowRight size={48} strokeWidth={3} />
+                    </motion.div>
+
+                    <motion.div
+                        whileHover={{ y: -10 }}
+                        style={{
+                            flex: 1,
+                            background: 'rgba(16, 185, 129, 0.1)',
+                            padding: '32px',
+                            borderRadius: '24px',
+                            border: '1.5px solid rgba(16, 185, 129, 0.3)',
+                            backdropFilter: 'blur(10px)',
+                            textAlign: 'left',
+                            boxShadow: '0 20px 40px rgba(16, 185, 129, 0.15)'
+                        }}
+                    >
+                        <div style={{
+                            width: '60px',
+                            height: '60px',
+                            background: '#10B981',
+                            borderRadius: '16px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            color: '#fff',
+                            marginBottom: '20px',
+                            boxShadow: '0 0 20px rgba(16, 185, 129, 0.5)'
+                        }}><TrendingUp size={32} /></div>
+                        <div style={{ fontSize: '26px', fontWeight: 900, marginBottom: '8px', color: '#fff' }}>Goal Alignment</div>
+                        <p style={{ margin: 0, opacity: 0.8, fontSize: '20px', fontWeight: 500, lineHeight: 1.4, color: '#D1FAE5' }}>
+                            Setting the trajectory for 2026-27 growth.
+                        </p>
+                    </motion.div>
                 </div>
             </motion.div>
 
             {/* PURPOSE SLIDE */}
-            <motion.div 
+            <motion.div
                 className="slide-section"
                 {...slideIn}
             >
@@ -93,7 +156,7 @@ const FrontlineConnect: React.FC = () => {
             </motion.div>
 
             {/* PARTICIPANTS SLIDE */}
-            <motion.div 
+            <motion.div
                 className="slide-section"
                 {...slideIn}
             >
@@ -102,7 +165,7 @@ const FrontlineConnect: React.FC = () => {
                     <h1 className="slide-title">Participants</h1>
                 </div>
 
-                <motion.div 
+                <motion.div
                     className="participant-grid"
                     variants={{
                         visible: { transition: { staggerChildren: 0.05 } }
@@ -114,20 +177,20 @@ const FrontlineConnect: React.FC = () => {
                     {participants.map((name, index) => {
                         const accentColor = cardColors[index % cardColors.length];
                         return (
-                            <motion.div 
+                            <motion.div
                                 key={name}
                                 className="participant-card creative"
                                 variants={{
                                     hidden: { opacity: 0, scale: 0.8, rotate: -2 },
-                                    visible: { 
-                                        opacity: 1, 
-                                        scale: 1, 
+                                    visible: {
+                                        opacity: 1,
+                                        scale: 1,
                                         rotate: 0,
                                         transition: { type: "spring", damping: 12, stiffness: 100 }
                                     }
                                 }}
-                                whileHover={{ 
-                                    scale: 1.05, 
+                                whileHover={{
+                                    scale: 1.05,
                                     rotate: 1,
                                     zIndex: 10
                                 }}
@@ -148,12 +211,12 @@ const FrontlineConnect: React.FC = () => {
                                 <div className="avatar-box" style={{ background: `linear-gradient(135deg, ${accentColor}, ${accentColor}dd)` }}>
                                     {index + 1}
                                 </div>
-                                
+
                                 <div className="participant-info">
                                     <div className="participant-name">{name}</div>
                                     <div className="participant-role">Relationship Manager</div>
                                 </div>
-                                
+
                                 <div className="card-glow" style={{ background: `radial-gradient(circle at center, ${accentColor}20, transparent 70%)` }}></div>
                             </motion.div>
                         );
@@ -162,15 +225,15 @@ const FrontlineConnect: React.FC = () => {
             </motion.div>
 
             {/* CTA SECTION */}
-            <motion.div 
+            <motion.div
                 className="slide-section dark"
-                style={{ textAlign: 'center', background: 'linear-gradient(135deg, #141E33 0%, #E63946 200%)' }}
+                style={{ textAlign: 'center', background: 'linear-gradient(135deg, #141E33 0%, #10B981 200%)' }}
                 {...slideIn}
             >
                 <h1 className="slide-title">Empowering the Individual.</h1>
                 <p className="slide-subtitle">The strength of the team is each individual member. The strength of each member is the team.</p>
                 <div style={{ marginTop: '40px' }}>
-                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '16px 32px', background: 'white', color: '#E63946', borderRadius: '100px', fontWeight: 900, cursor: 'pointer' }}>
+                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '16px 32px', background: 'white', color: '#10B981', borderRadius: '100px', fontWeight: 900, cursor: 'pointer' }}>
                         <MessageSquare size={20} /> Start the Conversation
                     </div>
                 </div>

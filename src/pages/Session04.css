@@ -140,11 +140,7 @@
   font-weight: 700;
 }
 
-.comparison-card li::before {
-  content: "→";
-  color: #D4AF37;
-  font-weight: 900;
-}
+
 
 /* Divergence Graph */
 .divergence-graph-wrap {
@@ -829,14 +825,16 @@
 
 .stage-label {
   font-size: 15px;
-  font-weight: 800;
-  background: #D4AF37;
+  font-weight: 900;
+  background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
   color: white;
-  padding: 4px 12px;
+  padding: 6px 18px;
   border-radius: 100px;
   text-transform: uppercase;
   margin-bottom: 16px;
   display: inline-block;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+  letter-spacing: 1px;
 }
 
 /* Quote */

@@ -137,7 +137,7 @@ const Session02: React.FC = () => {
             color: 'var(--navy)',
             marginBottom: '32px'
           }}>
-            Objective of Ideal Client Management
+            Objectives of Ideal Client Management
           </h2>
 
           <motion.div
@@ -534,7 +534,7 @@ const Session02: React.FC = () => {
               maxWidth: '900px',
               margin: '0 auto'
             }}>
-              “We can succeed not by selling products, but by delivering structured, <span style={{ color: 'var(--gold)' }}>goal-based financial solutions</span> with (<span style={{ color: '#A0CED9', fontWeight: 800 }}>Data</span>) supported by strong Relationship Management (<span style={{ color: 'var(--gold)', fontWeight: 800 }}>Team</span>) and <span style={{ color: 'var(--blue-light)', fontWeight: 800 }}>Technology</span>.”
+              “We can succeed not by selling products, but by delivering structured, <span style={{ color: 'var(--gold)' }}>goal-based financial solutions</span> with <span style={{ color: '#A0CED9', fontWeight: 800 }}>Data</span> supported by strong Relationship Management (<span style={{ color: 'var(--gold)', fontWeight: 800 }}>Team</span>) and <span style={{ color: 'var(--blue-light)', fontWeight: 800 }}>Technology</span>.”
             </div>
             <div style={{ color: 'rgba(255,255,255,0.5)', marginTop: '20px', fontSize: '18px', fontWeight: 700, letterSpacing: '2px' }}>
               CRM • SOFTWARE • AI

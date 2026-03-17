@@ -107,11 +107,11 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   };
 
   const heroImageVariants = {
-    hidden: { scale: 0.8, opacity: 0, rotate: -5 },
+    hidden: { scale: 0.8, opacity: 0, rotate: 0 },
     visible: {
       scale: 1,
       opacity: 1,
-      rotate: -1,
+      rotate: 0,
       transition: { duration: 1, ease: "backOut" as any }
     }
   };
@@ -131,55 +131,18 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           textAlign: 'left',
           boxShadow: 'none',
           borderBottom: '1px solid var(--border)',
-          padding: '20px',
+          padding: '40px',
           display: 'flex',
           alignItems: 'center',
           gap: '20px',
           borderRadius: '32px',
-          margin: '60px 0 20px',
+          margin: '30px 0 20px',
           position: 'relative',
           overflow: 'hidden'
         }}
         variants={itemVariants}
       >
-        {/* Floating background elements */}
-        <motion.div
-          style={{
-            position: 'absolute',
-            top: '10%',
-            left: '5%',
-            width: '200px',
-            height: '200px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)',
-            filter: 'blur(30px)',
-            zIndex: 0
-          }}
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.5, 0.8, 0.5]
-          }}
-          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          style={{
-            position: 'absolute',
-            bottom: '15%',
-            right: '10%',
-            width: '300px',
-            height: '500px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(74, 127, 212, 0.05) 0%, transparent 70%)',
-            filter: 'blur(40px)',
-            zIndex: 0
-          }}
-          animate={{
-            y: [0, 25, 0],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <div className="hero-text" style={{ flex: '1.2', margin: '0', maxWidth: 'none' }}>
+        <div className="hero-text" style={{ flex: '1', margin: '0', maxWidth: 'none' }}>
           <motion.h1
             style={{
               color: 'var(--navy)',
@@ -223,20 +186,35 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           className="hero-img"
           style={{
             flex: '1',
-            boxShadow: 'var(--sh3)',
+            boxShadow: '0 20px 50px rgba(0,0,0,0.1)',
             borderRadius: '32px',
             position: 'relative',
+            background: '#ffffff',
+            padding: '8px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: '1px solid rgba(0,0,0,0.05)',
             overflow: 'hidden'
           }}
           variants={heroImageVariants}
           whileHover={{ rotate: 0, scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          <img src="/HomeImage.png" alt="SNS Dashboard Home" style={{ borderRadius: '32px', display: 'block', width: '100%' }} />
+          <img
+            src="/premium_handshake1.png"
+            alt="SNS Dashboard Home"
+            style={{
+              borderRadius: '24px',
+              display: 'block',
+              width: '100%',
+              height: 'auto'
+            }}
+          />
         </motion.div>
       </motion.div>
 
-      <motion.div className="label" style={{ opacity: 0.6, marginTop: '100px', }} variants={itemVariants}>Navigate the Sessions</motion.div>
+      <motion.div className="label" style={{ opacity: 0.6, marginTop: '60px', }} variants={itemVariants}>Navigate the Sessions</motion.div>
       <motion.h2 className="section-title" style={{ fontSize: '56px', marginBottom: '32px' }} variants={itemVariants}>Six Sessions</motion.h2>
 
       <motion.div

@@ -48,18 +48,26 @@ const Session03: React.FC = () => {
 
         <div style={{ position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '20px' }}>
           <div style={{ flex: '1', minWidth: '550px' }}>
-            <div className="slide-label" style={{ background: 'rgba(255,255,255,0.08)', color: 'var(--gold-light)', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '8px', fontSize: '24px' }}>SESSION 04 • THE TRANSFORMATION</div>
+            <div className="slide-label" style={{ background: 'rgba(255,255,255,0.08)', color: 'var(--gold-light)', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '8px', fontSize: '12px' }}>SESSION 04 • THE TRANSFORMATION</div>
             <h1 className="slide-title" style={{ fontSize: '36px', marginBottom: '12px' }}>
               Align & <span style={{ color: '#ffffff', position: 'relative' }}>
                 Accelerate.
                 <div style={{ position: 'absolute', bottom: '5px', left: 0, width: '100%', height: '4px', background: 'var(--gold)', borderRadius: '2px', opacity: 0.8 }}></div>
               </span>
             </h1>
-            <p className="slide-subtitle" style={{ color: '#ffffff', fontSize: '18px', opacity: 0.95, marginBottom: '16px' }}>
+            <p className="slide-subtitle" style={{
+              color: '#ffffff',
+              fontSize: '18px',
+              opacity: 0.95,
+              marginBottom: '16px',
+              textAlign: 'left',
+              margin: '0 0 16px 0',
+              maxWidth: 'none'
+            }}>
               One Team, One Standard, One Model & One Delivery.
             </p>
 
-            <h2 style={{ fontSize: '20px', color: '#fff', marginBottom: '12px', fontWeight: 800 }}>What are we trying to achieve?</h2>
+            <h2 style={{ fontSize: '20px', color: '#fff', marginTop: '24px', marginBottom: '12px', fontWeight: 800 }}>What are we trying to achieve?</h2>
 
             <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
               {['Inspire', 'Improve', 'Impact'].map(item => (
@@ -124,14 +132,19 @@ const Session03: React.FC = () => {
         <div style={{ display: 'flex', gap: '60px', alignItems: 'center' }}>
           <div style={{ flex: '1' }}>
             <div style={{
-              padding: '24px 30px',
-              background: 'var(--navy)',
+              padding: '40px',
+              background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)',
               borderRadius: '24px',
               color: '#fff',
-              boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
+              boxShadow: '0 25px 50px rgba(0,0,0,0.2)',
+              borderLeft: '8px solid var(--gold)',
+              position: 'relative',
+              overflow: 'hidden'
             }}>
-              <p style={{ fontSize: '32px', lineHeight: '1.5', margin: 0 }}>
-                <span style={{ color: 'var(--gold-light)', fontWeight: 900 }}>Vision:</span> Become one of the most "intelligent & consistent" MF distributor.
+              <div style={{ position: 'absolute', top: '-10px', right: '-10px', fontSize: '100px', color: 'rgba(212, 175, 55, 0.05)', fontWeight: 900 }}>“</div>
+              <p style={{ fontSize: '38px', lineHeight: '1.4', margin: 0, fontFamily: "'Playfair Display', serif", fontWeight: 700 }}>
+                <span style={{ color: '#D4AF37', fontWeight: 900, textTransform: 'uppercase', fontSize: '24px', display: 'block', marginBottom: '12px', letterSpacing: '2px' }}>Vision:</span>
+                Become one of the most <span style={{ color: 'var(--gold-light)' }}>"intelligent & consistent"</span> MF distributor.
               </p>
             </div>
           </div>
@@ -183,55 +196,79 @@ const Session03: React.FC = () => {
         </div>
       </motion.div>
 
-      <motion.div className="slide-section dark" {...slideIn} style={{ padding: '30px' }}>
-        <div className="tech-slide" style={{ padding: '20px', borderRadius: '24px' }}>
-          <div className="tech-header" style={{ marginBottom: '16px' }}>
-            <div className="decorative-blocks">
-              <span></span>
-              <span></span>
-            </div>
-            <motion.h1 style={{ fontSize: '28px' }}>How to use Tech, Data & our Team to:</motion.h1>
+      <motion.div className="slide-section dark" {...slideIn} style={{ padding: '40px' }}>
+        <div style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          alignItems: 'flex-start', 
+          gap: '12px', 
+          borderBottom: '1px solid rgba(255,255,255,0.1)',
+          paddingBottom: '24px',
+          marginBottom: '32px'
+        }}>
+          <div className="decorative-blocks" style={{ margin: 0, gap: '6px' }}>
+            <span style={{ width: '12px', height: '12px' }}></span>
+            <span style={{ width: '12px', height: '12px' }}></span>
+            <span style={{ width: '12px', height: '12px' }}></span>
           </div>
-
-          <motion.ul
-            className="tech-points"
-            variants={{
-              visible: { transition: { staggerChildren: 0.1 } }
-            }}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {[
-              'Enhance investors’ experience',
-              'Improve Growth and efficiency',
-              'Scale up & personalize clients engagements',
-              'Create a One team, One standard, One model, One delivery'
-            ].map(point => (
-              <motion.li
-                key={point}
-                variants={{
-                  hidden: { opacity: 0, y: 10 },
-                  visible: { opacity: 1, y: 0 }
-                }}
-                whileHover={{ x: 10, color: 'var(--gold)' }}
-                style={{ fontSize: '24px', padding: '12px 0' }}
-              >
-                {point}
-              </motion.li>
-            ))}
-          </motion.ul>
-
-          <div className="tech-footer">
-            <p className="footer-text">
-              Our vision : To provide peace of mind by bringing significance in our Customer Service.
-            </p>
-            <div className="footer-bottom">
-              <span>www.snsgroup.in</span>
-              <span>“AMFI-registered Mutual Fund Distributor”</span>
-            </div>
-          </div>
+          <h1 style={{ fontSize: '32px', color: '#fff', fontWeight: 900, margin: 0, letterSpacing: '-0.5px' }}>
+            How to use Tech, Data & our Team to:
+          </h1>
         </div>
+
+        <motion.div
+          style={{ 
+            display: 'grid', 
+            gridTemplateColumns: '1fr 1fr', 
+            gap: '24px',
+            width: '100%'
+          }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.1 } }
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {[
+            'Enhance investors’ experience',
+            'Improve Growth and efficiency',
+            'Scale up & personalize clients engagements',
+            'Create a One team, One standard, One model, One delivery'
+          ].map(point => (
+            <motion.div
+              key={point}
+              variants={{
+                hidden: { opacity: 0, y: 15 },
+                visible: { opacity: 1, y: 0 }
+              }}
+              whileHover={{ y: -5, background: 'rgba(255,255,255,0.08)', borderColor: 'var(--gold)' }}
+              style={{ 
+                background: 'rgba(255,255,255,0.04)', 
+                padding: '24px 30px', 
+                borderRadius: '20px', 
+                border: '1.5px solid rgba(255,255,255,0.08)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '16px',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
+              }}
+            >
+              <div style={{ 
+                width: '10px', 
+                height: '10px', 
+                borderRadius: '50%', 
+                background: 'var(--gold)',
+                flexShrink: 0,
+                boxShadow: '0 0 10px var(--gold)'
+              }}></div>
+              <div style={{ fontSize: '24px', fontWeight: 800, color: '#fff', lineHeight: 1.3 }}>
+                {point}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </motion.div>
 
       {/* SECTION 3: CRM OPTIMIZATION OVERHAUL */}
@@ -427,7 +464,7 @@ const Session03: React.FC = () => {
           <motion.div
             style={{
               background: '#F8FAFC',
-              padding: '30px',
+              padding: '3px',
               border: '1px solid #E2E8F0',
               borderRadius: '24px'
             }}
@@ -435,43 +472,58 @@ const Session03: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h3 style={{ fontSize: '24px', color: 'var(--navy)', marginBottom: '8px' }}>Decision Intelligence at Scale</h3>
-            <p style={{ fontSize: '18px', color: '#64748B', marginBottom: '24px' }}>Empowering the same team to achieve 3X Productivity.</p>
+            <h3 style={{ fontSize: '32px', color: 'var(--navy)', marginBottom: '12px', fontWeight: 900, fontFamily: "'Playfair Display', serif" }}>Decision Intelligence at Scale</h3>
+            <p style={{ fontSize: '20px', color: '#475569', marginBottom: '32px', fontWeight: 600 }}>Empowering the same team to achieve 3X Productivity.</p>
 
             <motion.div
-              style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}
+              style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', width: '100%' }}
               variants={{
-                visible: { transition: { staggerChildren: 0.05 } }
+                visible: { transition: { staggerChildren: 0.1 } }
               }}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {[
-                { icon: <TrendingUp size={18} />, t: 'Predict Churn', d: 'Before Redemption' },
-                { icon: <Zap size={18} />, t: 'Identify SIPs', d: 'Top-up Opportunities' },
-                { icon: <Database size={18} />, t: 'Auto-generate', d: 'Portfolio Insights' },
-                { icon: <Users size={18} />, t: 'RM meeting', d: 'Intelligence Briefs' },
-                { icon: <Users size={18} />, t: 'Personalized communication ', d: 'at scale' },
+                { icon: <TrendingUp size={24} />, t: 'Predict Churn', d: 'Before Redemption', bg: 'linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%)', border: '#feb2b2', iconColor: '#c53030' },
+                { icon: <Zap size={24} />, t: 'Identify SIPs', d: 'Top-up Opportunities', bg: 'linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%)', border: '#9ae6b4', iconColor: '#2f855a' },
+                { icon: <Database size={24} />, t: 'Auto-generate', d: 'Portfolio Insights', bg: 'linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%)', border: '#90cdf4', iconColor: '#2b6cb0' },
+                { icon: <Users size={24} />, t: 'RM meeting', d: 'Intelligence Briefs', bg: 'linear-gradient(135deg, #fffaf0 0%, #feebc8 100%)', border: '#fbd38d', iconColor: '#b45309' },
+                { icon: <MessageSquare size={24} />, t: 'Personalized comms', d: 'at scale', bg: 'linear-gradient(135deg, #f5f3ff 0%, #e9d5ff 100%)', border: '#d8b4fe', iconColor: '#6b46c1' },
               ].map(item => (
                 <motion.div
                   key={item.t}
                   variants={{
-                    hidden: { opacity: 0, scale: 0.9 },
+                    hidden: { opacity: 0, scale: 0.95 },
                     visible: { opacity: 1, scale: 1 }
                   }}
-                  whileHover={{ y: -4, background: '#fff' }}
-                  style={{ padding: '16px', background: 'white', border: '1px solid #E2E8F0', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}
+                  whileHover={{ y: -6, boxShadow: '0 15px 30px rgba(0,0,0,0.1)' }}
+                  style={{
+                    padding: '16px',
+                    background: item.bg,
+                    border: `1.5px solid ${item.border}`,
+                    borderRadius: '20px',
+                    boxShadow: '0 4px 15px rgba(0,0,0,0.05)',
+                    textAlign: 'left'
+                  }}
                 >
-                  <div style={{ color: 'var(--gold)', marginBottom: '8px' }}>{item.icon}</div>
-                  <div style={{ fontWeight: 800, fontSize: '17px', color: 'var(--navy)' }}>{item.t}</div>
-                  <div style={{ fontSize: '14px', color: '#64748B' }}>{item.d}</div>
+                  <div style={{ color: item.iconColor, marginBottom: '8px', background: 'white', width: '45px', height: '45px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 10px rgba(0,0,0,0.05)' }}>{item.icon}</div>
+                  <div style={{ fontWeight: 900, fontSize: '20px', color: 'var(--navy)', marginBottom: '4px' }}>{item.t}</div>
+                  <div style={{ fontSize: '15px', color: '#4A5568', fontWeight: 600 }}>{item.d}</div>
                 </motion.div>
               ))}
             </motion.div>
-            <p style={{ fontSize: '16px', marginTop: '24px', fontStyle: 'italic', color: 'var(--navy)', fontWeight: 700 }}>
-              Same team. 3X productivity. Higher retention.
-            </p>
+            <div style={{
+              marginTop: '32px',
+              padding: '20px',
+              background: 'var(--navy)',
+              borderRadius: '16px',
+              boxShadow: '0 10px 25px rgba(26, 39, 68, 0.2)'
+            }}>
+              <p style={{ fontSize: '22px', margin: 0, color: '#fff', fontWeight: 900, letterSpacing: '0.5px' }}>
+                Same team. 3X productivity. Higher retention.
+              </p>
+            </div>
           </motion.div>
         </div>
       </motion.div>
@@ -484,7 +536,7 @@ const Session03: React.FC = () => {
         <div className="slide-header" style={{ marginBottom: '20px' }}>
           <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>Our Current Reality</div>
           <h1 className="slide-title" style={{ fontSize: '32px', marginBottom: '8px' }}>We Are Sitting on Powerful Data</h1>
-          <p className="slide-subtitle" style={{ fontSize: '18px' }}>Today we report data. Tomorrow we must activate intelligence.</p>
+          <p className="slide-subtitle" style={{ fontSize: '24px' }}>Today we report data. Tomorrow we must activate intelligence.</p>
         </div>
 
         <motion.div
@@ -950,9 +1002,9 @@ const Session03: React.FC = () => {
               visible: { opacity: 1, y: 0 }
             }}
             whileHover={{ y: -5, boxShadow: '0 15px 40px rgba(0,0,0,0.1)' }}
-            style={{ 
-              padding: '24px', 
-              textAlign: 'center', 
+            style={{
+              padding: '24px',
+              textAlign: 'center',
               width: '100%',
               background: 'linear-gradient(135deg, #fffcf0 0%, #fef3c7 100%)',
               border: '1px solid #fde68a',
@@ -988,8 +1040,8 @@ const Session03: React.FC = () => {
                 >
                   {['Investor communication drafts', 'RM/CS call summaries', 'Knowledge base creation', 'Training & onboarding content'].map(item => (
                     <li key={item} style={{ display: 'flex', alignItems: 'center', gap: '12px', paddingBottom: '12px', borderBottom: '1px solid rgba(212, 175, 55, 0.2)' }}>
-                       <div style={{ color: 'var(--gold)' }}><MessageSquare size={16} /></div>
-                       {item}
+                      <div style={{ color: 'var(--gold)' }}><MessageSquare size={16} /></div>
+                      {item}
                     </li>
                   ))}
                 </ul>
@@ -1008,9 +1060,9 @@ const Session03: React.FC = () => {
               visible: { opacity: 1, y: 0 }
             }}
             whileHover={{ y: -5, boxShadow: '0 15px 40px rgba(0,0,0,0.1)' }}
-            style={{ 
-              padding: '24px', 
-              textAlign: 'center', 
+            style={{
+              padding: '24px',
+              textAlign: 'center',
               width: '100%',
               background: 'linear-gradient(135deg, #f0fff4 0%, #dcfce7 100%)',
               border: '1px solid #9ae6b4',
@@ -1607,7 +1659,7 @@ const Session03: React.FC = () => {
 
               {/* Shadow Path */}
               <motion.path
-                d="M 40 250 L 250 210 L 460 170 L 670 130 L 880 90 L 1090 50"
+                d="M 40 293 L 250 260 L 460 215 L 670 155 L 880 95 L 1090 50"
                 fill="none"
                 stroke="rgba(212, 175, 55, 0.2)"
                 strokeWidth="12"
@@ -1619,7 +1671,7 @@ const Session03: React.FC = () => {
 
               {/* Data Area */}
               <motion.path
-                d="M 40 350 L 40 250 L 250 210 L 460 170 L 670 130 L 880 90 L 1090 50 L 1090 350 Z"
+                d="M 40 350 L 40 293 L 250 260 L 460 215 L 670 155 L 880 95 L 1090 50 L 1090 350 Z"
                 className="graph-area"
                 initial={{ opacity: 0, scaleY: 0 }}
                 whileInView={{ opacity: 0.1, scaleY: 1 }}
@@ -1629,7 +1681,7 @@ const Session03: React.FC = () => {
 
               {/* Main Data Line */}
               <motion.path
-                d="M 40 250 L 250 210 L 460 170 L 670 130 L 880 90 L 1090 50"
+                d="M 40 293 L 250 260 L 460 215 L 670 155 L 880 95 L 1090 50"
                 className="graph-line"
                 filter="url(#glow)"
                 initial={{ pathLength: 0 }}
@@ -1639,12 +1691,12 @@ const Session03: React.FC = () => {
 
               {/* Data Points & Labels */}
               {[
-                { x: 40, y: 250, year: 'FY26', val: '₹3,000 Cr' },
-                { x: 250, y: 210, year: 'FY27', val: '₹4,500 Cr' },
-                { x: 460, y: 170, year: 'FY28', val: '₹6,000 Cr' },
-                { x: 670, y: 130, year: 'FY29', val: '₹7,500 Cr' },
-                { x: 880, y: 90, year: 'FY30', val: '₹9,000 Cr' },
-                { x: 1090, y: 50, year: 'FY31', val: '₹10,000 Cr', target: true }
+                { x: 40, y: 293, year: 'April-26', val: '₹1,900 Cr' },
+                { x: 250, y: 260, year: 'April-27', val: '₹3,000 Cr' },
+                { x: 460, y: 215, year: 'April-28', val: '₹4,500 Cr' },
+                { x: 670, y: 155, year: 'April-29', val: '₹6,500 Cr' },
+                { x: 880, y: 95, year: 'April-30', val: '₹8,500 Cr' },
+                { x: 1090, y: 50, year: 'April-31', val: '₹10,000 Cr', target: true }
               ].map((point, i) => (
                 <g key={i}>
                   {point.target && (
