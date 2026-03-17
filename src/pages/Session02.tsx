@@ -137,7 +137,7 @@ const Session02: React.FC = () => {
             color: 'var(--navy)',
             marginBottom: '32px'
           }}>
-            Objectives of Ideal Client Management
+            Objectives of Ideal Client Management Model
           </h2>
 
           <motion.div
