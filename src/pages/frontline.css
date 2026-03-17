@@ -7,12 +7,16 @@
   font-family: 'DM Sans', sans-serif;
 }
 
-.slide-section {
-  min-height: auto;
+.frontline-container p {
+  margin: 0 0 20px 0;
+}
+
+.frontline-container .slide-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
+  align-items: center;
+  padding: 60px 40px;
   margin-bottom: 20px;
   background: #ffffff;
   border-radius: 40px;
@@ -22,7 +26,7 @@
   overflow: hidden;
 }
 
-.slide-section.dark {
+.frontline-container .slide-section.dark {
   background: #141E33;
   color: #fff;
   border-color: rgba(255, 255, 255, 0.08);
@@ -38,22 +42,23 @@
   background: linear-gradient(90deg, #E63946, #D62828);
 }
 
-.slide-header {
-  margin-bottom: 20px;
+.frontline-container .slide-header {
+  margin-bottom: 24px;
   text-align: center;
 }
 
-.slide-label {
+.frontline-container .slide-label {
   display: inline-block;
   padding: 8px 20px;
   background: rgba(230, 57, 70, 0.1);
   color: #E63946;
   border-radius: 100px;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 .dark .slide-label {
@@ -61,37 +66,40 @@
   color: #FF4D6D;
 }
 
-.slide-title {
+.frontline-container .slide-title {
   font-family: 'Playfair Display', serif;
   font-size: 42px;
   font-weight: 900;
   color: #1E293B;
   line-height: 1.1;
-  margin-bottom: 16px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
   letter-spacing: -1px;
 }
 
-.dark .slide-title {
+.frontline-container .dark .slide-title {
   color: #fff;
 }
 
-.slide-subtitle {
-  font-size: 32px;
+.frontline-container .slide-subtitle {
+  font-size: 28px;
   color: #64748B;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   line-height: 1.6;
+  text-align: center;
 }
 
-.dark .slide-subtitle {
+.frontline-container .dark .slide-subtitle {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.participant-grid {
+.frontline-container .participant-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .participant-card {

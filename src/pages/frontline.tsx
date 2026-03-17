@@ -42,9 +42,9 @@ const FrontlineConnect: React.FC = () => {
                 <div className="connect-icon"><Users size={200} /></div>
 
                 <div className="slide-header">
-                    <div className="slide-label">SESSION 02 • THE DIALOGUE</div>
+                    <div className="slide-label" style={{ fontSize: '18px' }}>SESSION 02 • THE DIALOGUE</div>
                     <h1 className="slide-title">Frontline Connect</h1>
-                    <p className="slide-subtitle" style={{ fontSize: '28px', maxWidth: '1000px', fontWeight: 700, margin: '0 auto', color: 'rgba(255,255,255,0.9)' }}>
+                    <p className="slide-subtitle" style={{ fontSize: '22px', maxWidth: '1000px', fontWeight: 700, margin: '0 auto', color: 'rgba(255,255,255,0.9)' }}>
                         One-on-one interaction between Relationship Managers and the senior management team.
                     </p>
                 </div>
@@ -136,19 +136,19 @@ const FrontlineConnect: React.FC = () => {
                 {...slideIn}
             >
                 <div className="slide-header">
-                    <div className="slide-label">The Purpose</div>
+                    <div className="slide-label" style={{ fontSize: '28px' }}>The Purpose</div>
                     <h1 className="slide-title">Clarity & Commitment</h1>
                 </div>
 
                 <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-                    <p style={{ fontSize: '24px', lineHeight: '1.6', color: 'var(--navy)', fontWeight: 500 }}>
+                    <p className="slide-subtitle" style={{ color: 'var(--navy)', fontWeight: 500, textAlign: 'center' }}>
                         "These discussions help establish clear expectations and provide clarity on each RM’s role in the next phase of SNS’s growth journey."
                     </p>
-                    <div style={{ marginTop: '40px', display: 'flex', justifyContent: 'center', gap: '20px' }}>
-                        <div style={{ padding: '20px 40px', background: '#F8FAFC', borderRadius: '100px', border: '1px solid #E2E8F0', fontWeight: 700 }}>
+                    <div style={{ marginTop: '32px', display: 'flex', justifyContent: 'center', gap: '24px' }}>
+                        <div style={{ padding: '16px 40px', background: 'rgba(230, 57, 70, 0.1)', borderRadius: '100px', border: '1px solid rgba(230, 57, 70, 0.25)', fontWeight: 800, fontSize: '20px', color: '#1E293B', boxShadow: '0 4px 12px rgba(230, 57, 70, 0.05)' }}>
                             Role Clarity
                         </div>
-                        <div style={{ padding: '20px 40px', background: '#F8FAFC', borderRadius: '100px', border: '1px solid #E2E8F0', fontWeight: 700 }}>
+                        <div style={{ padding: '16px 40px', background: 'rgba(230, 57, 70, 0.1)', borderRadius: '100px', border: '1px solid rgba(230, 57, 70, 0.25)', fontWeight: 800, fontSize: '20px', color: '#1E293B', boxShadow: '0 4px 12px rgba(230, 57, 70, 0.05)' }}>
                             Vision Alignment
                         </div>
                     </div>
@@ -161,7 +161,7 @@ const FrontlineConnect: React.FC = () => {
                 {...slideIn}
             >
                 <div className="slide-header">
-                    <div className="slide-label">THE FRONTLINE TEAM</div>
+                    <div className="slide-label" style={{ fontSize: '28px' }}>THE FRONTLINE TEAM</div>
                     <h1 className="slide-title">Participants</h1>
                 </div>
 
@@ -232,7 +232,7 @@ const FrontlineConnect: React.FC = () => {
             >
                 <h1 className="slide-title">Empowering the Individual.</h1>
                 <p className="slide-subtitle">The strength of the team is each individual member. The strength of each member is the team.</p>
-                <div style={{ marginTop: '40px' }}>
+                <div style={{ marginTop: '32px' }}>
                     <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '16px 32px', background: 'white', color: '#10B981', borderRadius: '100px', fontWeight: 900, cursor: 'pointer' }}>
                         <MessageSquare size={20} /> Start the Conversation
                     </div>

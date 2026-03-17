@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Target, Users, Layout, ShieldCheck, BarChart3, Rocket, MessageSquare, Zap } from 'lucide-react';
+import './Session02.css';
 
 const stepData = [
   { icon: <Target size={24} />, title: 'Client Segmentation', color: '#1A2744', desc: 'Multi-parameter auto-categorization. Identify, evaluate, and prioritize clients by complete relationship value — not just AUM.' },
@@ -25,7 +26,7 @@ const Session02: React.FC = () => {
   };
 
   return (
-    <div id="page-s2" className="page active" style={{ background: '#F8F9FB' }}>
+    <div id="page-s2" className="page active session02-container" style={{ background: '#F8F9FB' }}>
       {/* SECTION 1: Awake & Ignite Hero */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -50,7 +51,7 @@ const Session02: React.FC = () => {
         <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)', filter: 'blur(40px)', pointerEvents: 'none' }}></div>
 
         <div style={{ flex: '1', zIndex: 1, minWidth: '550px' }}>
-          <div className="label" style={{ color: 'var(--navy)', marginBottom: '12px', letterSpacing: '4px', fontSize: '14px', opacity: 0.7, fontWeight: 800 }}>SESSION 03 • THE CLARITY</div>
+          <div className="slide-label" style={{ marginBottom: '12px', letterSpacing: '4px', fontSize: '14px', fontWeight: 800, color: 'var(--navy)' }}>SESSION 03 • THE CLARITY</div>
           <h1 style={{
             color: 'var(--navy)',
             fontSize: '64px',

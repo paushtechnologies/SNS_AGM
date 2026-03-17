@@ -64,7 +64,7 @@ const MomentumBuilder: React.FC = () => {
         {...slideIn}
       >
         <div className="slide-header">
-          <div className="slide-label" style={{ fontSize: '48px', marginBottom: '0px', fontWeight: 900 }}>The Strategy</div>
+          <div className="slide-label" style={{ fontSize: '28px', marginBottom: '0px', fontWeight: 900 }}>The Strategy</div>
           <h1 className="slide-title" style={{ marginTop: '0px', fontWeight: 900 }}>The Three Pillars</h1>
           <p className="slide-subtitle">
             Introduce FY2026–27 theme: Tech, Data & Team as the foundation for our momentum.
@@ -187,7 +187,7 @@ const MomentumBuilder: React.FC = () => {
         {...slideIn}
       >
         <div className="slide-header">
-          <div className="slide-label" style={{ fontSize: '48px', marginBottom: '0px', fontWeight: 900 }}>The Goals</div>
+          <div className="slide-label" style={{ fontSize: '28px', marginBottom: '0px', fontWeight: 900 }}>The Goals</div>
           <h1 className="slide-title" style={{ marginTop: '0px', fontWeight: 900 }}>Core Objectives</h1>
         </div>
 
@@ -246,12 +246,12 @@ const MomentumBuilder: React.FC = () => {
           transition={{ duration: 0.8 }}
           style={{ textAlign: 'left', zIndex: 2 }}
         >
-          <div className="slide-label" style={{ color: '#D4AF37', letterSpacing: '6px', marginBottom: '0px', fontSize: '48px', fontWeight: 900 }}>THE VISION</div>
-          <h1 className="slide-title" style={{ fontSize: '56px', fontWeight: 900, marginBottom: '20px', lineHeight: '1.1', marginTop: '0px' }}>
+          <div className="slide-label" style={{ color: '#D4AF37', letterSpacing: '6px', marginBottom: '0px', fontSize: '16px', fontWeight: 900, textAlign: 'left' }}>THE VISION</div>
+          <h1 className="slide-title" style={{ fontSize: '56px', fontWeight: 900, marginBottom: '20px', lineHeight: '1.1', marginTop: '0px', textAlign: 'left' }}>
             Human Wisdom Meets <br />
             <span style={{ color: 'var(--gold)' }}>Digital Intelligence</span>
           </h1>
-          <p className="slide-subtitle" style={{ fontSize: '20px', opacity: 0.9, maxWidth: '600px', margin: '0 0 32px 0', lineHeight: '1.6' }}>
+          <p className="slide-subtitle" style={{ fontSize: '20px', opacity: 0.9, maxWidth: '600px', margin: '0 0 32px 0', lineHeight: '1.6', textAlign: 'left' }}>
             "Navigating the next chapter of SNS Group. Building the standards that define our <span style={{ color: '#D4AF37', fontWeight: 900 }}>₹10,000 Crore</span> future."
           </p>
 
