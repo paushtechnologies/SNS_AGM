@@ -44,7 +44,7 @@ const Session04: React.FC = () => {
       >
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '40px' }}>
           <div style={{ flex: '1.2' }}>
-            <div className="slide-label" style={{ background: 'rgba(212, 175, 55, 0.2)', color: '#D4AF37', marginBottom: '12px' }}>SESSION 05 • THE VISION</div>
+            <div className="slide-label" style={{ background: 'rgba(212, 175, 55, 0.2)', color: '#D4AF37', marginBottom: '8px', fontSize: '24px', padding: '8px 20px' }}>SESSION 05 • THE VISION</div>
             <h1 className="slide-title" style={{
               fontSize: '48px',
               color: '#FFFFFF',
@@ -93,7 +93,7 @@ const Session04: React.FC = () => {
       {/* ORIGIN STORY: THE BEHAVIOURAL GAP */}
       <motion.div className="slide-section" {...slideIn}>
         <div className="slide-header" style={{ marginBottom: '16px' }}>
-          <div className="slide-label" style={{ marginBottom: '8px' }}>ORIGIN STORY: MARCH 2020</div>
+          <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>ORIGIN STORY: MARCH 2020</div>
           <h2 className="slide-title" style={{ fontSize: '32px' }}>The Behavioural Gap</h2>
         </div>
         <motion.div
@@ -115,7 +115,7 @@ const Session04: React.FC = () => {
             whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
             style={{ borderTop: '4px solid #C53030', padding: '16px' }}
           >
-            <div style={{ fontSize: '15px', fontWeight: 900, color: '#C53030', marginBottom: '12px', letterSpacing: '2px', textTransform: 'uppercase' }}>INVESTOR A</div>
+            <div style={{ fontSize: '20px', fontWeight: 900, color: '#C53030', marginBottom: '12px', letterSpacing: '2px', textTransform: 'uppercase' }}>INVESTOR A</div>
             <XCircle size={48} color="#C53030" style={{ marginBottom: '16px', opacity: 0.8 }} />
             <p style={{ fontSize: '20px', fontWeight: 800, color: '#1E293B', marginBottom: '16px', lineHeight: 1.4 }}>Panicked and exited <br />the market</p>
             <div style={{ background: '#FFF5F5', color: '#C53030', padding: '12px', borderRadius: '12px', fontSize: '19px', fontWeight: 800 }}>Outcome: Missed recovery ✗</div>
@@ -129,7 +129,7 @@ const Session04: React.FC = () => {
             whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
             style={{ borderTop: '4px solid #2F855A', padding: '16px' }}
           >
-            <div style={{ fontSize: '15px', fontWeight: 900, color: '#2F855A', marginBottom: '12px', letterSpacing: '2px', textTransform: 'uppercase' }}>INVESTOR B</div>
+            <div style={{ fontSize: '20px', fontWeight: 900, color: '#2F855A', marginBottom: '12px', letterSpacing: '2px', textTransform: 'uppercase' }}>INVESTOR B</div>
             <CheckCircle2 size={48} color="#2F855A" style={{ marginBottom: '16px', opacity: 0.8 }} />
             <p style={{ fontSize: '20px', fontWeight: 800, color: '#1E293B', marginBottom: '16px', lineHeight: 1.4 }}>Stayed invested and <br />continued</p>
             <div style={{ background: '#F0FFF4', color: '#2F855A', padding: '12px', borderRadius: '12px', fontSize: '19px', fontWeight: 800 }}>Outcome: Created Wealth ✓</div>
@@ -148,7 +148,7 @@ const Session04: React.FC = () => {
       {/* WHAT WE ACTUALLY DO */}
       <motion.div className="slide-section" {...slideIn}>
         <div className="slide-header" style={{ marginBottom: '16px' }}>
-          <div className="slide-label" style={{ marginBottom: '8px' }}>OUR CORE ROLE</div>
+          <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>OUR CORE ROLE</div>
           <h2 className="slide-title" style={{ fontSize: '32px' }}>What We Actually Do</h2>
           <p className="slide-subtitle" style={{ fontSize: '18px' }}>Our role is to help clients stay rational and disciplined.</p>
         </div>
@@ -188,7 +188,7 @@ const Session04: React.FC = () => {
       {/* OUR FOUNDATION CARDS */}
       <motion.div className="slide-section" {...slideIn}>
         <div className="slide-header" style={{ marginBottom: '16px' }}>
-          <div className="slide-label" style={{ marginBottom: '8px' }}>OUR FOUNDATION</div>
+          <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>OUR FOUNDATION</div>
           <h2 className="slide-title" style={{ fontSize: '32px' }}>The Foundation of SNS</h2>
         </div>
         <motion.div
@@ -248,65 +248,87 @@ const Session04: React.FC = () => {
       </motion.div>
 
       <motion.div className="slide-section" {...slideIn}>
-        <div className="slide-header" style={{ marginBottom: '16px' }}>
-          <div className="slide-label" style={{ marginBottom: '8px' }}>KEY CONCEPT</div>
-          <h1 className="slide-title" style={{ fontSize: '32px', marginBottom: '8px' }}>Grow vs Scale</h1>
-          <p className="slide-subtitle" style={{ fontSize: '18px' }}>Scale is not just "more growth" — it's a completely different trajectory powered by systems and trust.</p>
+        <div className="slide-header" style={{ marginBottom: '32px' }}>
+          <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>KEY CONCEPT</div>
+          <h1 className="slide-title" style={{ fontSize: '42px', marginBottom: '12px' }}>Grow vs Scale</h1>
+          <p className="slide-subtitle" style={{ fontSize: '22px', fontWeight: 600 }}>Scale is not just "more growth" — it's a completely different trajectory powered by systems and trust.</p>
         </div>
 
-        <div className="comparison-container">
+        <div className="comparison-container" style={{ gap: '32px' }}>
           <motion.div
-            className="comparison-card growth-card"
+            className="comparison-card"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(0,0,0,0.08)' }}
+            whileHover={{ y: -10, boxShadow: '0 25px 50px rgba(197, 48, 48, 0.12)' }}
+            style={{ 
+              background: 'linear-gradient(135deg, #FFF5F5 0%, #FED7D7 100%)',
+              border: '2px solid #FC8181',
+              borderRadius: '32px',
+              padding: '32px'
+            }}
           >
-            <span className="card-type">Traditional Path</span>
-            <h2>Growth</h2>
-            <motion.ul
-              variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-              initial="hidden"
-              whileInView="visible"
-            >
+            <span style={{ color: '#C53030', fontWeight: 900, fontSize: '18px', letterSpacing: '2px', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>Traditional Path</span>
+            <h2 style={{ fontSize: '48px', color: '#1E293B', marginBottom: '24px', fontFamily: "'Playfair Display', serif", fontWeight: 900 }}>Growth</h2>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
               {[
                 'Linear expansion',
                 'Requires more effort & resources',
                 'Driven by transactions',
                 'More clients → more meetings → more AUM'
               ].map(item => (
-                <motion.li key={item} variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>
-                  {item}
-                </motion.li>
+                <li key={item} style={{ 
+                  padding: '12px 0', 
+                  fontSize: '19px', 
+                  fontWeight: 700, 
+                  color: '#475569', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: '12px',
+                  borderBottom: '1px solid rgba(197, 48, 48, 0.1)'
+                }}>
+                  <span style={{ color: '#C53030', fontWeight: 900 }}>→</span> {item}
+                </li>
               ))}
-            </motion.ul>
+            </ul>
           </motion.div>
 
           <motion.div
-            className="comparison-card scale-card"
+            className="comparison-card"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            whileHover={{ y: -10, boxShadow: '0 25px 50px rgba(212,175,55,0.15)' }}
+            whileHover={{ y: -10, boxShadow: '0 25px 50px rgba(47, 133, 90, 0.12)' }}
+            style={{ 
+              background: 'linear-gradient(135deg, #F0FFF4 0%, #C6F6D5 100%)',
+              border: '2px solid #68D391',
+              borderRadius: '32px',
+              padding: '32px'
+            }}
           >
-            <span className="card-type">The ₹10,000 Cr Path</span>
-            <h2>Scale</h2>
-            <motion.ul
-              variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-              initial="hidden"
-              whileInView="visible"
-            >
+            <span style={{ color: '#2F855A', fontWeight: 900, fontSize: '18px', letterSpacing: '2px', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>The ₹10,000 Cr Path</span>
+            <h2 style={{ fontSize: '48px', color: '#1E293B', marginBottom: '24px', fontFamily: "'Playfair Display', serif", fontWeight: 900 }}>Scale</h2>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
               {[
                 'Exponential expansion',
                 'Driven by systems & reputation',
                 'Powered by relationships & referrals',
                 'Trust + Referrals + Systems → Exponential AUM'
               ].map(item => (
-                <motion.li key={item} variants={{ hidden: { opacity: 0, x: 10 }, visible: { opacity: 1, x: 0 } }}>
-                  {item}
-                </motion.li>
+                <li key={item} style={{ 
+                  padding: '12px 0', 
+                  fontSize: '19px', 
+                  fontWeight: 800, 
+                  color: '#1E293B', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: '12px',
+                  borderBottom: '1px solid rgba(47, 133, 90, 0.1)'
+                }}>
+                  <span style={{ color: '#2F855A', fontWeight: 900 }}>→</span> {item}
+                </li>
               ))}
-            </motion.ul>
+            </ul>
           </motion.div>
         </div>
 
@@ -364,7 +386,7 @@ const Session04: React.FC = () => {
 
       <motion.div className="slide-section" {...slideIn}>
         <div className="slide-header" style={{ marginBottom: '16px' }}>
-          <div className="slide-label" style={{ marginBottom: '8px' }}>CASE STUDIES</div>
+          <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>CASE STUDIES</div>
           <h1 className="slide-title" style={{ fontSize: '32px' }}>Lessons from the World's Best</h1>
         </div>
 
@@ -425,54 +447,80 @@ const Session04: React.FC = () => {
       </motion.div>
 
       <motion.div className="slide-section" {...slideIn}>
-        <div className="slide-header" style={{ marginBottom: '16px' }}>
-          <h1 className="slide-title" style={{ fontSize: '32px' }}>The Distribution Trap</h1>
+        <div className="slide-header" style={{ marginBottom: '32px' }}>
+          <h1 className="slide-title" style={{ fontSize: '42px' }}>The Distribution Trap</h1>
         </div>
 
-        <div className="trapped-scaling-container" style={{ gap: '16px', marginTop: '0' }}>
+        <div className="trapped-scaling-container" style={{ 
+          display: 'grid', 
+          gridTemplateColumns: '1fr 1fr', 
+          gap: '24px', 
+          marginTop: '0',
+          width: '100%'
+        }}>
           <motion.div
             className="flow-section"
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            style={{ padding: '16px' }}
+            style={{ 
+              padding: '32px 16px', 
+              background: 'linear-gradient(135deg, #FFF5F5 0%, #FED7D7 100%)',
+              border: '1px solid #FEB2B2',
+              borderRadius: '24px',
+              boxShadow: '0 10px 40px rgba(197, 48, 48, 0.08)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              overflow: 'hidden'
+            }}
           >
-            <p style={{ fontSize: '14px', fontWeight: 900, color: '#C53030', marginBottom: '12px' }}>TRAPPED FIRMS</p>
-            <div className="flow-row" style={{ gap: '8px' }}>
-              <div className="flow-box" style={{ padding: '8px 16px', fontSize: '14px' }}>Product</div>
-              <span>→</span>
-              <div className="flow-box" style={{ padding: '8px 16px', fontSize: '14px' }}>Transaction</div>
-              <span>→</span>
-              <div className="flow-box" style={{ padding: '8px 16px', fontSize: '16px' }}>Commission</div>
+            <p style={{ fontSize: '22px', fontWeight: 900, color: '#C53030', marginBottom: '20px', letterSpacing: '1.5px', textTransform: 'uppercase' }}>TRAPPED FIRMS</p>
+            <div className="flow-row" style={{ gap: '10px', width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
+              <div className="flow-box" style={{ padding: '12px 16px', fontSize: '16px', border: '1px solid #FC8181', color: '#1E293B', fontWeight: 800, background: 'white', borderRadius: '12px', minWidth: '100px' }}>Product</div>
+              <span style={{ fontSize: '20px', color: '#C53030', fontWeight: 'bold' }}>→</span>
+              <div className="flow-box" style={{ padding: '12px 16px', fontSize: '16px', border: '1px solid #FC8181', color: '#1E293B', fontWeight: 800, background: 'white', borderRadius: '12px', minWidth: '100px' }}>Transaction</div>
+              <span style={{ fontSize: '20px', color: '#C53030', fontWeight: 'bold' }}>→</span>
+              <div className="flow-box" style={{ padding: '14px 20px', fontSize: '18px', border: '2px solid #C53030', color: '#C53030', fontWeight: 900, background: 'white', borderRadius: '12px', boxShadow: '0 4px 20px rgba(197, 48, 48, 0.15)', minWidth: '120px' }}>Commission</div>
             </div>
           </motion.div>
 
           <motion.div
             className="flow-section"
-            style={{ border: '1px solid #D4AF37', padding: '16px' }}
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            style={{ 
+              padding: '32px 16px', 
+              background: 'linear-gradient(135deg, #F0FFF4 0%, #C6F6D5 100%)',
+              border: '1px solid #9AE6B4',
+              borderRadius: '24px',
+              boxShadow: '0 10px 40px rgba(47, 133, 90, 0.08)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              overflow: 'hidden'
+            }}
           >
-            <p style={{ color: '#D4AF37', fontSize: '14px', fontWeight: 900, marginBottom: '12px' }}>SCALING FIRMS</p>
-            <div className="flow-row" style={{ gap: '8px' }}>
-              <div className="flow-box" style={{ padding: '8px 16px', fontSize: '14px' }}>Client</div>
-              <span>→</span>
-              <div className="flow-box" style={{ padding: '8px 16px', fontSize: '14px' }}>Relationship</div>
-              <span>→</span>
-              <div className="flow-box" style={{ padding: '8px 16px', fontSize: '16px' }}>Compounding</div>
+            <p style={{ color: '#2F855A', fontSize: '22px', fontWeight: 900, marginBottom: '20px', letterSpacing: '1.5px', textTransform: 'uppercase' }}>SCALING FIRMS</p>
+            <div className="flow-row" style={{ gap: '10px', width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
+              <div className="flow-box" style={{ padding: '12px 16px', fontSize: '16px', border: '1px solid #68D391', color: '#1E293B', fontWeight: 800, background: 'white', borderRadius: '12px', minWidth: '100px' }}>Client</div>
+              <span style={{ fontSize: '20px', color: '#2F855A', fontWeight: 'bold' }}>→</span>
+              <div className="flow-box" style={{ padding: '12px 16px', fontSize: '16px', border: '1px solid #68D391', color: '#1E293B', fontWeight: 800, background: 'white', borderRadius: '12px', minWidth: '100px' }}>Relationship</div>
+              <span style={{ fontSize: '20px', color: '#2F855A', fontWeight: 'bold' }}>→</span>
+              <div className="flow-box" style={{ padding: '14px 20px', fontSize: '18px', border: '2px solid #2F855A', color: '#2F855A', fontWeight: 900, background: 'white', borderRadius: '12px', boxShadow: '0 4px 20px rgba(47, 133, 90, 0.15)', minWidth: '120px' }}>Compounding</div>
             </div>
           </motion.div>
         </div>
 
-        <p className="slide-subtitle" style={{ marginTop: '20px', fontWeight: 700, fontSize: '16px' }}>
+        <p className="slide-subtitle" style={{ marginTop: '40px', fontWeight: 800, fontSize: '22px', color: '#1E293B', textAlign: 'center' }}>
           Same industry. Different mindset. Completely different outcomes.
         </p>
       </motion.div>
 
       <motion.div className="slide-section" {...slideIn}>
         <div className="slide-header" style={{ marginBottom: '16px' }}>
-          <div className="slide-label" style={{ marginBottom: '8px' }}>THE FORMULA</div>
+          <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>THE FORMULA</div>
           <h1 className="slide-title" style={{ fontSize: '32px', marginBottom: '4px' }}>Trust Compounding Formula</h1>
           <p className="slide-subtitle" style={{ fontSize: '18px' }}>
             Trust grows through repetition. Every interaction either strengthens trust or weakens it.
@@ -527,7 +575,7 @@ const Session04: React.FC = () => {
 
       <motion.div className="slide-section flywheel-section" {...slideIn}>
         <div className="slide-header" style={{ marginBottom: '12px' }}>
-          <div className="slide-label" style={{ marginBottom: '4px' }}>GROWTH ENGINE</div>
+          <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>GROWTH ENGINE</div>
           <h1 className="slide-title" style={{ fontSize: '28px', marginBottom: '4px' }}>The Wealth Flywheel</h1>
           <p className="slide-subtitle" style={{ fontSize: '16px' }}>Once the flywheel spins, growth becomes self-reinforcing and exponential.</p>
         </div>
@@ -646,7 +694,7 @@ const Session04: React.FC = () => {
 
       <motion.div className="slide-section" style={{ padding: '20px' }} {...slideIn}>
         <div className="slide-header" style={{ marginBottom: '12px' }}>
-          <div className="slide-label" style={{ marginBottom: '4px' }}>CAPABILITY PYRAMID</div>
+          <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>CAPABILITY PYRAMID</div>
           <h1 className="slide-title" style={{ fontSize: '28px' }}>₹10,000 Crore Capability Pyramid</h1>
           <p className="slide-subtitle" style={{ fontSize: '16px' }}>Strong foundations create scalable trust.</p>
         </div>
@@ -732,7 +780,7 @@ const Session04: React.FC = () => {
 
       <motion.div className="slide-section" {...slideIn}>
         <div className="slide-header" style={{ marginBottom: '16px' }}>
-          <div className="slide-label" style={{ marginBottom: '8px' }}>CONVERSATION MODEL</div>
+          <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>CONVERSATION MODEL</div>
           <h1 className="slide-title" style={{ fontSize: '32px', marginBottom: '8px' }}>₹10,000 Crore Client Conversation Model</h1>
           <p className="slide-subtitle" style={{ fontSize: '18px' }}>Move every client conversation up the levels.</p>
         </div>
@@ -904,7 +952,7 @@ const Session04: React.FC = () => {
                 whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
                 style={{ padding: '24px' }}
               >
-                <span className="stage-label" style={{ fontSize: '14px', padding: '4px 12px' }}>Stage {stage.s}</span>
+                <span className="stage-label" style={{ fontSize: '18px', padding: '6px 16px' }}>Stage {stage.s}</span>
                 <h3 style={{ color: '#1E293B', fontSize: '24px', marginBottom: '12px', marginTop: '12px' }}>{stage.t}</h3>
                 <p style={{ color: '#64748B', fontSize: '16px', lineHeight: '1.4' }}>{stage.d}</p>
               </motion.div>
@@ -970,18 +1018,18 @@ const Session04: React.FC = () => {
 
       <motion.div className="slide-section" {...slideIn} style={{ padding: '40px 20px' }}>
         <div className="closing-slide">
-          <p className="closing-text-light" style={{ fontSize: '18px', marginBottom: '16px' }}>
+          <p className="closing-text-light" style={{ fontSize: '28px', marginBottom: '24px' }}>
             The future of SNS will not be decided <br /> by markets or products.
           </p>
-          <h2 className="closing-text-bold" style={{ fontSize: '28px', marginBottom: '20px' }}>
+          <h2 className="closing-text-bold" style={{ fontSize: '56px', marginBottom: '32px' }}>
             It will be decided by the standards <br /> we set for ourselves.
           </h2>
-          <hr className="closing-divider" style={{ width: '60px', margin: '0 auto 20px' }} />
+          <hr className="closing-divider" style={{ width: '100px', margin: '0 auto 32px' }} />
           <motion.p
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
             className="closing-highlight"
-            style={{ fontSize: '20px' }}
+            style={{ fontSize: '32px' }}
           >
             Let us build the ₹10,000 Crore mindset.
           </motion.p>
@@ -995,7 +1043,7 @@ const Session04: React.FC = () => {
               <img src="/SNS Logo.png" alt="SNS Logo" style={{ height: '60px' }} />
             </div>
             <hr className="trust-divider" style={{ width: '30px', margin: '12px 0 12px auto' }} />
-            <p className="trust-text" style={{ fontSize: '10px' }}>60+ YEARS OF TRUST</p>
+            <p className="trust-text" style={{ fontSize: '16px' }}>60+ YEARS OF TRUST</p>
           </div>
 
           <div className="cover-divider" style={{ width: '2px', height: '100px' }}></div>
@@ -1005,7 +1053,7 @@ const Session04: React.FC = () => {
             <h1 className="cover-title" style={{ fontSize: '36px', lineHeight: 1.1 }}>
               ₹10,000 <br /> Crore <br /> Mindset
             </h1>
-            <p className="cover-footer" style={{ fontSize: '10px', marginTop: '12px' }}>THE NEXT CHAPTER OF SNS GROUP</p>
+            <p className="cover-footer" style={{ fontSize: '16px', marginTop: '12px' }}>THE NEXT CHAPTER OF SNS GROUP</p>
           </div>
         </div>
       </motion.div>

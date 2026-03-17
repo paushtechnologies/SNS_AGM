@@ -48,7 +48,7 @@ const Session03: React.FC = () => {
 
         <div style={{ position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '20px' }}>
           <div style={{ flex: '1', minWidth: '550px' }}>
-            <div className="slide-label" style={{ background: 'rgba(255,255,255,0.08)', color: 'var(--gold-light)', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '12px' }}>SESSION 04 • THE TRANSFORMATION</div>
+            <div className="slide-label" style={{ background: 'rgba(255,255,255,0.08)', color: 'var(--gold-light)', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '8px', fontSize: '24px' }}>SESSION 04 • THE TRANSFORMATION</div>
             <h1 className="slide-title" style={{ fontSize: '36px', marginBottom: '12px' }}>
               Align & <span style={{ color: '#ffffff', position: 'relative' }}>
                 Accelerate.
@@ -69,7 +69,7 @@ const Session03: React.FC = () => {
                   border: '1.5px solid rgba(255,255,255,0.12)',
                   padding: '10px 24px',
                   borderRadius: '16px',
-                  fontSize: '14px',
+                  fontSize: '18px',
                   color: 'var(--gold-light)',
                   fontWeight: 900,
                   letterSpacing: '1px',
@@ -117,7 +117,7 @@ const Session03: React.FC = () => {
         {...slideIn}
       >
         <div className="slide-header">
-          <div className="slide-label">Our Strategic Commitment</div>
+          <div className="slide-label" style={{ fontSize: '28px', padding: '10px 24px', background: 'rgba(56, 178, 172, 0.1)', color: '#2C7A7B', border: '1px solid rgba(56,178,172,0.2)', marginBottom: '4px' }}>Our Strategic Commitment</div>
           <h1 className="slide-title">Tech. Data. Team.</h1>
         </div>
 
@@ -137,7 +137,7 @@ const Session03: React.FC = () => {
           </div>
 
           <div style={{ flex: '1' }}>
-            <div className="label" style={{ color: 'var(--gold)', marginBottom: '16px', fontSize: '12px' }}>FY FOCUS AREAS</div>
+            <div className="label" style={{ color: 'var(--gold)', marginBottom: '16px', fontSize: '20px' }}>FY FOCUS AREAS</div>
             <motion.div
               style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '8px' }}
               variants={{
@@ -240,7 +240,7 @@ const Session03: React.FC = () => {
         {...slideIn}
       >
         <div className="slide-header" style={{ marginBottom: '20px' }}>
-          <div className="slide-label" style={{ marginBottom: '12px' }}>FOUNDATION ENGINE</div>
+          <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>FOUNDATION ENGINE</div>
           <h1 className="slide-title" style={{ fontSize: '32px', marginBottom: '8px' }}>CRM Optimization</h1>
           <p className="slide-subtitle" style={{ fontSize: '18px' }}>
             Activating the engine of growth through 100% CRM focus and data-driven discipline.
@@ -346,7 +346,7 @@ const Session03: React.FC = () => {
         {...slideIn}
       >
         <div className="slide-header" style={{ marginBottom: '20px' }}>
-          <div className="slide-label" style={{ marginBottom: '12px' }}>Why AI Matters Now</div>
+          <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>Why AI Matters Now</div>
           <h1 className="slide-title" style={{ fontSize: '32px', marginBottom: '8px' }}>It's No Longer Optional.</h1>
         </div>
 
@@ -482,7 +482,7 @@ const Session03: React.FC = () => {
         {...slideIn}
       >
         <div className="slide-header" style={{ marginBottom: '20px' }}>
-          <div className="slide-label" style={{ marginBottom: '12px' }}>Our Current Reality</div>
+          <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>Our Current Reality</div>
           <h1 className="slide-title" style={{ fontSize: '32px', marginBottom: '8px' }}>We Are Sitting on Powerful Data</h1>
           <p className="slide-subtitle" style={{ fontSize: '18px' }}>Today we report data. Tomorrow we must activate intelligence.</p>
         </div>
@@ -558,7 +558,7 @@ const Session03: React.FC = () => {
         {...slideIn}
       >
         <div className="slide-header" style={{ marginBottom: '20px' }}>
-          <div className="slide-label" style={{ marginBottom: '12px' }}>Relationship 2.0</div>
+          <div className="slide-label" style={{ marginBottom: '6px', fontSize: '26px', padding: '8px 20px' }}>Relationship 2.0</div>
           <h1 className="slide-title" style={{ fontSize: '32px', marginBottom: '8px' }}>Human + AI</h1>
           <p className="slide-subtitle" style={{ color: 'var(--gold)', fontWeight: 800, fontSize: '18px' }}>
             AI Will Upgrade — Not Replace — Our Team
@@ -622,7 +622,7 @@ const Session03: React.FC = () => {
             viewport={{ once: true }}
             style={{ padding: '20px' }}
           >
-            <div className="label" style={{ color: 'var(--gold-light)', marginBottom: '16px', fontSize: '11px' }}>What AI in CX Means for MF Distributors</div>
+            <div className="label" style={{ color: 'var(--gold-light)', marginBottom: '16px', fontSize: '18px' }}>What AI in CX Means for MF Distributors</div>
             <motion.div
               style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '8px' }}
               variants={{
@@ -784,10 +784,11 @@ const Session03: React.FC = () => {
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '16px',
+            gap: '24px',
             width: '100%',
-            maxWidth: '1100px',
-            justifyItems: 'center'
+            maxWidth: '1200px',
+            justifyItems: 'center',
+            margin: '0 auto'
           }}
           variants={{
             visible: { transition: { staggerChildren: 0.1 } }
@@ -805,20 +806,23 @@ const Session03: React.FC = () => {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 }
             }}
-            whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
+            whileHover={{ y: -5, boxShadow: '0 15px 40px rgba(0,0,0,0.1)' }}
             style={{
-              padding: '16px',
+              padding: '24px',
               textAlign: 'center',
-              width: '100%'
+              width: '100%',
+              background: 'linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%)',
+              border: '1px solid #94a3b8',
+              borderRadius: '24px'
             }}
           >
 
-            <div style={{ color: 'var(--gold)', marginBottom: '8px', display: 'flex', justifyContent: 'center' }}>
-              <Cpu size={20} />
+            <div style={{ color: 'var(--navy)', marginBottom: '12px', display: 'flex', justifyContent: 'center' }}>
+              <Cpu size={28} />
             </div>
 
             <div className="ai-areas-slide">
-              <h1 style={{ fontSize: '20px', marginBottom: '8px', textAlign: 'center' }}>
+              <h1 style={{ fontSize: '24px', marginBottom: '16px', textAlign: 'center', color: 'var(--navy)', fontWeight: 900 }}>
                 Areas we can use AI
               </h1>
 
@@ -826,36 +830,37 @@ const Session03: React.FC = () => {
 
                 <ul
                   style={{
-                    fontSize: '16px',
+                    fontSize: '17px',
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr',
-                    gap: '6px 12px',
+                    gap: '8px 16px',
                     padding: 0,
-                    listStylePosition: 'inside',
-                    fontWeight: 500,
+                    listStyle: 'none',
+                    fontWeight: 700,
                     textAlign: 'left',
-                    margin: '0 auto',
-                    maxWidth: '320px'
+                    margin: '0 auto 20px',
+                    color: 'var(--navy)'
                   }}
                 >
-                  <li>AI chatbots for FAQs</li>
-                  <li>Onboarding help</li>
-                  <li>Predictive analytics</li>
-                  <li>SIP stoppage alerts</li>
-                  <li>Sentiment analysis</li>
-                  <li>QA CS survey</li>
-                  <li>CRM Optimization</li>
+                  {['AI chatbots for FAQs', 'Onboarding help', 'Predictive analytics', 'SIP stoppage alerts', 'Sentiment analysis', 'QA CS survey', 'CRM Optimization'].map(item => (
+                    <li key={item} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <div style={{ width: '6px', height: '6px', background: 'var(--gold)', borderRadius: '50%', flexShrink: 0 }}></div>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
 
 
                 <div
                   style={{
-                    marginTop: '12px',
-                    padding: '12px',
-                    background: 'var(--blue-soft)',
-                    borderRadius: '12px',
-                    border: '1px solid var(--blue-mid)',
-                    textAlign: 'center'
+                    marginTop: '20px',
+                    padding: '20px',
+                    background: 'rgba(255, 255, 255, 0.25)',
+                    backdropFilter: 'blur(10px)',
+                    borderRadius: '16px',
+                    border: '1.5px solid rgba(0,0,0,0.15)',
+                    textAlign: 'center',
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.05)'
                   }}
                 >
 
@@ -863,18 +868,18 @@ const Session03: React.FC = () => {
                     style={{
                       color: 'var(--navy)',
                       fontWeight: 900,
-                      fontSize: '16px',
-                      marginBottom: '8px',
+                      fontSize: '18px',
+                      marginBottom: '12px',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                      gap: '6px'
+                      gap: '8px'
                     }}
                   >
                     <div
                       style={{
-                        width: '4px',
-                        height: '14px',
+                        width: '6px',
+                        height: '18px',
                         background: 'var(--gold)',
                         borderRadius: '2px'
                       }}
@@ -886,8 +891,8 @@ const Session03: React.FC = () => {
                   <div
                     style={{
                       display: 'grid',
-                      gridTemplateColumns: 'repeat(3, 1fr)',
-                      gap: '6px',
+                      gridTemplateColumns: 'repeat(2, 1fr)',
+                      gap: '8px',
                       justifyItems: 'center'
                     }}
                   >
@@ -897,24 +902,26 @@ const Session03: React.FC = () => {
                       <div
                         key={task}
                         style={{
-                          fontSize: '13px',
+                          fontSize: '14px',
                           color: 'var(--navy)',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           gap: '6px',
                           background: '#ffffff',
-                          padding: '4px 8px',
-                          borderRadius: '6px',
-                          border: '1px solid rgba(0,0,0,0.05)',
-                          fontWeight: 700
+                          padding: '6px 12px',
+                          borderRadius: '8px',
+                          border: '1.5px solid rgba(0,0,0,0.1)',
+                          fontWeight: 800,
+                          width: '100%',
+                          boxShadow: '0 2px 5px rgba(0,0,0,0.05)'
                         }}
                       >
 
                         <div
                           style={{
-                            width: '4px',
-                            height: '4px',
+                            width: '5px',
+                            height: '5px',
                             borderRadius: '50%',
                             background: 'var(--gold)',
                             flexShrink: 0
@@ -942,17 +949,24 @@ const Session03: React.FC = () => {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 }
             }}
-            whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
-            style={{ padding: '16px', textAlign: 'center', width: '100%' }}
+            whileHover={{ y: -5, boxShadow: '0 15px 40px rgba(0,0,0,0.1)' }}
+            style={{ 
+              padding: '24px', 
+              textAlign: 'center', 
+              width: '100%',
+              background: 'linear-gradient(135deg, #fffcf0 0%, #fef3c7 100%)',
+              border: '1px solid #fde68a',
+              borderRadius: '24px'
+            }}
           >
 
-            <div style={{ color: 'var(--gold)', marginBottom: '8px', display: 'flex', justifyContent: 'center' }}>
-              <MessageSquare size={20} />
+            <div style={{ color: 'var(--navy)', marginBottom: '12px', display: 'flex', justifyContent: 'center' }}>
+              <MessageSquare size={28} />
             </div>
 
             <div className="genai-opportunities-slide">
 
-              <h1 style={{ fontSize: '20px', marginBottom: '8px', textAlign: 'center' }}>
+              <h1 style={{ fontSize: '24px', marginBottom: '20px', textAlign: 'center', color: 'var(--navy)', fontWeight: 900 }}>
                 Generative AI Opportunities
               </h1>
 
@@ -960,22 +974,24 @@ const Session03: React.FC = () => {
 
                 <ul
                   style={{
-                    fontSize: '16px',
+                    fontSize: '18px',
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: '10px',
+                    gap: '16px',
                     padding: 0,
-                    listStylePosition: 'inside',
-                    fontWeight: 500,
+                    listStyle: 'none',
+                    fontWeight: 700,
                     textAlign: 'left',
                     margin: '0 auto',
-                    maxWidth: '260px'
+                    color: 'var(--navy)'
                   }}
                 >
-                  <li>Investor communication drafts</li>
-                  <li>RM/CS call summaries</li>
-                  <li>Knowledge base creation</li>
-                  <li>Training & onboarding content</li>
+                  {['Investor communication drafts', 'RM/CS call summaries', 'Knowledge base creation', 'Training & onboarding content'].map(item => (
+                    <li key={item} style={{ display: 'flex', alignItems: 'center', gap: '12px', paddingBottom: '12px', borderBottom: '1px solid rgba(212, 175, 55, 0.2)' }}>
+                       <div style={{ color: 'var(--gold)' }}><MessageSquare size={16} /></div>
+                       {item}
+                    </li>
+                  ))}
                 </ul>
 
               </div>
@@ -991,17 +1007,24 @@ const Session03: React.FC = () => {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 }
             }}
-            whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
-            style={{ padding: '16px', textAlign: 'center', width: '100%' }}
+            whileHover={{ y: -5, boxShadow: '0 15px 40px rgba(0,0,0,0.1)' }}
+            style={{ 
+              padding: '24px', 
+              textAlign: 'center', 
+              width: '100%',
+              background: 'linear-gradient(135deg, #f0fff4 0%, #dcfce7 100%)',
+              border: '1px solid #9ae6b4',
+              borderRadius: '24px'
+            }}
           >
 
-            <div style={{ color: 'var(--gold)', marginBottom: '8px', display: 'flex', justifyContent: 'center' }}>
-              <TrendingUp size={20} />
+            <div style={{ color: 'var(--navy)', marginBottom: '12px', display: 'flex', justifyContent: 'center' }}>
+              <TrendingUp size={28} />
             </div>
 
             <div className="kpi-slide">
 
-              <h1 style={{ fontSize: '20px', marginBottom: '8px', textAlign: 'center' }}>
+              <h1 style={{ fontSize: '24px', marginBottom: '20px', textAlign: 'center', color: 'var(--navy)', fontWeight: 900 }}>
                 KPIs to Track ROI
               </h1>
 
@@ -1009,23 +1032,24 @@ const Session03: React.FC = () => {
 
                 <ul
                   style={{
-                    fontSize: '16px',
+                    fontSize: '18px',
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: '8px',
+                    gap: '12px',
                     padding: 0,
-                    listStylePosition: 'inside',
-                    fontWeight: 500,
+                    listStyle: 'none',
+                    fontWeight: 700,
                     textAlign: 'left',
                     margin: '0 auto',
-                    maxWidth: '260px'
+                    color: 'var(--navy)'
                   }}
                 >
-                  <li>Customer Satisfaction</li>
-                  <li>First Contact Resolution</li>
-                  <li>Self-service adoption</li>
-                  <li>Churn rate & SIP persistence</li>
-                  <li>Revenue per advisor</li>
+                  {['Customer Satisfaction', 'First Contact Resolution', 'Self-service adoption', 'Churn rate & SIP persistence', 'Revenue per advisor'].map(item => (
+                    <li key={item} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 16px', background: 'rgba(255,255,255,0.4)', borderRadius: '12px' }}>
+                      <TrendingUp size={16} color="#2F855A" />
+                      {item}
+                    </li>
+                  ))}
                 </ul>
 
               </div>
@@ -1040,7 +1064,7 @@ const Session03: React.FC = () => {
         style={{ padding: '15px 40px', minHeight: 'auto' }}
       >
         <div className="slide-header" style={{ marginBottom: '15px' }}>
-          <div className="slide-label" style={{ marginBottom: '8px' }}>AI Landscape</div>
+            <div className="slide-label" style={{ marginBottom: '6px', textAlign: 'center', fontSize: '26px', fontWeight: 900, padding: '8px 20px' }}>AI Landscape</div>
           <h1 className="slide-title" style={{ fontSize: '28px' }}>Detailed Areas & ROI</h1>
         </div>
 
