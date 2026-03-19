@@ -1343,12 +1343,12 @@ const Session04: React.FC = () => {
 
       {/* FINAL MANTRA */}
       <motion.div className="slide-section" style={{ background: '#D4AF37', color: '#fff', border: 'none', padding: '40px 20px' }} {...slideIn}>
-        <h2 style={{ fontSize: '36px', marginBottom: '16px', fontWeight: 900, fontFamily: "'Playfair Display', serif" }}>The ₹10,000 Crore Mindset</h2>
+        <h2 style={{ textAlign: 'center', fontSize: '36px', marginBottom: '16px', fontWeight: 900, fontFamily: "'Playfair Display', serif" }}>The ₹10,000 Crore Mindset</h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          style={{ fontSize: '24px', maxWidth: '800px', margin: '0 auto', fontStyle: 'italic', fontWeight: 600, lineHeight: 1.3 }}
+          style={{ textAlign: 'center', fontSize: '24px', maxWidth: '800px', margin: '0 auto', fontStyle: 'italic', fontWeight: 600, lineHeight: 1.3 }}
         >
           "If SNS was already a ₹10,000 Crore firm, how would we behave tomorrow morning?"
         </motion.p>

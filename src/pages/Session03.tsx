@@ -197,11 +197,11 @@ const Session03: React.FC = () => {
       </motion.div>
 
       <motion.div className="slide-section dark" {...slideIn} style={{ padding: '40px' }}>
-        <div style={{ 
-          display: 'flex', 
-          flexDirection: 'column', 
-          alignItems: 'flex-start', 
-          gap: '12px', 
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          gap: '12px',
           borderBottom: '1px solid rgba(255,255,255,0.1)',
           paddingBottom: '24px',
           marginBottom: '32px'
@@ -217,9 +217,9 @@ const Session03: React.FC = () => {
         </div>
 
         <motion.div
-          style={{ 
-            display: 'grid', 
-            gridTemplateColumns: '1fr 1fr', 
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
             gap: '24px',
             width: '100%'
           }}
@@ -243,10 +243,10 @@ const Session03: React.FC = () => {
                 visible: { opacity: 1, y: 0 }
               }}
               whileHover={{ y: -5, background: 'rgba(255,255,255,0.08)', borderColor: 'var(--gold)' }}
-              style={{ 
-                background: 'rgba(255,255,255,0.04)', 
-                padding: '24px 30px', 
-                borderRadius: '20px', 
+              style={{
+                background: 'rgba(255,255,255,0.04)',
+                padding: '24px 30px',
+                borderRadius: '20px',
                 border: '1.5px solid rgba(255,255,255,0.08)',
                 display: 'flex',
                 alignItems: 'center',
@@ -255,10 +255,10 @@ const Session03: React.FC = () => {
                 boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
               }}
             >
-              <div style={{ 
-                width: '10px', 
-                height: '10px', 
-                borderRadius: '50%', 
+              <div style={{
+                width: '10px',
+                height: '10px',
+                borderRadius: '50%',
                 background: 'var(--gold)',
                 flexShrink: 0,
                 boxShadow: '0 0 10px var(--gold)'
@@ -710,21 +710,54 @@ const Session03: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* NEW SECTION 1: Key Benefits for Business */}
-      <motion.div className="slide-section" {...slideIn}>
-        <div className="business-benefits-slide" style={{ padding: '30px', borderRadius: '24px' }}>
-          <div className="slide-header">
-            <div className="decorative-blocks">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+      {/* KEY BENEFITS FOR BUSINESS */}
+      <motion.div 
+        className="slide-section" 
+        {...slideIn}
+        style={{ 
+          padding: '50px 40px',
+          background: 'linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%)',
+          borderTop: '10px solid #2ecc71',
+          boxShadow: '0 30px 60px rgba(0,0,0,0.06)',
+          position: 'relative',
+          overflow: 'hidden'
+        }}
+      >
+        <div style={{ 
+          position: 'absolute', 
+          top: '-15%', 
+          right: '-10%', 
+          width: '500px', 
+          height: '500px', 
+          background: 'radial-gradient(circle, rgba(46, 204, 113, 0.04) 0%, transparent 70%)', 
+          zIndex: 0 
+        }}></div>
+
+        <div className="business-benefits-slide" style={{ width: '100%', maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+          <div className="slide-header" style={{ marginBottom: '50px', textAlign: 'center' }}>
+            <div className="decorative-blocks" style={{ justifyContent: 'center', marginBottom: '16px' }}>
+              <span style={{ width: '18px', height: '18px', background: 'var(--gold)', borderRadius: '4px' }}></span>
+              <span style={{ width: '18px', height: '18px', background: 'var(--gold)', borderRadius: '4px', opacity: 0.4 }}></span>
+              <span style={{ width: '18px', height: '18px', background: 'var(--gold)', borderRadius: '4px', opacity: 0.2 }}></span>
             </div>
-            <h1 className="slide-title">Key Benefits for Business</h1>
+            <h1 style={{ 
+              fontSize: '56px', 
+              fontWeight: 900, 
+              color: 'var(--navy)',
+              fontFamily: "'Playfair Display', serif",
+              letterSpacing: '-2px',
+              margin: 0
+            }}>
+              Key Benefits for Business
+            </h1>
           </div>
 
           <motion.div
-            className="benefits-grid"
+            style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(4, 1fr)', 
+              gap: '24px' 
+            }}
             variants={{
               visible: { transition: { staggerChildren: 0.1 } }
             }}
@@ -733,66 +766,182 @@ const Session03: React.FC = () => {
             viewport={{ once: true }}
           >
             {[
-              { t: 'Lower servicing cost', i: <Database size={32} /> },
-              { t: 'Higher RM productivity', i: <TrendingUp size={32} /> },
-              { t: 'Better retention & lower churn', i: <Users size={32} /> },
-              { t: 'Scalable growth without headcount increase', i: <Zap size={32} /> }
+              { t: 'Lower servicing cost', i: <Database size={36} />, color: '#3182ce' },
+              { t: 'Higher RM productivity', i: <TrendingUp size={36} />, color: '#d69e2e' },
+              { t: 'Better retention & lower churn', i: <Users size={36} />, color: '#38a169' },
+              { t: 'Scalable growth without headcount increase', i: <Zap size={36} />, color: '#805ad5' }
             ].map((benefit, idx) => (
               <motion.div
                 key={idx}
-                className="benefit-card business"
                 variants={{
-                  hidden: { opacity: 0, scale: 0.9 },
-                  visible: { opacity: 1, scale: 1 }
+                  hidden: { opacity: 0, scale: 0.9, y: 30 },
+                  visible: { opacity: 1, scale: 1, y: 0 }
                 }}
-                whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
+                whileHover={{ 
+                  y: -15, 
+                  boxShadow: '0 40px 80px -15px rgba(0, 0, 0, 0.15)',
+                  borderColor: 'var(--gold)'
+                }}
+                style={{ 
+                  padding: '48px 24px', 
+                  background: '#ffffff', 
+                  borderRadius: '32px', 
+                  border: '1.5px solid rgba(0,0,0,0.05)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '30px',
+                  transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                  textAlign: 'center',
+                  boxShadow: '0 10px 25px rgba(0,0,0,0.03)'
+                }}
               >
-                <div className="benefit-icon">{benefit.i}</div>
-                <h3>{benefit.t}</h3>
+                <div style={{ 
+                  width: '90px', 
+                  height: '90px', 
+                  background: 'rgba(212, 175, 55, 0.08)', 
+                  borderRadius: '28px', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  color: 'var(--gold)',
+                  boxShadow: 'inset 0 4px 8px rgba(0,0,0,0.02)'
+                }}>
+                  {benefit.i}
+                </div>
+                <div style={{ 
+                  fontSize: '24px', 
+                  fontWeight: 900, 
+                  color: 'var(--navy)', 
+                  lineHeight: '1.3',
+                  fontFamily: "'DM Sans', sans-serif",
+                  letterSpacing: '-0.5px'
+                }}>
+                  {benefit.t}
+                </div>
+                
+                <div style={{ 
+                  marginTop: 'auto',
+                  width: '40px', 
+                  height: '5px', 
+                  background: 'var(--gold)', 
+                  borderRadius: '100px',
+                  opacity: 0.2
+                }}></div>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </motion.div>
 
-      <motion.div className="slide-section" {...slideIn} style={{ padding: '30px' }}>
-        <div className="investor-benefits-slide" style={{ padding: '20px', borderRadius: '24px' }}>
-          <div className="slide-header" style={{ marginBottom: '20px' }}>
-            <div className="decorative-blocks">
-              <span></span>
-              <span></span>
+      {/* KEY BENEFITS FOR INVESTORS */}
+      <motion.div 
+        className="slide-section" 
+        {...slideIn} 
+        style={{ 
+          padding: '40px',
+          background: 'linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)',
+          borderTop: '10px solid #2ecc71',
+          boxShadow: '0 30px 60px rgba(0,0,0,0.06)',
+          position: 'relative',
+          overflow: 'hidden'
+        }}
+      >
+        <div style={{ 
+          position: 'absolute', 
+          bottom: '-10%', 
+          left: '-5%', 
+          width: '400px', 
+          height: '400px', 
+          background: 'radial-gradient(circle, rgba(212,175,55,0.05) 0%, transparent 70%)', 
+          zIndex: 0 
+        }}></div>
+
+        <div className="investor-benefits-slide" style={{ width: '100%', maxWidth: '1100px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+          <div className="slide-header" style={{ marginBottom: '40px', textAlign: 'center' }}>
+            <div className="decorative-blocks" style={{ justifyContent: 'center', marginBottom: '16px' }}>
+              <span style={{ width: '12px', height: '12px', background: '#2ecc71', borderRadius: '3px' }}></span>
+              <span style={{ width: '12px', height: '12px', background: '#2ecc71', opacity: 0.5, borderRadius: '3px' }}></span>
             </div>
-            <h1 style={{ fontSize: '28px' }}>Key Benefits for Investors</h1>
+            <h1 style={{ 
+              fontSize: '48px', 
+              fontWeight: 900, 
+              color: 'var(--navy)',
+              fontFamily: "'Playfair Display', serif",
+              letterSpacing: '-1.5px',
+              margin: 0
+            }}>
+              Key Benefits for Investors
+            </h1>
           </div>
 
           <div className="benefits-content">
-            <motion.ul
+            <motion.div
+              style={{ 
+                display: 'grid', 
+                gridTemplateColumns: 'repeat(2, 1fr)', 
+                gap: '24px' 
+              }}
               variants={{
-                visible: { transition: { staggerChildren: 0.1 } }
+                visible: { transition: { staggerChildren: 0.12 } }
               }}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {[
-                'Faster query resolution',
-                '24x7 assistance',
-                'Relevant fund & goal-based insights',
-                'Reduced friction across journeys'
-              ].map(benefit => (
-                <motion.li
-                  key={benefit}
+                { t: 'Faster query resolution', i: <Zap size={28} /> },
+                { t: '24x7 assistance', i: <MessageSquare size={28} /> },
+                { t: 'Relevant fund & goal-based insights', i: <TrendingUp size={28} /> },
+                { t: 'Reduced friction across journeys', i: <Users size={28} /> }
+              ].map((benefit, idx) => (
+                <motion.div
+                  key={idx}
                   variants={{
-                    hidden: { opacity: 0, x: -20 },
+                    hidden: { opacity: 0, x: idx % 2 === 0 ? -30 : 30 },
                     visible: { opacity: 1, x: 0 }
                   }}
-                  whileHover={{ x: 10, color: 'var(--gold)' }}
-                  style={{ fontSize: '20px', padding: '8px 0' }}
+                  whileHover={{ 
+                    scale: 1.02, 
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.08)',
+                    borderColor: '#2ecc71'
+                  }}
+                  style={{ 
+                    padding: '28px 32px', 
+                    background: '#ffffff', 
+                    borderRadius: '24px', 
+                    border: '1.5px solid #eef2f6',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '20px',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 10px 25px rgba(0,0,0,0.02)'
+                  }}
                 >
-                  {benefit}
-                </motion.li>
+                  <div style={{ 
+                    width: '60px', 
+                    height: '60px', 
+                    background: 'rgba(46, 204, 113, 0.1)', 
+                    borderRadius: '16px', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    color: '#27ae60',
+                    flexShrink: 0
+                  }}>
+                    {benefit.i}
+                  </div>
+                  <div style={{ 
+                    fontSize: '22px', 
+                    fontWeight: 800, 
+                    color: 'var(--navy)',
+                    lineHeight: '1.2'
+                  }}>
+                    {benefit.t}
+                  </div>
+                </motion.div>
               ))}
-            </motion.ul>
+            </motion.div>
           </div>
         </div>
       </motion.div>
@@ -1423,46 +1572,134 @@ const Session03: React.FC = () => {
       </motion.div>
 
       {/* SECTION 10,000 CR MATTERS */}
-      <motion.div className="slide-section" {...slideIn} style={{ padding: '12px 30px' }}>
-        <div className="why-10000-slide" style={{ padding: '12px', borderRadius: '24px' }}>
-          <div className="slide-header" style={{ marginBottom: '16px' }}>
-            <div className="decorative-blocks">
-              <span></span>
-              <span></span>
+      <motion.div 
+        className="slide-section" 
+        {...slideIn} 
+        style={{ 
+          padding: '40px', 
+          background: 'linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)',
+          borderTop: '10px solid #2ecc71', // Premium green accent from the image
+          boxShadow: '0 30px 60px rgba(0,0,0,0.06)',
+          position: 'relative',
+          overflow: 'hidden'
+        }}
+      >
+        {/* Subtle Decorative Background Element */}
+        <div style={{ 
+          position: 'absolute', 
+          top: '0', 
+          right: '0', 
+          width: '300px', 
+          height: '300px', 
+          background: 'radial-gradient(circle, rgba(46, 204, 113, 0.05) 0%, transparent 70%)', 
+          zIndex: 0 
+        }}></div>
+
+        <div className="why-10000-slide" style={{ width: '100%', maxWidth: '1100px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+          <div className="slide-header" style={{ marginBottom: '40px', textAlign: 'center' }}>
+            <div className="decorative-blocks" style={{ justifyContent: 'center', marginBottom: '16px' }}>
+              <span style={{ width: '14px', height: '14px', background: '#2ecc71', borderRadius: '3px' }}></span>
+              <span style={{ width: '14px', height: '14px', background: 'var(--gold)', borderRadius: '3px' }}></span>
             </div>
-            <h1 className="slide-title" style={{ fontSize: '32px', fontWeight: 900 }}>Why ₹10,000 Crores Matters</h1>
+            <h1 className="slide-title" style={{ 
+              fontSize: '52px', 
+              fontWeight: 900, 
+              color: 'var(--navy)',
+              letterSpacing: '-2px',
+              marginBottom: '10px'
+            }}>
+              Why ₹10,000 Crores Matters
+            </h1>
+            <div style={{ 
+              display: 'inline-block',
+              padding: '10px 32px',
+              background: 'rgba(46, 204, 113, 0.08)',
+              color: '#1a7f37',
+              borderRadius: '100px',
+              fontSize: '26px',
+              fontWeight: 800,
+              border: '1.5px solid rgba(46, 204, 113, 0.2)',
+              boxShadow: '0 4px 15px rgba(0,0,0,0.03)',
+              letterSpacing: '-0.5px'
+            }}>
+              Market positioning & credibility lift
+            </div>
           </div>
 
           <div className="why-content">
             <motion.div
-              style={{ listStyle: 'none', padding: 0 }}
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '28px' }}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={{
-                visible: { transition: { staggerChildren: 0.1 } }
+                visible: { transition: { staggerChildren: 0.15 } }
               }}
             >
-              <div style={{ fontSize: '30px', fontWeight: 900, color: 'var(--navy)', marginBottom: '20px', letterSpacing: '-0.5px' }}>Market positioning & credibility lift</div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px' }}>
-                {[
-                  'Stronger AMC negotiation power',
-                  'Operating leverage expansion',
-                  'Enterprise valuation multiple re-rating'
-                ].map(point => (
-                  <motion.div
-                    key={point}
-                    variants={{
-                      hidden: { opacity: 0, y: 10 },
-                      visible: { opacity: 1, y: 0 }
-                    }}
-                    whileHover={{ scale: 1.05, background: '#fff' }}
-                    style={{ padding: '14px 16px', background: '#F8FAFC', borderRadius: '16px', border: '1px solid #E2E8F0', fontWeight: 900, color: 'var(--navy)', textAlign: 'center', fontSize: '17px', transition: 'all 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                  >
-                    {point}
-                  </motion.div>
-                ))}
-              </div>
+              {[
+                { text: 'Stronger AMC negotiation power', icon: <Shield size={36} /> },
+                { text: 'Operating leverage expansion', icon: <TrendingUp size={36} /> },
+                { text: 'Enterprise valuation multiple re-rating', icon: <BarChart3 size={36} /> }
+              ].map((point, idx) => (
+                <motion.div
+                  key={idx}
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.9, y: 30 },
+                    visible: { opacity: 1, scale: 1, y: 0 }
+                  }}
+                  whileHover={{ 
+                    y: -12, 
+                    boxShadow: '0 35px 70px -15px rgba(0, 0, 0, 0.15)',
+                    borderColor: '#2ecc71',
+                    background: '#fff'
+                  }}
+                  style={{ 
+                    padding: '40px 24px', 
+                    background: '#ffffff', 
+                    borderRadius: '28px', 
+                    border: '1px solid #eef2f6', 
+                    display: 'flex', 
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '24px',
+                    transition: 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                    textAlign: 'center',
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.02)'
+                  }}
+                >
+                  <div style={{ 
+                    width: '80px', 
+                    height: '80px', 
+                    background: 'linear-gradient(135deg, #f0fff4 0%, #dcfce7 100%)', 
+                    borderRadius: '24px', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    color: '#27ae60',
+                    boxShadow: '0 8px 16px rgba(46, 204, 113, 0.1)'
+                  }}>
+                    {point.icon}
+                  </div>
+                  
+                  <div style={{ 
+                    fontSize: '22px', 
+                    fontWeight: 900, 
+                    color: 'var(--navy)', 
+                    lineHeight: '1.3',
+                    fontFamily: "'DM Sans', sans-serif"
+                  }}>
+                    {point.text}
+                  </div>
+                  
+                  <div style={{ 
+                    width: '60px', 
+                    height: '4px', 
+                    background: 'linear-gradient(90deg, #2ecc71, #27ae60)', 
+                    borderRadius: '100px',
+                    opacity: 0.4
+                  }}></div>
+                </motion.div>
+              ))}
             </motion.div>
           </div>
         </div>
