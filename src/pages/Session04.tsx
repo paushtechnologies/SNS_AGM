@@ -749,14 +749,23 @@ const Session04: React.FC = () => {
           ))}
         </div>
 
-        <div className="flywheel-legend">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <div style={{ width: '24px', height: '12px', background: '#D4AF37', borderRadius: '4px' }}></div>
-            <p style={{ fontSize: '16px', fontWeight: 800, color: '#1E293B', margin: 0 }}>Business Outcomes</p>
+        <div className="flywheel-legend" style={{ gap: '40px', padding: '12px 30px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <div style={{ display: 'flex', gap: '6px' }}>
+              {['#3B82F6', '#8B5CF6', '#10B981', '#6366F1'].map(c => (
+                <div key={c} style={{ width: '14px', height: '14px', background: c, borderRadius: '50%', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}></div>
+              ))}
+            </div>
+            <p style={{ fontSize: '18px', fontWeight: 800, color: '#1E293B', margin: 0 }}>Client Experience</p>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <div style={{ width: '24px', height: '12px', background: '#1E293B', borderRadius: '4px' }}></div>
-            <p style={{ fontSize: '16px', fontWeight: 800, color: '#1E293B', margin: 0 }}>Client Experience</p>
+          
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <div style={{ display: 'flex', gap: '6px' }}>
+              {['#1E293B', '#EC4899', '#F59E0B', '#D4AF37'].map(c => (
+                <div key={c} style={{ width: '14px', height: '14px', background: c, borderRadius: '50%', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}></div>
+              ))}
+            </div>
+            <p style={{ fontSize: '18px', fontWeight: 800, color: '#1E293B', margin: 0 }}>Business Outcomes</p>
           </div>
         </div>
       </motion.div>
@@ -1374,24 +1383,71 @@ const Session04: React.FC = () => {
         </div>
       </motion.div>
 
-      <motion.div className="slide-section" style={{ background: '#F8FAFC', padding: '40px 20px' }} {...slideIn}>
-        <div className="cover-slide" style={{ gap: '30px', padding: '40px' }}>
-          <div className="cover-left" style={{ flex: 1 }}>
-            <div className="logo-container">
-              <img src="/SNS Logo.png" alt="SNS Logo" style={{ height: '60px' }} />
+      {/* FINAL COVER SLIDE */}
+      <motion.div 
+        className="slide-section" 
+        style={{ 
+          background: '#ffffff', 
+          padding: '80px 40px',
+          borderTop: '15px solid var(--gold)',
+          boxShadow: '0 40px 120px rgba(0,0,0,0.1)'
+        }} 
+        {...slideIn}
+      >
+        <div className="cover-slide" style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          gap: '80px', 
+          padding: '60px',
+          background: 'linear-gradient(135deg, #f8fafc 0%, #ffffff 100%)',
+          borderRadius: '40px',
+          position: 'relative',
+          overflow: 'hidden'
+        }}>
+          {/* Subtle Background Pattern */}
+          <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(212,175,55,0.05) 0%, transparent 70%)', zIndex: 0 }}></div>
+
+          <div className="cover-left" style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', position: 'relative', zIndex: 1 }}>
+            <motion.div 
+              className="logo-container"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, type: 'spring' }}
+              whileHover={{ scale: 1.05 }}
+              style={{ marginBottom: '40px' }}
+            >
+              <img src="/SNS Logo.png" alt="SNS Logo" style={{ height: '220px', objectFit: 'contain', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.1))' }} />
+            </motion.div>
+            <div style={{ textAlign: 'right' }}>
+              <div style={{ width: '60px', height: '4px', background: 'var(--gold)', margin: '0 0 15px auto', borderRadius: '2px' }}></div>
+              <p className="trust-text" style={{ fontSize: '18px', fontWeight: 900, color: 'var(--navy)', letterSpacing: '4px', margin: 0 }}>60+ YEARS OF TRUST</p>
             </div>
-            <hr className="trust-divider" style={{ width: '30px', margin: '12px 0 12px auto' }} />
-            <p className="trust-text" style={{ fontSize: '16px' }}>60+ YEARS OF TRUST</p>
           </div>
 
-          <div className="cover-divider" style={{ width: '2px', height: '100px' }}></div>
+          <div className="cover-divider" style={{ width: '3px', height: '350px', background: '#e2e8f0', borderRadius: '10px', position: 'relative', zIndex: 1 }}>
+            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '20px', height: '20px', background: 'var(--gold)', borderRadius: '50%', border: '4px solid #fff' }}></div>
+          </div>
 
-          <div className="cover-right" style={{ flex: 2 }}>
-            <p className="cover-subtitle" style={{ fontSize: '16px' }}>Building the</p>
-            <h1 className="cover-title" style={{ fontSize: '36px', lineHeight: 1.1 }}>
-              ₹10,000 <br /> Crore <br /> Mindset
+          <div className="cover-right" style={{ flex: 1.5, position: 'relative', zIndex: 1 }}>
+            <p className="cover-subtitle" style={{ fontSize: '32px', color: '#64748B', fontWeight: 600, marginBottom: '8px', letterSpacing: '-0.5px' }}>Building the</p>
+            <h1 className="cover-title" style={{ 
+              fontSize: '110px', 
+              lineHeight: '0.9', 
+              fontWeight: 900, 
+              color: 'var(--navy)',
+              fontFamily: "'Playfair Display', serif",
+              letterSpacing: '-5px',
+              margin: '0 0 30px 0'
+            }}>
+              ₹10,000 <br /> 
+              <span style={{ color: 'var(--gold)' }}>Crore</span> <br /> 
+              Mindset
             </h1>
-            <p className="cover-footer" style={{ fontSize: '16px', marginTop: '12px' }}>THE NEXT CHAPTER OF SNS GROUP</p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+              <div style={{ width: '40px', height: '2px', background: 'var(--gold)' }}></div>
+              <p className="cover-footer" style={{ fontSize: '22px', fontWeight: 800, color: 'var(--gold)', letterSpacing: '4px', margin: 0, textTransform: 'uppercase' }}>THE NEXT CHAPTER OF SNS GROUP</p>
+            </div>
           </div>
         </div>
       </motion.div>
